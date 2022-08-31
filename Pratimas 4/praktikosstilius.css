@@ -1,0 +1,48 @@
+header {
+    text-align: center;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    background-color: green;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+section.grey-block {
+    padding: 20px;
+    background-color: #eee;
+}
+
+section.green-block {
+    padding: 20px;
+    background-color: lightgreen;
+}
+
+main {
+    padding: 20px;
+    background-color: green;
+}
+
+section img {
+    width: 100%;
+}
+
+h2 {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    margin-top: 0px;
+}
+
+.grey-block h2 {
+    margin-top: 20px;
+  }

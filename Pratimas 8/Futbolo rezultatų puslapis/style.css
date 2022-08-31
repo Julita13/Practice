@@ -1,0 +1,79 @@
+body {
+    background-color: #1f2739;
+    text-align: center;
+}
+
+h1 {
+    font-size: 54px;
+    color: yellow;
+}
+
+h1 span {
+    color: aqua
+}
+header img {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+}
+
+h2 {
+    color: tomato;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+
+table {
+    font-size: 28px;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+td,th {
+    padding: 15px;
+    font-size: 1em;
+    box-shadow: 0 2px 2px -2px black;
+}
+.win {
+    background-color: #14dc4b;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.draw {
+    background-color: #ffcd00;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.lost {
+    background-color: red;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+td:first-child {
+    color: red;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: #0e1119;
+}
+
+.form {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}

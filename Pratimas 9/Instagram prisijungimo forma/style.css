@@ -1,0 +1,108 @@
+body {
+    background-color: #fafafa;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.Instagram_logo {
+    width: 60%;
+    padding: 30px;
+}
+
+fieldset {
+    border-color: rgb(241, 238, 238);
+    width: 100%;
+    max-width: 350px;
+    
+}
+
+.first-block {
+    color: lightgrey;
+    background-color: white;
+    margin-top: 220px;
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+.second-block {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+.third-block {
+    border: none;
+}
+
+.first-block p {
+    color: rgb(122, 109, 109);
+}
+.blue {
+    background-color: #b2dffc;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+.blue ::placeholder {
+    color: white;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #385185;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.small-text a {
+    color: #385185;
+    font-weight: lighter;
+}
+
+.logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+span a {
+    color: #0095f6;
+}
+
+.png {
+    width: 40%;
+}
+
+.first-block p.black::before {
+    content: "━━━━━━━━━━━━━━━";
+    color: lightgray;
+    padding-right: 20px;
+}
+
+.first-block p.black::after {
+    content: "━━━━━━━━━━━━━━━━";
+    color: lightgray;
+    padding-left: 20px;
+}
+
+html body main form fieldset.first-block input.blue {
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+
+nav a {
+    font-size: 28px;
+    text-decoration: none;
+}
+
+a:not(:first-child):before {
+    content: "//"; 
+    color: grey;
+    margin: 10px;
+}

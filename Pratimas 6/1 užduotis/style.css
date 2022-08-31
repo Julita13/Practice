@@ -1,0 +1,20 @@
+body {
+    background-color: lightgrey;
+}
+
+.sun, .lazy, .stars {
+    width: 100%;
+    max-width: 500px;
+}
+
+.moon {
+    background: yellow;
+    object-fit: contain;
+    width: 100%;
+    max-width: 500px;
+}
+
+.svg {
+    width: 100%;
+    max-width: 50px;
+}

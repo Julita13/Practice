@@ -1,0 +1,36 @@
+html {
+    background-color: rgb(75, 16, 75);
+}
+
+body{
+    border: 3px rgb(241, 166, 26) dotted;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 30px 600px;
+}
+
+.heading {
+    text-align: center;
+    color: rgb(241, 166, 26);
+}
+
+.sub-headings {
+    text-align: center;
+    color: rgb(165, 72, 86);
+}
+
+.paragraph {
+    text-align: justify;
+    padding: 20px;
+    font-size: 18px;
+    text-shadow: 1px 1px orange;
+    border-radius: 25px;
+}
+
+img {
+    border-radius: 10%;
+    border-top: 15px white solid;
+    border-right: 15px black solid;
+    border-bottom: 15px green solid;
+    border-left: 15px blue solid;
+    margin-bottom: 20px;
+}

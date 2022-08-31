@@ -1,0 +1,17 @@
+body {
+    background: yellow;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1::before {
+    content: "xxx";
+    color: red;
+    margin: 10px;
+}
+
+h1::after {
+    content: "xxx";
+    color: red;
+    margin: 10px;
+}

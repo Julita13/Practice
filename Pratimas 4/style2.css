@@ -1,0 +1,42 @@
+body {
+    background-color: darkviolet;
+}
+
+div.main-content {
+    padding: 20px;
+    width: 50%;
+    border: 2px dotted; color: #ff7b00;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.40)
+}
+
+.Headline {
+   color: yellow; 
+}
+
+.justified-text {
+    text-shadow: 1px 1px #ff6600;
+    border-radius: 25px;
+    text-align: justify;
+}
+
+.sub-headings {
+    color: orangered;
+}
+
+span{
+    font-size: 30px;
+}
+
+.colorfull-borders {
+    border-width: 25px;
+    border-style: solid;
+    border-color: blue yellow red green;
+    border-radius: 25px;
+}
+
+img {
+    margin-top: 20px;
+}

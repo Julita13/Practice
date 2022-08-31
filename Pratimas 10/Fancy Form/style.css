@@ -1,0 +1,101 @@
+html {
+    background-color: white;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    background-color: #2f4f4f;
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.purple-background {
+    background-color: #ef82ee;
+}
+
+.small-text {
+    font-size: 18px;
+}
+
+label {
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    width: 45%;
+    height: 20px;
+}
+
+textarea {
+    width: 45%;
+    margin-top: -20px;
+}
+
+button {
+    background-color: #008001;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    margin-bottom: 50px;
+    border-top: 2px solid #767676;
+    border-left: 2px solid #767676;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 3px;
+}
+
+input#agree {
+    width: 5%;
+}
+
+input#age {
+    width: 10%;
+}
+
+input#age:in-range {
+    border: 2px solid blue;
+}
+
+input:read-only {
+    background-color: #a9a9a9;
+    border-bottom: none;
+    border-right: none;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #1a4b14;
+}
+
+input:required {
+    border: 2px solid red;
+}
+
+input:valid,
+textarea:valid {
+    border: 2px solid green;
+}
+
+input:invalid,
+textarea:invalid, 
+input:out-of-range {
+    border: 2px solid red;
+}
+
+input:checked + label {
+    color: blue;
+}

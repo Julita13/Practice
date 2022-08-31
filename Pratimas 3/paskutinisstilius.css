@@ -1,0 +1,13 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgb(32, 30, 131), rgb(34, 147, 161));
+}
+
+.left{
+    text-align: left;
+}
+
+.picturesque{
+    box-shadow: 5px 10px;
+    color: aqua;
+}

@@ -1,0 +1,66 @@
+body {
+    background-image: url(moroccan-flower.png);
+    padding: 20px;
+}
+
+header img {
+    width: 50%;
+    min-width: 200px;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #4f5a21;
+    margin: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.flex-container {
+    background-color: #b1cd00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    padding: 1rem;
+    text-align: justify;
+    background-color: white;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    background-color: #b1cd00;
+    padding: 15px;
+    float: right;
+    margin: 10px 0;
+}
+
+main img {
+    max-width: 50%;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.about-us {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.our-mission {
+    flex: 3;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px; 
+    color: #4f5a21;
+    padding: 10px;;
+}

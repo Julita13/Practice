@@ -1,0 +1,104 @@
+body {
+    background: white;
+}
+
+menu {
+    padding-left: 0;
+}
+
+.sidebar {
+    background-color: rgb(87, 82, 82);
+    display: inline-block;
+    color: lightgrey;
+    font-size: 24px;
+    float: left;
+    width: 20%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {font-size: 0.8em;}
+
+li {
+    font-size: 14px;
+}
+
+.separator {
+    border-top: 3px solid #111111;
+    border-bottom: 1px solid #353535;
+    color: black;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.movies {
+    text-align: center;
+    width: 80%;
+    margin: auto 0;
+}
+
+.right {
+    text-align: right;
+}
+
+.right a {
+    text-decoration: none;
+    color: grey;
+}
+
+main {
+    display: inline-block;
+    width: 80%;
+}
+
+
+main .right .blue {
+    color: blue;
+}
+
+main .movies .name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+main p {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+main .dark {
+    font-weight: bold;
+    margin: auto 1rem;
+}
+
+main .grey {
+    color: #999;
+}
+
+.movies .genre {
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+iframe {
+    width: 100%;
+    margin: 20px;
+}
+
+html body main ul.movies li p.genre {
+    display: block;
+}
+
+html body main div.main {
+    margin-left: 20px;
+}

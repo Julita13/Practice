@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Užduotis 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="https://formspree.io/f/xnqrnnjp" method="POST">
+    <h1>Payment form</h1>
+    <p>Required fields are followed by "*"</p>
+    <h2>Contact information</h2>
+
+        <fieldset>
+            <legend>Title</legend>
+            <input type="radio" id="Mister" name="title" value="Mister">
+            <label for="Mister">Mr</label><br>
+            <input type="radio" id="Miss" name="title" value="Miss">
+            <label for="Miss">Mrs</label><br>
+        </fieldset><br><br>
+
+            <label for="name">Name:*</label>
+            <input type="text" id="name" required> <br><br>
+            <label for="e-mail">E-mail:*</label>
+            <input type="email" id="e-mail" required><br><br>
+            <label for="password">Password:*</label>
+            <input type="password" id="password" required><br><BR>
+
+        <h2>Payment information</h2>
+
+        <label for="Card type">Card type:</label>
+            <select name="Card type" id="Card type">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+            </select><br><br>
+
+        <label for="card-number">Card number:*</label>
+        <input type="text" minlength="16" maxlength="16" id="card-number" required><br><br>
+
+        <label for="Expiration-date">Expiration date:*</label>
+        <input type="date" name="Expiration-date" id="Expiration-date" required><br><br>
+
+
+        <button type="submit">Validate the payment</button>
+        
+    </form>
+</body>
+</html>
