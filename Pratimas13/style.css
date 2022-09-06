@@ -1,0 +1,22 @@
+.container > div {
+    background-color: #eee;
+    padding: 1em; 
+}
+
+.container > div:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-gap: 1em;
+    /*grid-column-gap: 1em; 
+    grid-row-gap: 1em; 
+    grid-template-columns: 1fr 2fr 1fr; */
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+}
