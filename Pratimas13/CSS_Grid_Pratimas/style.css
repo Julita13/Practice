@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+    color: white;
+    text-align: center;
+}
+
+.left {
+    width: 50%;
+    background-color: red;
+    margin-right: 10px;
+}
+
+.right {
+    width: 50%;
+}
+
+.right-top {
+    display: flex;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+.right-bottom {
+    display: flex;
+    background-color: red;
+}
+
+.item {
+    width: 100%; 
+    padding: 30px;
+}
+
+.special-item {
+    width: 100%;
+    padding: 30px; 
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+
+
+.grid-container {
+    display: grid;
+}
