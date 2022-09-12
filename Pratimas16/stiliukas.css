@@ -1,0 +1,59 @@
+.box {
+    width: 100px;
+    height: 100px;
+    transition: width 4s;
+    background-color: red;
+}
+
+.box:hover {
+    width: 500px;
+}
+
+.container {
+    width: 100px; 
+    height: 100px;
+    background-color: magenta;
+    transition: width 2s, height 4s;
+    transition-delay: 1s;
+}
+
+.container:hover {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes changes {
+    from {background-color: lightblue; color: black;}
+    to {background-color:  darkblue; color: white;}
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: black;
+    animation-name: changes;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+.last {
+    width: 100px;
+    height: 100px;
+    background-color: magenta;
+    animation: floating;
+    animation-duration: 5s;
+    position: relative;
+}
+
+@keyframes floating {
+    0% {background-color: magenta; left: 0px; top: 0px;}
+    25% {background-color: red; left: 300px; top: 0px;}
+    50% {background-color: orange; left: 300px; top: 300px;}
+    75% {background-color: yellow; left: 0px; top: 300px;}
+    100% {background-color: pink; left: 0px; top: 0px;}
+}
