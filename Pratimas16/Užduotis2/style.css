@@ -1,0 +1,20 @@
+.first-box {
+    width: 100px; 
+    height: 100px;
+    background-color: lightgrey;
+    transition: all 2s;
+    color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.first-box:hover {
+    background-color: rgb(123, 23, 211);
+    border-radius: 50%;
+    color: white;
+    transform: rotate(360deg);
+    font-size: 70px;
+}
