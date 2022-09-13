@@ -1,0 +1,13 @@
+.box {
+    background-color: #999999;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+
+/*blogo spalvų derinio pavyzdis - naršyklėje šios spalvos tekstas bus blogai skaitomas */
+
+p {
+    color: lightgrey;
+}
