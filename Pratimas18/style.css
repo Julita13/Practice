@@ -1,0 +1,255 @@
+/* Mobile first */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-networks a {
+    color: #645cff;
+    margin: 0.2rem;
+}
+
+.social-networks a:hover {
+    color: #8580df;
+}
+
+.social-networks a:last-child {
+    margin-right: 1.5rem;
+}
+
+.purple-text {
+    color: #645cff;
+}
+
+.header-navigation {
+    display: none;
+    }
+
+
+.purple-box {
+    background-color: #645cff;
+    color: white;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.white-header {
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+}
+
+.purple-button {
+    color: white;
+    background-color: #645cff;
+    text-decoration: none;
+    border: 1px solid #645cff;
+    border-radius: 4px;
+    width: 15%;
+    padding: 0.3rem;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 1s;
+}
+
+.purple-button:hover {
+    background-color: rgb(49, 22, 206);
+    color: wheat;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 0.3rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.white-box {
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tour-pictures {
+    width: 100%;
+  
+}
+
+.white-box p {
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.white-box a {
+    color: #1011ef;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+.our-services {
+    background-color: #f8fbfc;
+}
+
+.our-services h2 {
+    padding-top: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5rem;
+}
+
+.services {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.services p {
+    font-size: 0.6rem;
+    width: 80%;
+    margin-bottom: 3rem;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.services i {
+    background-color: #645cff;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.7rem 0.5rem;
+    margin-top: 1rem;
+}
+
+h5 {
+    font-weight: lighter;
+    margin-left: 1.5rem;
+    font-size: 1.0rem;
+}
+.countries {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+    
+}
+
+.countries i {
+    color: #645cff;
+    padding-bottom: 1rem;
+}
+
+.countries p {
+    line-height: 0.1rem;
+}
+
+.special-heading {
+    color: #3333f1;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.tour-container {
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 2px -2px gray;
+}
+
+.tour-date {
+    color: black;
+    background-color: #645cff;
+    width: 20%;
+    padding: 0.5rem;
+    margin-bottom: -2rem;
+    position: absolute;
+}
+
+.gallery-header {
+    background-color: #f8fbfc;
+    padding: 0.5rem;
+}
+
+.gallery-box {
+    background-color: #645cff;
+}
+
+.sign-up {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    color: white;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.submit-email {
+    margin: auto;
+}
+
+input {
+    width: 10rem;
+    height: 1rem;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+button {
+    margin-left: -0.5rem;
+    transition: all 1s;
+}
+
+button:hover {
+    background-color: rgb(151, 106, 21);
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    height: 5rem;
+    text-align: center;
+    padding: 5rem;
+    padding-bottom: 7rem;
+}
+
+.footer-navigation {
+    padding-bottom: 1rem
+}
+
+.footer-navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0.3rem;
+}
+
+.footer-navigation a:hover, .header-navigation a:hover  {
+    color: rgb(151, 106, 21);
+    text-decoration: underline;
+}
+
+footer p {
+    padding-top: 1rem;
+}
+
