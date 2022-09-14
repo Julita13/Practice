@@ -98,6 +98,11 @@ h2 {
     text-decoration: none;
     font-size: 0.8rem;
     text-align: left;
+    transition: color 1ms;
+}
+
+.white-box a:hover {
+    color: rgb(151, 106, 21);
 }
 
 h3 {
