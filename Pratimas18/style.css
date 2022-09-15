@@ -2,6 +2,16 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+:root {
+    /* pavadinimai nėra super taiklūs*/
+--main-text-color: #645cff;
+--main-changes-color: #8580df;
+--addl-changes-color: rgb(151, 106, 21);
+--white-text: white;
+}
+
+
 header {
     display: flex;
     flex-direction: row;
@@ -15,12 +25,12 @@ h1 {
 }
 
 .social-networks a {
-    color: #645cff;
+    color: var(--main-text-color);
     margin: 0.2rem;
 }
 
 .social-networks a:hover {
-    color: #8580df;
+    color: var(--main-changes-color);
 }
 
 .social-networks a:last-child {
@@ -28,7 +38,7 @@ h1 {
 }
 
 .purple-text {
-    color: #645cff;
+    color: var(--main-text-color);
 }
 
 .header-navigation {
@@ -37,8 +47,8 @@ h1 {
 
 
 .purple-box {
-    background-color: #645cff;
-    color: white;
+    background-color: var(--main-text-color);
+    color: var(--white-text);
     height: 50rem;
     display: flex;
     flex-direction: column;
@@ -53,12 +63,12 @@ h1 {
 }
 
 .purple-button {
-    color: white;
-    background-color: #645cff;
+    color: var(--white-text);
+    background-color: var(--main-text-color);
     text-decoration: none;
-    border: 1px solid #645cff;
+    border: 1px solid var(--main-text-color);
     border-radius: 4px;
-    width: 15%;
+    width: 20%;
     padding: 0.3rem;
     margin: 0 auto;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -66,7 +76,7 @@ h1 {
 }
 
 .purple-button:hover {
-    background-color: rgb(49, 22, 206);
+    background-color: var(--main-changes-color);
     color: wheat;
 }
 
@@ -102,7 +112,7 @@ h2 {
 }
 
 .white-box a:hover {
-    color: rgb(151, 106, 21);
+    color: var(--addl-changes-color);
 }
 
 h3 {
@@ -130,7 +140,7 @@ h3 {
 }
 
 .services p {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     width: 80%;
     margin-bottom: 3rem;
     margin: 0 auto;
@@ -143,7 +153,7 @@ h4 {
 }
 
 .services i {
-    background-color: #645cff;
+    background-color: var(--main-text-color);
     width: 1rem;
     height: 1rem;
     padding: 0.7rem 0.5rem;
@@ -163,7 +173,7 @@ h5 {
 }
 
 .countries i {
-    color: #645cff;
+    color: var(--main-text-color);
     padding-bottom: 1rem;
 }
 
@@ -177,14 +187,19 @@ h5 {
     font-size: 0.8rem;
 }
 
+.special-heading:hover {
+    color: var(--addl-changes-color)
+   }
+
 .tour-container {
     margin-bottom: 3rem;
     box-shadow: 0 2px 2px -2px gray;
+    border: 1px solid rgb(224, 224, 224);
 }
 
 .tour-date {
     color: black;
-    background-color: #645cff;
+    background-color: var(--main-text-color);
     width: 20%;
     padding: 0.5rem;
     margin-bottom: -2rem;
@@ -197,13 +212,13 @@ h5 {
 }
 
 .gallery-box {
-    background-color: #645cff;
+    background-color: var(--main-text-color);
 }
 
 .sign-up {
     display: grid;
     grid-template-columns: 30% 70%;
-    color: white;
+    color: var(--white-text);
     padding-left: 2rem;
     padding-bottom: 3rem;
 }
@@ -221,18 +236,19 @@ input:invalid {
     border: 1px solid red;
 }
 
+/* minusiniai marginai - not so great idea, I know. Tiesiog niekaip kitaip nėjo padaryti :) */
 button {
     margin-left: -0.5rem;
     transition: all 1s;
 }
 
 button:hover {
-    background-color: rgb(151, 106, 21);
+    background-color: var(--addl-changes-color);
 }
 
 footer {
     background-color: #222222;
-    color: white;
+    color: var(--white-text);
     height: 5rem;
     text-align: center;
     padding: 5rem;
@@ -240,21 +256,177 @@ footer {
 }
 
 .footer-navigation {
-    padding-bottom: 1rem
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
 }
 
 .footer-navigation a {
-    color: white;
+    color: var(--white-text);
     text-decoration: none;
     margin: 0.3rem;
 }
 
 .footer-navigation a:hover, .header-navigation a:hover  {
-    color: rgb(151, 106, 21);
+    color: var(--addl-changes-color);
     text-decoration: underline;
 }
 
 footer p {
     padding-top: 1rem;
+    font-size: 0.8rem;
 }
 
+/* For Desktops */
+
+@media screen and (min-width: 992px) {
+
+    .header-navigation {
+        display: block;
+        padding: 1rem;
+        }
+    
+    .header-navigation a {
+        text-decoration: none;
+        color: black;
+        font-size: 0.9rem;
+        margin: 0.5rem;
+        font-weight: bolder;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-left: 5rem;
+    }
+
+    .purple-button {
+        width: 10%;
+        margin-top: 1.5rem;
+    }
+
+    .white-header {
+        font-size: 5rem;
+    }
+
+    .purple-box {
+        background-image: url(https://images.unsplash.com/photo-1463694775559-eea25626346b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGV4cGxvcmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .purple-box p {
+        font-size: 1rem;
+        justify-content: justify;
+    }
+
+    .flex-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-text {
+        margin-left: 4rem;
+    }
+    .right-text p, .right-text a, .special-heading {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+        font-weight: lighter;
+        margin: 3rem 0;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .our-services h2 {
+        padding-top: 4rem;
+    }
+
+    .services {
+        display: flex;
+    }
+
+    .services h4 {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    .services p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .services i {
+        width: 2rem;
+        height: 2.5rem;
+        font-size: 2rem;
+        padding: 1rem 0.8rem;
+        ;
+    }
+
+   .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+   }
+
+   .tour-date {
+    width: 10%;
+   }
+
+   .tour-pictures {
+    height: 18rem;
+   }
+
+   .tour-container h5 {
+    font-size: 1.3rem;
+   }
+
+   .tour-container {
+    border: 1px solid rgb(224, 224, 224);
+   }
+
+   .tour-info p, .tour-details p {
+    font-size: 1rem;
+   }
+
+   .grid-wrapper a {
+    grid-row: 3/4;
+    grid-column: 2/3;
+   }
+   
+   .tour-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+
+   .submit-email input {
+    width: 30rem;
+   }
+
+   .sign-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
+
+   .footer-navigation a, footer p, .social-networks a {
+    font-size: 1.2rem;
+   }
+   
+   /*o štai čia faktiškai vienintelė vieta, kuri yra nedabaigta. 
+   Nu niekaip man nedaėjo, kaip ta borderį išsikelti už image'o ribų. 
+   Šventoji karvė - Google - irgi nepadėjo, tad palikau taip, kaip yra. Kalta :)  */
+   .flex-box img {
+    border: 0.4em solid var(--main-text-color);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-bottom: none; 
+    border-right: none; 
+   }
+}

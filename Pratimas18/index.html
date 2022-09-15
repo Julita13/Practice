@@ -12,15 +12,14 @@
 </head>
 <body>
 
-
     <header id="home">
             <h1>Hiking <span class="purple-text">Tours</span></h1>
             <nav class="header-navigation">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Featured</a>
-                <a href="#">Gallery</a>
+                <a href="#home">Home</a>
+                <a href="#about-us">About</a>
+                <a href="#our-services">Services</a>
+                <a href="#featured">Featured</a>
+                <a href="#gallery">Gallery</a>
             </nav>
             <ul class="social-networks">
                     <a href="https://www.facebook.com/home.php"><i class="fa-brands fa-facebook"></i></a>
@@ -28,6 +27,7 @@
                     <a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin-in"></i></a>
             </ul>
     </header>
+
     <main>
         <div class="purple-box">
             <h2 class="white-header">CONTINUE EXPLORING</h2>
@@ -37,31 +37,47 @@
 
         <section class="white-box" id="about-us">
             <h2>ABOUT <span class="purple-text">US</span></h2>
-            <img class="tour-pictures" src="https://media.istockphoto.com/photos/group-of-hikers-walks-in-mountains-at-sunset-picture-id1189969126?b=1&k=20&m=1189969126&s=170667a&w=0&h=dWy10OGBQCoA_K8ckTsmznhcjt-0-gxVIMfKYJAgU4c=" alt="Hikers walking mountains">
-            <div>
-                <h3>EXPLORE THE DIFFERENCE</h3>
-                <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis deserunt adipisci cupiditate porro! Earum impedit optio ad aspernatur. Aliquid, ad.</P>
-                <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis deserunt adipisci cupiditate porro! Earum impedit optio ad aspernatur. Aliquid, ad.</P>
-                <a href="#">Read more</a>
+            <div class="flex-box">
+                <div>
+                    <img class="tour-pictures" src="https://media.istockphoto.com/photos/group-of-hikers-walks-in-mountains-at-sunset-picture-id1189969126?b=1&k=20&m=1189969126&s=170667a&w=0&h=dWy10OGBQCoA_K8ckTsmznhcjt-0-gxVIMfKYJAgU4c=" alt="Hikers walking mountains">
+                </div>
+                <div class="right-text">
+                    <h3>EXPLORE THE DIFFERENCE</h3>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis deserunt adipisci cupiditate porro! Earum impedit optio ad aspernatur. Aliquid, ad.</P>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis deserunt adipisci cupiditate porro! Earum impedit optio ad aspernatur. Aliquid, ad.</P>
+                    <a href="#">Read more</a>
+                </div>
             </div>
         </section>
         <section class="our-services" id="our-services">
             <h2>OUR <span class="purple-text">SERVICES</span></h2>
             <div class="grid-container">
                 <div class="services">
-                    <i class="fa-solid fa-wallet"></i>
-                    <h4>SAVING MONEY</h4>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, fugit?</P>
+                    <div>
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div>
+                        <h4>SAVING MONEY</h4>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, fugit?</P>
+                    </div>
                 </div>
                 <div class="services">
-                    <i class="fa-solid fa-tree"></i>
-                    <h4>ENDLESS HIKING</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, cumque.</p>
+                    <div>
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div>
+                        <h4>ENDLESS HIKING</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, cumque.</p>
+                    </div>
                 </div>
                 <div class="services">
-                    <i class="fa-solid fa-socks"></i>
-                    <h4>AMAZING COMFORT</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, asperiores.</p>
+                    <div>
+                        <i class="fa-solid fa-socks"></i>
+                    </div>
+                    <div>
+                        <h4>AMAZING COMFORT</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, asperiores.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,7 +148,7 @@
                 <h2>OUR <span class="purple-text">GALLERY</span></h2>
             </div>
             <div class="gallery-box">
-                <div>
+                <div class="tour-photos">
                     <img class="tour-pictures" src="https://media.istockphoto.com/photos/amazing-meili-snow-mountain-and-mountain-range-at-yunnan-china-picture-id1294995108?b=1&k=20&m=1294995108&s=170667a&w=0&h=3V0Afi18NVPMR7m312V96fFolQxSmx__9k5I7GVVeA4=" alt="Tibet mountains.">
                     <img class="tour-pictures" src="https://images.unsplash.com/photo-1505993597083-3bd19fb75e57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YSUyMGlzbGFuZHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Java's volcano.">
                     <img class="tour-pictures" src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG9uZyUyMGtvbmd8ZW58MHx8MHx8&w=1000&q=80" alt="Hong Kong skyline.">
@@ -152,7 +168,6 @@
         </section>
     </main>
 
-
     <footer>
         <nav class="footer-navigation">
             <a href="#home">Home</a>
@@ -169,8 +184,7 @@
         <p>
         Copyright © Hiking Tours 2022. All Rights Reserved.
         </p>
-
     </footer>
-
+    
 </body>
 </html>
