@@ -4,13 +4,12 @@ body {
 }
 
 :root {
-    /* pavadinimai nėra super taiklūs*/
+    /* pavadinimai nėra super taiklūs, my bad*/
 --main-text-color: #645cff;
 --main-changes-color: #8580df;
 --addl-changes-color: rgb(151, 106, 21);
 --white-text: white;
 }
-
 
 header {
     display: flex;
