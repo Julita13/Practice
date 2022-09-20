@@ -1,0 +1,122 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ececec;
+}
+
+/*margins are not supposed to be set in negative values!*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  margin: -1rem -1rem 0 -1rem;
+}
+
+.main-logo {
+  width: 40%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1rem;
+}
+nav a {
+  color: #944da4;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0.2rem;
+}
+nav a:last-child {
+  margin-bottom: 1rem;
+}
+
+main {
+  background-color: white;
+  width: 95%;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  height: 13rem;
+}
+
+h1 {
+  color: #626c6e;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: -0.5rem;
+}
+
+th {
+  color: darkslategrey;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.7rem 0;
+}
+
+td {
+  color: #69696b;
+  padding: 0.7rem 0;
+}
+
+tr {
+  text-align: left;
+  border-bottom: 1px solid lightgrey;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 85%;
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  color: #69696b;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    height: 10rem;
+    margin: -0.5rem -0.5rem 1rem -0.5rem;
+  }
+  .main-logo {
+    width: 10rem;
+    margin-left: 10rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10rem;
+    margin-top: 3rem;
+  }
+  nav a {
+    margin: 1rem;
+  }
+  main {
+    background-color: white;
+    width: 75%;
+    border-radius: 0.3rem;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  h1 {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  table {
+    width: 95%;
+  }
+}/*# sourceMappingURL=style.css.map */
