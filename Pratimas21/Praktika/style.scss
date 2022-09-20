@@ -1,0 +1,85 @@
+@import 'styles/variables.scss';
+
+@mixin theme($theme: DarkGray) {
+    background-color: $theme;
+    box-shadow: 0 0 1px rgba($theme, .025); 
+    color: #fff;
+}
+
+@if $my-variable == true {
+    $color-one: blue;
+} @else {
+    $color-one:red;
+}
+
+body {
+    font: 100% $font-stack;
+}
+
+p {
+    color: $primary-color;
+}
+
+h1 {
+    color: $primary-color;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px; 
+        text-decoration: none;
+    }
+}
+
+.info {
+    @include theme;
+    // optional: width: (20px * 3)//
+}
+
+.alert {
+    @include theme($theme: DarkRed);
+}
+
+.success {
+    @include theme($theme: DarkGreen);
+}
+
+.dinosaur-div {
+    background-image: url(https://media.istockphoto.com/photos/tyrannosaurus-rex-picture-id182492703?b=1&k=20&m=182492703&s=170667a&w=0&h=dc9lgmf-nC0PfI_Z9AfLj4PQoZFgLUBw00lp6nX1704=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+#some-other-div {
+    @extend .dinosaur-div;
+    height: 600px;
+}
+
+.result {
+    color: $color-one;
+}
+
+.saturate {
+    width: 500px; 
+    height: 60px;
+    background-color: saturate($color: pink, $amount: 20%);
+}
+
+@for $i from 1 through 5 {
+    .content-div#{$i} {
+        background-color: darken(aqua, 0% +$i * 5);
+    }
+}
+

@@ -1,0 +1,84 @@
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+p {
+  color: green;
+}
+
+h1 {
+  color: green;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.info {
+  background-color: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.025);
+  color: #fff;
+}
+
+.alert {
+  background-color: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.025);
+  color: #fff;
+}
+
+.success {
+  background-color: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.025);
+  color: #fff;
+}
+
+.dinosaur-div, #some-other-div {
+  background-image: url(https://media.istockphoto.com/photos/tyrannosaurus-rex-picture-id182492703?b=1&k=20&m=182492703&s=170667a&w=0&h=dc9lgmf-nC0PfI_Z9AfLj4PQoZFgLUBw00lp6nX1704=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+#some-other-div {
+  height: 600px;
+}
+
+.result {
+  color: blue;
+}
+
+.saturate {
+  width: 500px;
+  height: 60px;
+  background-color: pink;
+}
+
+.content-div1 {
+  background-color: #00e6e6;
+}
+
+.content-div2 {
+  background-color: #00cccc;
+}
+
+.content-div3 {
+  background-color: #00b3b3;
+}
+
+.content-div4 {
+  background-color: #009999;
+}
+
+.content-div5 {
+  background-color: teal;
+}/*# sourceMappingURL=style.css.map */
