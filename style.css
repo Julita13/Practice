@@ -1,0 +1,288 @@
+/* Mobile First design */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0 2rem;
+    justify-content: center;
+}
+
+header { 
+    margin: 3rem 0.2rem 3rem 0.2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-items {
+    display: none;
+}
+
+.pink-text {
+    color: #FF3998;
+}
+
+.first-grid-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.hamburger-menu i {
+    color: #999;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+.starting-paragraph {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.launching-soon h1 {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.grey-text {
+    color: #777;
+}
+
+.pink-robot {
+    height: 22rem;
+    margin-top: -4rem;
+}
+
+.colored-button {
+    width: 10rem;
+    text-align: center;
+    border-color: pink;
+    border-radius: 40px;
+    background-color: white;
+    margin-top: 1rem;
+    padding: 1.3rem 1.5rem;
+}
+
+.colored-button a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.colored-section {
+    background-image: url(Atsiskaitymas/assets/background.svg);
+    background-size: cover;
+    padding: 6rem 2rem 1rem 3rem;
+    margin: 5rem -3rem 2rem -3rem;
+}
+
+.colored-section h1 {
+    font-size: 2.5rem;
+}
+
+.colored-section p {
+    font-size: 1.2rem;
+}
+
+.second-grid-container {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.grid-item-1 {
+    text-align: left;
+}
+
+.grid-item-3 {
+    text-align: left;
+}
+
+.grid-item-4 {
+    display: none;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    color: #555555;
+}
+
+.small-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.rare-auction {
+    margin-right: 1rem;
+}
+
+.golden-text {
+    color: #FF8139;
+}
+
+.right-aligned {
+    text-align: right;
+}
+.right-aligned h3 {
+    margin-top: -0.2rem;
+}
+
+.with-eth::before {
+    content:url('Atsiskaitymas/assets/eth.svg');
+    margin-right: 0.5rem;
+}
+
+.green-woman {
+    margin-top: 7rem;
+    height: 20rem;
+}
+
+.bordered-box {
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.bottom-line {
+    border-bottom: 2px solid #eeeeee;
+}
+
+
+.horizontal-align {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-align a {
+    color: #555555;
+    text-decoration: none;
+}
+
+.last-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.last-flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0.2rem 3rem 0.2rem;
+}
+
+.horizontal-align a:first-child {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.horizontal-align a {
+    font-size: 1.2rem;
+}
+
+.dark-heading {
+    color: #777777;
+    padding: 0.3rem 0;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    margin-bottom: 4rem;
+}
+
+.social-icons i {
+    color: #999999;
+    margin-right: 1rem;
+}
+
+footer {
+    padding-bottom: 5rem;
+    font-size: 1.2rem;
+}
+footer p {
+    color: #999999;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.invisible-footer {
+    display: none;
+}
+
+
+
+
+/* Desktop version */
+@media screen and (min-width: 992px) {
+
+    .navigation-items {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #6a6a6a;
+        margin: 0.5rem;
+    }
+
+    .launching-soon h1 {
+        font-size: 4rem;
+    }
+    .colored-section {
+        padding: 6rem 2rem 3rem 3rem;
+        margin: 5rem 1rem 2rem 0rem;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .second-grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: 7rem 0rem;
+        justify-content: center;
+    }
+
+    .grid-item-1, .grid-item-3 {
+        text-align: center;
+    }
+    
+    .last-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .last-flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .grid-item-4 {
+        display: block;
+    }
+
+    .invisible-footer {
+        display: block;
+    }
+}
