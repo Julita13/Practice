@@ -99,6 +99,13 @@ header nav {
     text-align: left;
 }
 
+.boomerang-logo {
+    width: 155px;
+    height: 47px;
+    object-fit: cover;
+    object-position: 1% 100%;
+}
+
 .grid-item-3 {
     text-align: left;
 }
@@ -267,6 +274,9 @@ footer p {
         text-align: center;
     }
     
+    .boomerang-logo {
+        width: auto;
+    }
     .last-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
