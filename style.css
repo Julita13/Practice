@@ -1,5 +1,18 @@
 /* Mobile First design */
 
+:root {
+--main-text-color: #999999; 
+--main-heading-color: black;
+--announcement-color: #FF3998;
+--secondary-text-color: #555555;
+--main-bg-color: white;
+--secondary-background-color: #eee;
+--main-underline-color: #2b2a2a;
+--special-color: #FF8139; 
+--special-heading-color: #777777; 
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0 2rem;
@@ -10,7 +23,7 @@ header {
     margin: 3rem 0.2rem 3rem 0.2rem;
 }
 
-header nav {
+.wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -19,24 +32,31 @@ header nav {
     display: none;
 }
 
-.pink-text {
-    color: #FF3998;
-}
-
-.first-grid-container {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-
+/* turiu suvokimą, kad čia turėtų būti hamburger tipo išskleidžiamas meniu, bet kadangi Java dar nesimokėm, šį karta pasitenkinau tiesiog ikonėlė :) */
 .hamburger-menu i {
-    color: #999;
+    color: var(--main-text-color);
     font-size: 2rem;
     margin-top: 0.2rem;
 }
 
-.starting-paragraph {
+.NFT-announcement {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.opening-paragraph {
     font-size: 1rem;
     font-weight: bolder;
+    color: var(--announcement-color);
+    letter-spacing: 0.1rem;
+}
+
+.launching-soon {
+    width: 50vw;
+}
+
+.pink-text {
+    color: var(--announcement-color);
 }
 
 .launching-soon h1 {
@@ -46,53 +66,62 @@ header nav {
 }
 
 .grey-text {
-    color: #777;
+    color: var(--secondary-text-color);
+    font-size: 1.3rem;
 }
 
-.pink-robot {
-    height: 22rem;
+.pink-creature {
+    position: absolute;
+    margin-left: 55%;
     margin-top: -4rem;
 }
 
+.pink-robot {
+    width: 420px;
+    height: auto;
+}
+
 .colored-button {
-    width: 10rem;
-    text-align: center;
-    border-color: pink;
+    width: 11rem;
+    height: 4rem;
     border-radius: 40px;
-    background-color: white;
     margin-top: 1rem;
-    padding: 1.3rem 1.5rem;
+    border: solid 3px transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, pink, red, darkorange, orange);
+    background-color: var(--main-bg-color);
+    background-color: border-box;
+    background-clip: content-box, border-box;
 }
 
 .colored-button a {
-    color: black;
+    color: var(--main-heading-color);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
+/* minusiniai margin'ai - I know, not a very cool idea. Bet kitaip šičia neišgalvojau, kaip padaryti :) */
 .colored-section {
     background-image: url(Atsiskaitymas/assets/background.svg);
     background-size: cover;
-    padding: 6rem 2rem 1rem 3rem;
-    margin: 5rem -3rem 2rem -3rem;
+    padding: 6rem 2rem 3rem 3rem;
+    margin: 5rem -2rem 2rem -3rem;
 }
 
 .colored-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .colored-section p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-.second-grid-container {
+.first-grid-container {
     display: grid;
-    gap: 2rem;
-    width: 100%;
+    gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
-    margin: 3rem auto;
-    text-align: center;
+    margin: 4rem auto;
+    text-align: left;
 }
 
 .grid-item-1 {
@@ -114,58 +143,84 @@ header nav {
     display: none;
 }
 
-.underlined-text {
-    text-decoration: underline;
-    color: #555555;
+.auction-offer h1 {
+    font-size: 3rem;
 }
 
-.small-flex {
+.underlined-text {
+    text-decoration: underline;
+    color: var(--main-underline-color)
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+
+.item-for-sale {
     display: flex;
     justify-content: space-between;
-    background-color: #eee;
+    background-color: var(--secondary-background-color);
     padding: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     margin-bottom: 3rem;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.flex-container {
-    display: flex;
-    margin-top: 2rem;
-}
-
-.rare-auction {
-    margin-right: 1rem;
+.rare-auction-item {
+    margin-right: 2rem;
 }
 
 .golden-text {
-    color: #FF8139;
+    color: var(--special-color);
+    font-size: 1rem;
 }
 
 .right-aligned {
     text-align: right;
 }
-.right-aligned h3 {
-    margin-top: -0.2rem;
+
+.right-aligned p:first-child {
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
-.with-eth::before {
+.right-aligned p:last-child {
+    font-size: 1.3rem;
+}
+.right-aligned h3 {
+    margin-top: -0.1rem;
+}
+
+.special-symbol::before {
     content:url('Atsiskaitymas/assets/eth.svg');
     margin-right: 0.5rem;
 }
 
+.second-grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-top: 2px solid var(--secondary-background-color);
+    border-bottom: 2px solid var(--secondary-background-color);
+    margin: 3rem auto;
+}
+
+.second-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .green-woman {
     margin-top: 7rem;
-    height: 20rem;
+    height: 24rem;
+    margin-bottom: -3.4rem;
 }
 
-.bordered-box {
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
-}
-
-.bottom-line {
+.bottom-lined {
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -180,16 +235,16 @@ header nav {
     text-decoration: none;
 }
 
-.last-grid-container {
+.useful-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.last-flex-container {
-    display: flex;
-    flex-direction: column;
-    margin: 5rem 0.2rem 3rem 0.2rem;
+.dark-heading {
+    color: var(--special-heading-color);
+    padding: 0.3rem 0;
+    font-size: 1.3rem;
 }
 
 .horizontal-align a:first-child {
@@ -198,13 +253,8 @@ header nav {
 }
 
 .horizontal-align a {
-    font-size: 1.2rem;
-}
-
-.dark-heading {
-    color: #777777;
-    padding: 0.3rem 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    padding-top: 0.8rem;
 }
 
 .social-icons {
@@ -212,16 +262,23 @@ header nav {
 }
 
 .social-icons i {
-    color: #999999;
+    color: var(--main-text-color);
     margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+.social-icons i:hover, .navigation-items a:hover, .horizontal-align a:hover, .hamburger-menu i:hover, .underlined-text:hover {
+    cursor: pointer;
+    color: var(--special-color);
 }
 
 footer {
     padding-bottom: 5rem;
-    font-size: 1.2rem;
+    padding-top: 2rem;
+    font-size: 1.3rem;
 }
 footer p {
-    color: #999999;
+    color: var(--main-text-color);
 }
 
 .footer-flex {
@@ -233,15 +290,16 @@ footer p {
     display: none;
 }
 
-
-
-
 /* Desktop version */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px){
 
     .navigation-items {
         display: block;
         font-size: 1.5rem;
+    }
+   
+    .pink-robot {
+        width: 600px;
     }
 
     .hamburger-menu {
@@ -250,34 +308,35 @@ footer p {
 
     nav a {
         text-decoration: none;
-        color: #6a6a6a;
+        color: var(--secondary-text-color);
         margin: 0.5rem;
     }
 
+
     .launching-soon h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
+
+
     .colored-section {
         padding: 6rem 2rem 3rem 3rem;
-        margin: 5rem 1rem 2rem 0rem;
+        margin: 10rem 1rem 2rem auto;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
 
-    .second-grid-container {
+    .first-grid-container {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin: 7rem 0rem;
+        margin: 7rem auto;
         justify-content: center;
-    }
-
-    .grid-item-1, .grid-item-3 {
-        text-align: center;
     }
     
     .boomerang-logo {
         width: auto;
+        margin-right: 3rem;
     }
-    .last-grid-container {
+    
+    .useful-info {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -286,10 +345,48 @@ footer p {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 4rem;
     }
 
     .grid-item-4 {
         display: block;
+    }
+
+    .auction-offer {
+        margin: 0 auto;
+    }
+
+    .showcase:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .bottom-lined {
+        border-bottom: none;
+    }
+   
+    
+    .second-grid-container {
+        padding-bottom: 7rem;
+    }
+
+    .green-woman {
+        margin-top: 2rem;
+        height: 35rem;
+        margin-bottom: -7.4rem;
+    }
+    
+    .useful-info div {
+        margin-right: 3rem;
+    } 
+
+    .useful-info {
+        margin-top: -1.5rem;
+    }
+
+    footer {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
     }
 
     .invisible-footer {
