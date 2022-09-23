@@ -12,7 +12,6 @@
 --special-heading-color: #777777; 
 }
 
-
 body {
     font-family: 'Inter', sans-serif;
     margin: 0 2rem;
@@ -70,6 +69,7 @@ header {
     font-size: 1.3rem;
 }
 
+/* minusiniai margin'ai - I know, not a very cool idea. Bet kitaip šičia neišgalvojau, kaip padaryti :) */
 .pink-creature {
     position: absolute;
     margin-left: 55%;
@@ -87,7 +87,7 @@ header {
     border-radius: 40px;
     margin-top: 1rem;
     border: solid 3px transparent;
-    background-image: linear-gradient(white, white), linear-gradient(to right, pink, red, darkorange, orange);
+    background-image: linear-gradient(var(--main-bg-color), var(--main-bg-color)), linear-gradient(to right, pink, red, darkorange, orange);
     background-color: var(--main-bg-color);
     background-color: border-box;
     background-clip: content-box, border-box;
@@ -100,7 +100,6 @@ header {
     font-weight: bold;
 }
 
-/* minusiniai margin'ai - I know, not a very cool idea. Bet kitaip šičia neišgalvojau, kaip padaryti :) */
 .colored-section {
     background-image: url(Atsiskaitymas/assets/background.svg);
     background-size: cover;
@@ -124,7 +123,7 @@ header {
     text-align: left;
 }
 
-.grid-item-1 {
+.grid-item-1, .grid-item-3 {
     text-align: left;
 }
 
@@ -133,10 +132,6 @@ header {
     height: 47px;
     object-fit: cover;
     object-position: 1% 100%;
-}
-
-.grid-item-3 {
-    text-align: left;
 }
 
 .grid-item-4 {
@@ -190,6 +185,7 @@ header {
 .right-aligned p:last-child {
     font-size: 1.3rem;
 }
+
 .right-aligned h3 {
     margin-top: -0.1rem;
 }
@@ -217,13 +213,12 @@ header {
 .green-woman {
     margin-top: 7rem;
     height: 24rem;
-    margin-bottom: -3.4rem;
+    margin-bottom: -3.3rem;
 }
 
 .bottom-lined {
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid var(--secondary-background-color);
 }
-
 
 .horizontal-align {
     display: flex;
@@ -231,7 +226,7 @@ header {
 }
 
 .horizontal-align a {
-    color: #555555;
+    color: var(--secondary-text-color);
     text-decoration: none;
 }
 
@@ -277,6 +272,7 @@ footer {
     padding-top: 2rem;
     font-size: 1.3rem;
 }
+
 footer p {
     color: var(--main-text-color);
 }
@@ -312,11 +308,9 @@ footer p {
         margin: 0.5rem;
     }
 
-
     .launching-soon h1 {
         font-size: 5rem;
     }
-
 
     .colored-section {
         padding: 6rem 2rem 3rem 3rem;
@@ -365,7 +359,6 @@ footer p {
         border-bottom: none;
     }
    
-    
     .second-grid-container {
         padding-bottom: 7rem;
     }
