@@ -23,7 +23,7 @@
 // 3. Sukurt kintamąjį su savo amžiumi. Patikrink: jei amžius didesnis nei 100, 
 // arba mažesnis nei 0 - tegul išmeta "Invalid age"; jei tarp 1 ir 18 - "Child"; jei tarp 19 ir 99 - "Adult".
 
-//const age = 33;
+// const age = 33;
 
 // if(age > 100 || age < 0) {
 //   console.log("Invalid Age");
@@ -33,10 +33,10 @@
 //   console.log("Child");
 // }
 
-// 4. Sukurk variable 'car', kuris bus lygus kažkokiam automobilio prekės ženklui.
-// Sukurk if-else, kuris pasakys ar tas brand'as priklauso VW Group, ar BMW Group, ar nei vienam.
-// VW group priklauso: VW, Audi, Bentley, Bugatti, Lamborghini, Porsche.
-// BMW group priklauso: BMW, Mini, Rolls - Royce.
+// // 4. Sukurk variable 'car', kuris bus lygus kažkokiam automobilio prekės ženklui.
+// // Sukurk if-else, kuris pasakys ar tas brand'as priklauso VW Group, ar BMW Group, ar nei vienam.
+// // VW group priklauso: VW, Audi, Bentley, Bugatti, Lamborghini, Porsche.
+// // BMW group priklauso: BMW, Mini, Rolls - Royce.
 
 const car = "Toyota"
 
