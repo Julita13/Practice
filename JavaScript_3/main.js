@@ -52,7 +52,7 @@
 //       alert( 'We hope that this page looks ok!' );
 //   }
 
-const browser = "Edge";
+const browser = "Chrome";
 
 if(browser === "Chrome" || browser === "Firefox" || browser === "Safari" || browser === "Opera") {
     alert("Okay, we support the browsers too");
