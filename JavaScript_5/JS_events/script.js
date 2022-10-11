@@ -1,12 +1,12 @@
 // document.querySelector("button").addEventListener("click", sayHello);
-//         document.querySelector("p").addEventListener("copy", dontcopy)
+// document.querySelector("p").addEventListener("copy", dontCopy);
 
 //         function sayHello () {
 //             document.querySelector("h1").textContent = "Hello"
 //         }
 
-//         function dontcopy() {
-//             alert("Don't copy!")
+//         function dontCopy() {
+//             alert("Don't copy!");
 //         }
 
 // 1. Pratimas
@@ -24,7 +24,7 @@
 // 3. Pratimas
 // Padaryti, kad paspaudus ant mygtuko, po apačia atsirastų paragrafe tekstas apie jus.
 
-// document.querySelector("button").addEventListener("click", appearText)
+// document.querySelector("button").addEventListener("click", appearText);
 
 // function appearText(){
 //     document.querySelector("p").innerText = 'Tekstas apie mane :)'
@@ -91,3 +91,12 @@
 // Jame įrašykite "Nejudinkite pelytės". Jeigu vartotojas pajudins pelytę - pakeiskite tekstą į "Kiek galima neklausyti?!".
 
 document.body.addEventListener("mousemove", () => document.getElementById("output").innerText = "Kiek galima neklausyti?!");
+
+// PASICHEKINTI! 
+// 6 Pratimas
+
+// let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// document.querySelector('button').addEventListener('click', () => {
+//   document.querySelector('h1').innerText = randomNumber;
+// })
