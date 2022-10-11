@@ -49,10 +49,10 @@ function randomNumber() {
 // ir grąžins sumą šių žodžių ilgių (t.y. "Petras", "Slekys" => 12).
 
 function countLength(vardas, pavardė){
-    return vardas.length + pavardė.length
+    return vardas.length + pavardė.length;
   }
   
-  console.log(countLength('Julita', 'Mažuolytė'))
+  console.log(countLength('Julita', 'Mažuolytė'));
 
 //4. Pratimas
 // Sukurkite funkciją, kuri pagal paduotą skaičių grąžins abecelės raidę (pvz. 0 => A; 1 => B; 2 => C ir t.t.). Hint: Jums reikės pirma sukurti 
@@ -60,10 +60,10 @@ function countLength(vardas, pavardė){
 
 function countingLetters (i) {
     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    return alphabet[i]
+    return alphabet[i];
   }
   
-  console.log(countingLetters(8))
+  console.log(countingLetters(8));
 
 //5. Pratimas
 // Sukurkite funkciją, kuri paims tris parametrus (n1, n2, operator). Operator gali būti "sum", "sub", "div", "multi" 
