@@ -66,3 +66,9 @@ function myFunction(color) {
 // mygtukas.addEventListener('click', () => {
 //     rezultatas.innerText = `Labas, ${inputLaukas.value}`;
 //   })
+
+// document.addEventListener('keydown', (event) => {
+//   if(event.ctrlKey && event.key === 'c'){ 
+//     alert('kopijuojam')
+//   }
+// })
