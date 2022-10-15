@@ -41,3 +41,5 @@ function Driving(event) {
             document.querySelector("h1").innerText = `Dar mokysis vairuoti: ${vardas}`
         }
 }
+
+
