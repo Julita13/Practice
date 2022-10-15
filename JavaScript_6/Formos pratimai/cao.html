@@ -7,19 +7,19 @@
     <title>CAO pratimai</title>
 </head>
 <body>
-    <form>
+    <form id="firstform">
         <h2>Norėdami sužinoti bilieto kainą, nurodykite savo amžių</h2>
-        <input type="text" name="age" id="age" placeholder="Įveskite savo amžių">
+        <input type="text" name="age" id="age" placeholder="Įveskite savo amžių" required>
         <button type="submit">Skaičiuoti kainą</button><br><br><br>
         <h1></h1><br><br><br>
     </form>
     <form id="secondform">
         <h2>Norėdami sužinoti, ar esate tinkami kariuomenei, atsakykite į žemiau pateiktus klausimus</h2>
-        <input type="text" name="amžius" id="amžius" placeholder="Įveskite savo amžių"><br><br>
+        <input type="text" name="amžius" id="amžius" placeholder="Įveskite savo amžių" required><br><br>
         <Label for="criminal">Turiu kriminalinės praeities</Label>
-        <input type="radio" name="radiobutton" id="criminal"><br>
+        <input type="radio" name="radiobutton" id="criminal" required><br>
         <label for="goodboy">Neturiu kriminalinių įrašų</label>
-        <input type="radio" name="radiobutton" id="goodboy"><br><br>
+        <input type="radio" name="radiobutton" id="goodboy" required><br><br>
         <button type="submit">Sužinoti atsakymą</button><br><br>
         <h1 id="secondanswer"></h1>
     </form>

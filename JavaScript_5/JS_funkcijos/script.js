@@ -86,6 +86,24 @@ function pratimas(n1, n2, operator) {
   
   console.log(pratimas(10, 5, 'sum'));
 
+  // 5. Pratimas ANOTHER WAY TO SOLVE 
+
+  // function pratimas(n1, n2, operator) {
+  //   if (operator === "sum") {
+  //     console.log(n1+ n2);
+  //   } else if (operator === "min") {
+  //     console.log(n1-n2);
+  //   } else if (operator === "div") {
+  //     console.log(n1/n2);
+  //   } else if (operator === "multi") {
+  //     console.log(n1*n2)
+  //   } else {
+  //     console.log("Please, check your function - something went wrong")
+  //   }
+  // }
+  
+  // pratimas(6, 2, "multi")
+
 //6. Pratimas
 // Sukurkite dvi funkcijas: viena grąžina random skaičių nuo 1 iki 10 (įskaitant), 
 // kita - gautą skaičių pakelia kvadratu. Iškviesk abi funkcijas vienoje eilutėje (pvz. squareNum(generateRandomNumber()) => 1...100).

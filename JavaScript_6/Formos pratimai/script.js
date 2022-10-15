@@ -16,7 +16,7 @@ function calculatePrice(event) {
      }
 }
 
-document.querySelector("form").addEventListener("submit", calculatePrice);
+document.querySelector("#firstform").addEventListener("submit", calculatePrice);
 
 
 // 2 pratimas
