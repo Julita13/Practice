@@ -1,9 +1,9 @@
 // // 1 Pratimas
 function calculatePrice(event) {
     event.preventDefault();
-    const price = 6; 
+    let price = 6; 
     const puseKainos= price/2; 
-    const trečdalisKainos = price/3;
+    const trečdalisKainos = price-(price/3); // const trečdalisKainos = Math.ceil(price*0.66);
     const age = document.querySelector("input[name=age]").value;
     const showPrice = document.querySelector("h1");
 
