@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Formos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="first-task">
+        <h1>1. Norėdami sužinoti, kokio dydžio bonusas Jums priklauso, atsakykite į klausimą: kiek metų dirbate mūsų įmonėje?</h1>
+        <input type="text" name="duration" id="duration" placeholder="Nurodykite savo stažą" required>
+        <button type="submit">Pateikti atsakymą</button><br><br>
+        <h1 id="first-answer"></h1><br>
+    </form>
+    <form id="second-task">
+        <h1>2. Įveskite metus, norėdami sužinoti ar jie keliamieji:</h1>
+        <input type="text" name="year" id="year" placeholder="Pvz. 2022" required>
+        <button type="submit">Įvesti</button><br><br>
+        <h1 id="second-answer"></h1><br>
+    </form>
+    <form id="third-task">
+        <h1>3. Nurodykite temperatūrą Celsijaus (°C) laipsniais</h1>
+        <input type="text" name="temperature" id="temperature" placeholder="(°C)" required>
+        <button type="submit">Konvertuoti į °F</button>
+        <h1 id="third-answer"></h1><br>
+    </form>
+    <form id="fourth-task">
+        <h1>4. Norėdami užsiregistruoti, užpildykite žemiau esančius laukus:</h1>
+        <input type="email" name="email" id="email" placeholder="Jūsų elektroninis paštas" required><br><br>
+        <label for="agree">Sutinku gauti laiškus</label>
+        <input type="checkbox" name="agree" id="agree"><br><br>
+        <button type="submit">Registruotis</button><br><br>
+        <h1 id="fourth-answer"></h1><br>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html> 
