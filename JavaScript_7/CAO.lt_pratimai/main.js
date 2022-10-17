@@ -80,3 +80,22 @@ function completeRegistration(event) {
     fourthAnswer.innerText = agreement ? `El. paštas ${email} sėkmingai užregistruotas` : "Registracija nesėkminga";
 }
 
+// 5. Pratimas
+//  Sukurk programą, kurioje bus du inputai - vardas (text) ir skaičius (number) ir tuščias <ul>. 
+// Įrašius formoje duomenis, po apačia turi susikurti list itemų tiek, kiek tu parašei skaičių. 
+// List itemuose turi būti tavo vardas :)
+
+function createList(event) {
+    event.preventDefault();
+    const vardas = document.querySelector("input[name=vardas]").value;
+    const myNumber = document.querySelector("input[name=skaičius]").value;
+    const fifthAnswer = document.querySelector("#fifth-answer");
+    fifthAnswer.innerHTML = ""
+    for (let i = 0; i < myNumber; i++) {
+        let tagLi = document.createElement("li");
+        tagLi.textContent = vardas;
+        fifthAnswer.append(tagLi)
+    }
+}
+
+document.querySelector("#fifth-task").addEventListener("submit", createList);
