@@ -117,7 +117,7 @@ function createTriangle(event) {
             outcome += "*";
         }
         outcome += "<br>";
-        sixthAnswer.innerText = outcome;
+        sixthAnswer.innerHTML = outcome; // štai čia ir buvo problema - ne inner.Text, o innerHtml;
     }
 }
 document.querySelector("#sixth-task").addEventListener("submit", createTriangle);
