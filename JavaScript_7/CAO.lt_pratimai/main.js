@@ -122,4 +122,4 @@ function createTriangle(event) {
 }
 document.querySelector("#sixth-task").addEventListener("submit", createTriangle);
 
-//  KAME PROBLEMA 6 PRATIME? 
+//  KAME PROBLEMA 6 PRATIME? - RESOLVED :)
