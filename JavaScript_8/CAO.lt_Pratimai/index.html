@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAO.lt pratimai</title>
+    <style>
+        p {color: red}
+    </style>
+</head>
+<body>
+    <!-- 1. Pratimas -->
+    <form id="first-task">
+        <h1>l. Pratimas</h1>
+        <label for="size">Įveskite "L" raidės dydį:</label><br><br>
+        <input type="number" name="size" id="size">
+        <p id="first-answer"></p>
+    </form>
+    <!-- 2. Pratimas -->
+    <form id="second-task">
+        <h1>2. Pratimas</h1>
+        <label for="dydis">Įveskite "C" raidės dydį:</label><br><br>
+        <input type="number" name="dydis" placeholder="skaičius" id="dydis">
+        <p id="second-answer"></p>
+    </form>
+     <!-- 3. Pratimas  -->
+        <h1>3. Pratimas</h1>
+        <label for="vardas">Įrašykite savo vardą:</label><br><br>
+        <input type="text" name="vardas" id="vardas" placeholder="Jūsų vardas" required>
+        <p id="third-answer"></p>
+    <!--  4. Pratimas -->
+        <form id="fourth-task">
+            <h1>4. Sužinokite, kuris skaičius arčiausiai 100!</h1>
+            <label for="">Įveskite pirmąjį skaičių</label><br><br>
+            <input type="number" name="firstnumber" id="first-number" placeholder="skaičius" required><br><br>
+            <label for="second-number">Įveskite antrąjį skaičių</label><br><br>
+            <input type="number" name="secondnumber" id="second-number" placeholder="skaičius" required> <br><br>
+            <button type="submit">Palyginkite skaičius</button>
+            <p id = fourth-answer></p>
+        </form>
+        <!-- 5. Pratimas -->
+        <form id="fifth-task">
+            <h1>5. Pratimas</h1>
+            <label for="guess">Atspėkite skaičių - nuo 1 iki 5: </label><br><br>
+            <input type="number" id="guess" name="guess" min="1" max="5" placeholder="1,2,3,4,5"><br><br>
+            <button type="submit">Spėti</button>
+            <p id="fifth-answer"></p>
+        </form>
+        <!-- 6. Pratimas -->
+        
+    <script src="main.js"></script>
+</body>
+</html>
