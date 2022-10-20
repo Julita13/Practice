@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petro pratimai</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button>Change</button>
+    <script>
+        const title = document.querySelector("h1");
+        title.style.color = "red";
+        title.style.background = "green";
+        title.style.width = "50%";
+        title.style.padding = "2 rem 1 rem";
+        title.style.borderRadius = "0.5rem";
+        console.log(title.style.color);
+        document.querySelector("button").addEventListener("click", () => {
+            title.style.color = "violet";
+            }
+        )
+    </script>
+</body>
+</html>
