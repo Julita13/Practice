@@ -58,8 +58,9 @@ jumpingButton.addEventListener('click', changePosition);
 // Jei įrašytos yra du simboliai arba mažiau - viso puslapio fonas raudonas. Jei daugiau nei du simboliai - puslapio fonas žalias.
 
 const writingName = document.querySelector("#write-name");
-writingName.addEventListener("input", event => {
-    const name = event.target.value;
+
+writingName.addEventListener("input", () => { 
+    const name = document.querySelector("input[name=write-name]").value;
     document.body.style.backgroundColor = name.length < 3 ? "red" : "green"
 })
 
