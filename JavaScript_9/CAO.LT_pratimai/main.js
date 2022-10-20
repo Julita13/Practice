@@ -88,6 +88,8 @@ function generateRandomColor() {
   const green = Math.floor(Math.random()*255)+1;
   const blue = Math.floor(Math.random()*255)+1;
   return "rgb(" + red + "," + green + "," + blue + ")";
+  // arba TAS PATS: 
+  // return `rgb(${red}, ${green}, ${blue})`;
 }
 
 lastButton.addEventListener("click", event => {
