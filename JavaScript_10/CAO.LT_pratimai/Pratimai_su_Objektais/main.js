@@ -41,17 +41,18 @@
     // atsispausdink objektą ir pažiūrėk ar viskas gerai veikia. Hint: už funkcijos ribų negali atspausdinti objekto, 
     // nes const person = {} yra limituotas konkrečiame bloke (šiuo atveju - funkcijoje). Už jos ribų jis neegzistuoja.
 
-    document.querySelector("#second-task").addEventListener("submit", e => {
-        e.preventDefault(); 
-        const myName = document.querySelector("input[name=myname]").value;
-        const mySurname = document.querySelector("input[name=surname]").value;
-        const person = {
-          name: myName, 
-          surname: mySurname,
-        }
-        console.log(person)
+    function createObject(event) {
+      event.preventDefault(); 
+      const myName = document.querySelector("input[name=myname]").value;
+      const mySurname = document.querySelector("input[name=surname]").value;
+      const person = {
+        name: myName, 
+        surname: mySurname,
       }
-      );
+      console.log(person)
+    }
+    
+    document.querySelector("#second-task").addEventListener("submit", createObject);
 
     // 3. Pratimas
     // Sukurk formą, kurioje vartotojas įrašo vardą ir įveda amžių. Pateikus duomenis, turi susikurti objektas, kuriame du properties - name ir isLegalAge. 
