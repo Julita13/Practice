@@ -26,16 +26,13 @@ const facebookProfile = {
   console.log(facebookProfile.removeFriend());
 
 //    5. Pratimas
-
-
 const cars = [
-    {type: "BMW", price: '30.000'},
-    {type: "MERCEDES", price: '35.000'},
-    {type: "HONDA", price: '18.000'},
-    {type: "VOLVO", price: '25.000'}
-  ];
-  
-  cars.forEach(function (item, index){
-    console.log(`${cars[index].type} car price $${cars[index].price}`);
-  });
-  
+  {type: "BMW", price: '30.000'},
+  {type: "MERCEDES", price: '35.000'},
+  {type: "HONDA", price: '18.000'},
+  {type: "VOLVO", price: '25.000'}
+];
+
+cars.forEach(function (item, index){
+  console.log(`${cars[index].type} car price $${cars[index].price}`);
+});
