@@ -8,19 +8,24 @@
 </head>
 <body>
     <form id="farm-issues">
+        <h1>"Fermos" pratimas</h1><br>
         <label for="width">Plotis:</label><br>
         <input type="number" id="width" name="width"><br><br>
         <label for="length">Ilgis:</label><br>
         <input type="number" name="length" id="length"><br><br>
         <label for="n">Bulvių kg: </label><br>
-        <input type="number" name="n" id="n"><br><br>
+        <input type="number" name="n" id="n" value="120"><br><br>
         <label for="m">Runkelių kg: </label><br>
-        <input type="number" name="m" id="m"><br><br>
+        <input type="number" name="m" id="m" value="150"><br><br>
         <label for="k">Morkų kg: </label><br>
-        <input type="number" name="k" id="k"><br><br>
+        <input type="number" name="k" id="k" value="100"><br><br>
         <button type="submit">Skaičiuoti</button>
+        <p id="bulves"></p>
+        <p id="runkeliai"></p>
+        <p id="morkos"></p>
         <p id="answer"></p>
         <p id="pelnas"></p>
+        <p id="result"></p>
     </form>
     <script src="main.js"></script>
 </body>
