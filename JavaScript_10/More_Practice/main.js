@@ -34,5 +34,7 @@ const cars = [
 ];
 
 cars.forEach(function (item, index){
-  console.log(`${cars[index].type} car price $${cars[index].price}`);
+  // console.log(`${cars[index].type} car price $${cars[index].price}`);
+  console.log(`${item.type} car price $${item.price}`); // tas pats, kas ir 37 eilutėje
+  console.log(index);
 });
