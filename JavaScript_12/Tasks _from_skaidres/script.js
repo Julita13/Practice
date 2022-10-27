@@ -37,3 +37,11 @@ function secondTask(myNumber) {
   
 //   secondTask(81);
 //   secondTask(7);
+
+// 3. Pratimas
+
+
+
+
+
+// 4. Pratimas
