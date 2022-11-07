@@ -82,7 +82,7 @@ const arrEvery = [1, 2, 3, 4, 5, 6, 11];
 const lessTen = arrEvery.every(num => num < 10);
 console.log(lessTen); // gražina FALSE, nes vienas elementas - neatitinka išsikeltos sąlygos. O ją turi atitikti VISI ELEMENTAI
 
-// SORT: sortuoja mūsų masyvą pagal tamtikrą kriterijų:
+// SORT: sortuoja mūsų masyvą pagal tam tikrą kriterijų:
 
 const arrSort = [1, 2, 3, 4, 5, 6];
 descOrder = arr.sort((a, b) => a > b ? -1 : 1);

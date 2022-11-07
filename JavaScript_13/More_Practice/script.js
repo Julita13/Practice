@@ -33,8 +33,6 @@ let ropliai = ["Krokodilas", "Vėžlys"];
 let gyvūnai = naminiaiGyvūnai.concat(laukiniaiGyvūnai, ropliai);
 console.log(gyvūnai);
 
-// INCLUDES:
-
 // INDEXOF: ieško nurodyto elemento nuo nurodyto atspirties taško.
 
 console.log(mėnesiai.indexOf('Kovas')); // jei nenurodome skaičių, ieško nuo nulinio elemento. Jei išmeta -1, reiškia tokio elemento NĖRA. 
