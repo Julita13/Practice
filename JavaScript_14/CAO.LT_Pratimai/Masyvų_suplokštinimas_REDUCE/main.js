@@ -11,7 +11,7 @@ console.log(sum2);
 
 const favoriteNumbers = [13, 7, 5, 2, 10];
 let sumOfFavoriteNumbers = favoriteNumbers.reduce((a, b)  => a + b);
-console.log (sumOfFavoriteNumbers);
+console.log(sumOfFavoriteNumbers);
 // ARBA: 
 const favoriteNumbers2 = [13, 7, 5, 2, 10];
 console.log(favoriteNumbers2.reduce((a, b) => a + b));
