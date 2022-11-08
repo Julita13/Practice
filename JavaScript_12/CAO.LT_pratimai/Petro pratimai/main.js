@@ -2,8 +2,8 @@
 
 console.log("bmw".toUpperCase()) === "BMW";
 
-const name = "Julita";
-console.log(name.charAt(0)); // paduoda pirmąją raidę;
-console.log(name.toUpperCase());
+const vardas = "Julita";
+console.log(vardas.charAt(0)); // paduoda pirmąją raidę;
+console.log(vardas.toUpperCase());
 console.log("Jonas".toUpperCase());
-console.log(name.toUpperCase().charAt(1));
+console.log(vardas.toUpperCase().charAt(1));
