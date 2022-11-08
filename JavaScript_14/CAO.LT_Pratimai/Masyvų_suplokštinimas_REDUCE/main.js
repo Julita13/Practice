@@ -24,6 +24,14 @@ const cars = ["BMW", "MCB", "VWG", "Toyota", "AUDI"];
 let threeSymbols = cars.reduce((a, b) => b.length === 3 ? a + 1 : a, 0)
 console.log(threeSymbols);
 
+// ARBA: 
+
+console.log(cars.reduce((a, b) => {
+    if(b.length === 3) {
+      a = a + 1
+    } return a
+  }, 0));
+  
 // 3.Pratimas
 // Sukurk array su daug skaičių. Grąžink didžiausią skaičių iš array naudojant reduce.
 

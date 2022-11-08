@@ -75,4 +75,4 @@ const prekės = [
     return `pigiausia prekė: ${items[0].name}, brangiausia prekė: ${items[items.length - 1].name}`
   }
   
-  console.log(fn(prekės))
+  console.log(fn(prekės));

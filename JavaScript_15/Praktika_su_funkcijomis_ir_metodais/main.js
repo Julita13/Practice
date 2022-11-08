@@ -2,9 +2,9 @@
 // Parašykite funkciją, kuri priims minutes (number) ir grąžins sekundes (string: "x seconds").
 // Pvz: fn(3) => "180 seconds"
 
-function calculateSeconds(number) {
-    const seconds = number * 60;
-    return `${seconds} sekundes`
+function calculateSeconds(minutes) {
+    const seconds = minutes * 60;
+    return `${seconds} sekundės`
   }
 console.log(calculateSeconds(3))
 
@@ -14,7 +14,7 @@ const fn = (n1) => n1 * 60 + " seconds";
 console.log(fn(3));
 
 // 2.Pratimas
-// Parašykite funkciją, kuri priims varotojų amžių ir grąžins kiek dienų jis jau nugyveno (skaičių, metų tikslumu, 
+// Parašykite funkciją, kuri priims vartotojų amžių ir grąžins kiek dienų jis jau nugyveno (skaičių, metų tikslumu, 
 // neskaičiuojant keliamųjų metų - t.y. visada 365 dienos).
 // Pvz: fn(20) => 7300.
 
@@ -131,3 +131,67 @@ console.log(fn8(3));
 //   }
 //   return generatedNums;
 // }
+
+// 9.Pratimas
+// Sukurkite arrow funkciją, kuri paimtų du skaičius ir grąžintų boolean value ar skaičių suma didesnė už 100 ar mažesnė (ir lygi).
+// Pvz.: fn(10, 50) -> true
+
+const compareSum = (n, m) => n + m > 100;
+console.log(compareSum(50, 51));
+
+// TAS PATS (ilgesnis variantas)
+const compareSum2 = (n, m) => n + m > 100 ? true : false;
+console.log(compareSum2(50, 4))
+
+// 10. Pratimas
+// Parašykite funkciją, kuri paimtų array (susideda iš objektų su vardu ir amžium) bei grąžina array išrykiuotą pagal amžių ir jei amžius sutampa 
+// – vardus a>z tvarka. Pvz.: fn([{name: „Alfredas“, age: 25}, {name: „Jonas“, age: 25}, {name: „Kasparas“, age: 20}]) -> 
+// [{name: „Kasparas“, age: 20}, {name: „Alfredas“, age: 25}, {name: „Jonas“, age: 25}]
+
+
+//  BLOGAI padarytas!! Pasiklausti
+const myArray = [
+  {
+    name: 'Žygimantas', 
+    age: 25,
+  }, 
+  {
+    name: 'Jonas', 
+    age: 25,
+  }, 
+  {name: 'Kasparas', 
+  age: 20,
+  },
+]
+
+const compareAge = (array) => array.sort((a, b) => a.age - b.age)
+const compareNames = (array) => array.sort(array.name)
+console.log(compareNames(myArray))
+
+
+// CAO atsakymas: 
+// const fn10 = (array) => array.sort((a, b) => a.name > b.name ? 1 : -1).sort((a, b) => a.age - b.age);
+// console.log(fn10(myArray));
+
+
+// 11.Pratimas
+// Parašykite funkciją, į kurią padavus datą, pasakys ar išeiginė ar ne (visos išeiginės turi būti saugomos array.)
+// Pvz.: fn(new Date(2020, 12, 25)) -> true
+
+// CAO ATSAKYMAS: 
+
+function isItHoliday(date) {
+  const holidays = ["2022-01-01", "2022-02-16", "2022-03-11"];
+  return holidays.some(holiday => (new Date(holiday)).getDate() === date.getDate())
+}
+
+console.log(isItHoliday(new Date("2022-03-12")));
+
+// 12. Pratimas
+// Sukurkite funkciją, kuri kaip parametrą gaus array su skaičiais. Funkcija turės grąžinti mažiausią trūkstamą skaičių iš array.
+// Pvz. Paduodu: [1, 2, 4, 5]; Grąžina: 3
+
+// CAO ATSAKYMAS
+const numeriukai = [1, 2, 4, 5]; 
+const missingNumber = (array) => array.find((x, i) => x + 1 !== array[i + 1]) + 1;
+console.log(missingNumber(numeriukai));
