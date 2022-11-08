@@ -26,6 +26,11 @@ console.log(threeSymbols);
 
 // ARBA: 
 
+let threeSymbols2 = cars.filter(a => a.length<=3).length
+console.log(threeSymbols2);
+
+// ARBA: 
+
 console.log(cars.reduce((a, b) => {
     if(b.length === 3) {
       a = a + 1
