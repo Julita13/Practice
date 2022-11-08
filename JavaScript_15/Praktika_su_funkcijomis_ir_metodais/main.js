@@ -88,3 +88,46 @@ function reverseLowerLetters2(string) {
   
 console.log(reverseLowerLetters2(vardas));
 
+//  7. Pratimas
+// Parašykite funkciją, kuri paims array skaičių ir grąžins didžiausią neigiamą skaičių.
+// pvz: [-1, -100, -5, 10, 0, 11] -> "-1"
+// Mano sprendimas: 
+
+const differentNumbers = [-100, -5, -1, 10, 0, 11];
+const negativeNumbers = differentNumbers.filter(x => x < 0).sort((a, b) => b - a)[0];
+
+console.log(negativeNumbers);
+
+// ARBA: 
+
+console.log(differentNumbers.filter(x => x < 0).sort((a, b) => b - a)[0]);
+
+// ARBA CAO sprendimas: 
+
+const fn7 = (nums) => nums.filter(x => x < 0).sort((a, b) => b - a)[0];
+console.log(fn7(differentNumbers));
+
+// 8. Pratimas
+// Sukurkite funkciją, kuri paims skaičių parametrą ir sugeneruos array su tiek random skaičių (nuo 1 - 10)), kiek parametre nurodyta.
+// T.y. "3" => [1, 6, 3].
+
+let fn8 = (num) => {
+  let newArray = [];
+  for(let i = 0; i < num; i++) {
+    let randomNumber = Math.floor(Math.random() * 11);
+    newArray.push(randomNumber)
+  }
+  return newArray
+}
+
+console.log(fn8(3));
+
+// ARBA CAO.LT
+// 
+// const randomNumbers = (quant) => {
+//   const generatedNums = [];
+//   for(let i = 0; i < quant; i++){
+//     generatedNums.push(Math.floor(Math.random() * 10) + 1)
+//   }
+//   return generatedNums;
+// }
