@@ -87,8 +87,9 @@ class Persona {
   mokinys1.myName();
   mokytojas1.mySalary();
   
-  // INHERITANCE: praplečia objektą: papildo mūsų klasę
-  // INKAPSULIACIJA: metodai ir savybės yra uždaromi tik toje klasėje. Grotelėmis pažymime naują property konstruktoriaus viduje iškart 
+  // INHERITANCE: praplečia objektą: papildo mūsų klasę "tėvinės" klasės parametrais. EXTENDS prie FUNCTION ir super ... konstruktoriaus pirmoje eilutėje! 
+  // INKAPSULIACIJA: metodai ir savybės yra uždaromi tik toje klasėje. Grotelėmis # pažymime naują property konstruktoriaus viduje iškart. 
+  // Kitaip tariant, objekto vidiniai duomenys yra slepiami ir jais galima manipuliuoti tik naudojant objekto viešus metodus
   // laužtinių skliaustų
-  // ABSTRAKCIJA: objekto nepriklausomumas nuo išorinių sudedamųjų dalių; pvz: MOKINYS tik apie MOKINĮ. Slepiam tai, ko nereikia 
-//   POLIMORFIZMAS
+  // ABSTRAKCIJA: objekto nepriklausomumas nuo išorinių sudedamųjų dalių; pvz: MOKINYS tik apie MOKINĮ. Slepiam tai, ko nereikia.
+//   POLIMORFIZMAS: many - form - daug formų skirtingų objektų tos pačios properties gali turėti skirtingas reikšmes

@@ -58,13 +58,13 @@ function Automobilis(b, m, e, p) {
     alert("vrooom")
   }
   this.getPrice = function() {
-    let basePrice = this.basePrice;
+    let finalPrice = this.basePrice;
     if(this.engine === "electric") {
-      return basePrice + 10000;
+      return finalPrice + 10000;
     } else if(this.engine === "diesel") {
-      return basePrice + 5000;
+      return finalPrice + 5000;
     } 
-    return basePrice;
+    return finalPrice;
   }
 }
 
