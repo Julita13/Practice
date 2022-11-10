@@ -5,13 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAO.LT pratimai</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form id="first-task">
@@ -29,6 +23,22 @@
                 <td id="my-surname"></td>
             </tr>
         </table>
+    </form>
+    <form id="second-task">
+        <h1>2. Pratimas</h1>
+        <h2>Įveskite reikalaujamą informaciją: </h2>
+        <label for="car-brand">Car brand:</label><br>
+        <input type="text" name="car-brand" id="car-brand" placeholder="brand" required><br><br>
+        <label for="model">Model:</label><br>
+        <input type="text" name="model" id="model" placeholder="model" required><br><br>
+        <label for="mileage">Mileage:</label><br>
+        <input type="number" name="mileage" id="mileage" placeholder="mileage" required><br><br>
+        <label for="price">Price: </label><br>
+        <input type="number" name="price" id="price" placeholder="price" required><br><br>
+        <label for="image">Add your image: </label><br>
+        <input type="text" name="image" id="image" placeholder="https://example.com"><br><br>
+        <button type="submit">Submit</button>
+
     </form>
 
     <script src="script.js"></script>

@@ -4,41 +4,21 @@
 // parodys amžių.
 
 function Person(name, lastname, birthyear) {
-    this.name = name; 
-    this.lastname = lastname;
-    this.birthyear = birthyear;
-    this.showAge = function() {
-      console.log(new Date().getFullYear() - this.birthyear);
-    };
-    this.showFullName = function() {
-      console.log(this.name, this.lastname)
-    }
+  this.name = name; 
+  this.lastname = lastname;
+  this.birthyear = birthyear;
+  this.showAge = function() {
+    console.log(new Date().getFullYear() - this.birthyear)
+  };
+  this.showFullName = function() {
+    console.log(this.name, this.lastname)
   }
-  
-  const asmuo = new Person("Julita", "Mažuolytė", 1989);
-  console.log(asmuo.lastname);
-  asmuo.showFullName();
-  asmuo.showAge();
+}
 
-//   TOMO SPRENDIMAS
-// class Person {
-//   constructor(name, lastname, birthYear) {
-//     this.name = name;
-//     this.lastname = lastname;
-//     this.birthYear = birthYear;
-//   }
-//   fullName() {
-//     return this.name + ' ' + this.lastname;
-//   }
-//   age() {
-//     return (new Date().getFullYear()) - this.birthYear;
-//   }
-// }
-
-// const asmuo1 = new Person('Tomas', 'Mockevičius', 1994);
-
-// console.log(asmuo1.fullName())
-// console.log(asmuo1.age())
+const asmuo = new Person("Julita", "Mažuolytė", 1989);
+console.log(asmuo.lastname);
+asmuo.showFullName();
+asmuo.showAge();
 
 // 2.Pratimas
 // Naudojant ES6 klases sukurkite objekto Filmas(Movie) kūrimo konstruktorių, kuris turės šias savybes:
@@ -72,28 +52,28 @@ function Person(name, lastname, birthyear) {
 // Antras sprendimo būdas
 
 class Movie {
-  constructor(name, year, director, budget, income) {
-  this.name = name;
-  this.year = year;
-  this.director = director;
-  this.budget = budget;
-  this.income = income;
+    constructor(name, year, director, budget, income) {
+    this.name = name;
+    this.year = year;
+    this.director = director;
+    this.budget = budget;
+    this.income = income;
+    }
+    getIntroduction() {
+      return `${this.name}, ${this.year}, ${this.director}`
+    };
+    getProfit() {
+      const result = this.income - this.budget;
+      return result
+    }
   }
-  getIntroduction() {
-    return `${this.name}, ${this.year}, ${this.director}`
-  };
-  getProfit() {
-    const result = this.income - this.budget;
-    return result
-  }
-}
-
-const filmas = new Movie("Titanic", 1997, "James Cameron", 1000000, 50000000);
-const filmas2 = new Movie("Inception", 2010, 'Christopher Nolan', 4896, 589654)
-console.log(filmas.director);
-console.log(filmas.getIntroduction());
-console.log(filmas2.director);
-console.log(filmas2.getProfit());
+  
+  const filmas = new Movie("Titanic", 1997, "James Cameron", 1000000, 50000000);
+  const filmas2 = new Movie("Inception", 2010, 'Christopher Nolan', 4896, 589654)
+  console.log(filmas.director);
+  console.log(filmas.getIntroduction());
+  console.log(filmas2.director);
+  console.log(filmas2.getProfit());
 
 // 3.Pratimas
 // Sutvarkykite kodą, kad pavyktų sukurti objektą Rabbit:
@@ -114,22 +94,22 @@ console.log(filmas2.getProfit());
 
 
 class Animal {
-  constructor(name) {
-    this.name = name;
+    constructor(name) {
+      this.name = name;
+    }
   }
-}
-class Rabbit extends Animal {
-  constructor(name, ...args) {
-    super(...args);
-    this.name = name;
-    this.created = `${new Date()}`;
+  class Rabbit extends Animal {
+    constructor(name, ...args) {
+      super(...args);
+      this.name = name;
+      this.created = `${new Date()}`;
+    }
   }
-}
-let rabbit = new Rabbit("White Rabbit");
-
-console.log(rabbit);
-console.log(rabbit.created);
-
+  let rabbit = new Rabbit("White Rabbit");
+  
+  console.log(rabbit);
+  console.log(rabbit.created);
+  
 //   ARBA:
 // class Animal {
 //     constructor(name) {
@@ -145,7 +125,7 @@ console.log(rabbit.created);
 //   let rabbit = new Rabbit("White Rabbit");
 //   console.log(rabbit.created);
 
-// 4.Pratimas
+  // 4.Pratimas
 
 // Naudojant ES6 klases sukurkite automobilių objektų kūrimo konstruktorių(Car), kuris turės šias savybes:
 // 1. make; 2. model; 3. year.
@@ -162,38 +142,37 @@ console.log(rabbit.created);
 //   Testavimui, sukurkite du objektus, kurie turės nurodytas savybes ir metodus
 
 class Car {
-  constructor(make, model, year) {
-    this.make = make;
-    this.model = model;
-    this.year = year;
-  }
-  getIntroduction = () => `${this.make} ${this.model}`
-  getAge = () => {
-    const thisYear = new Date().getFullYear(); 
-    const age = thisYear - this.year;
-    return age > 10 ? `11 metų arba senesnis` : `10 metų arba naujesnis`
-  }
-}
-
-class Motorcycle extends Car{
-  constructor (wheels, ...args) {
-    super(...args)
-    this.wheels = wheels;
-  }
-  getWheelsNumber = () => {
-    if(this.wheels === 2) {
-      return `Motociklas turi 2 ratus`
-    } else if(this.wheels === 3) {
-      return `motociklas turi 3 ratus`
+    constructor(make, model, year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+    }
+    getIntroduction = () => `${this.make} ${this.model}`
+    getAge = () => {
+      const thisYear = new Date().getFullYear(); 
+      const age = thisYear - this.year;
+      return age > 10 ? `11 metų arba senesnis` : `10 metų arba naujesnis`
     }
   }
-}
 
-const myCar = new Car("Toyota", "Yaris", 2008);
-const motorcycle = new Motorcycle (2, "Ducatti", "MX5", 2001)
-console.log(myCar);
-console.log(myCar.getIntroduction());
-console.log(myCar.getAge());
-console.log(motorcycle);
-console.log(motorcycle.getWheelsNumber());
+  class Motorcycle extends Car{
+    constructor (wheels, ...args) {
+      super(...args)
+      this.wheels = wheels;
+    }
+    getWheelsNumber = () => {
+      if(this.wheels === 2) {
+        return `Motociklas turi 2 ratus`
+      } else if(this.wheels === 3) {
+        return `motociklas turi 3 ratus`
+      }
+    }
+  }
 
+  const myCar = new Car("Toyota", "Yaris", 2008);
+  const motorcycle = new Motorcycle (2, "Ducatti", "MX5", 2001)
+  console.log(myCar);
+  console.log(myCar.getIntroduction());
+  console.log(myCar.getAge());
+  console.log(motorcycle);
+  console.log(motorcycle.getWheelsNumber());

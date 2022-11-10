@@ -84,3 +84,42 @@ function Person(vardas, pavarde) {
   //   }
   //   }
   // } )
+
+  // 3.Pratimas
+  // 3. Prisimename darbą su masyvais: sukurkite funkciją, kuri priims masyvą ir išfiltruos visus pasikartojančius 
+  // skaičius bei šį masyvą grąžins atgal.
+  // Pvz:
+  // paduodu: [1, 3, 3, 5, 5, 5]
+  // grąžina: [1, 3, 5]
+
+  // 1 sprendimo būdas su filter ir indexOf
+  const myArray = [1, 3, 3, 5, 5, 5];
+  const newArray = myArray.filter((number, index) => {
+    return myArray.indexOf(number) === index;
+  });
+
+  console.log(newArray);
+
+  //  2 sprendimo būdas su forEach
+  let secondArray = [];
+  myArray.forEach((number) => {
+    if (!secondArray.includes(number)) {
+      secondArray.push(number);
+  }
+  });
+
+  console.log(secondArray);
+
+  // 3 sprendimo būdas - pats trumpiausias - su Set()
+
+  let thirdArray = [... new Set(myArray)];
+  console.log(thirdArray);
+
+  //  Tas pats, tik užrašymo būdas skiriasi: 
+  const removeDuplicates = arr => [...new Set(arr)];
+  console.log(removeDuplicates([1, 3, 3, 5, 5, 5]));
+
+  // 2.Pratimas
+  // Sukurkite HTML formą, kurioje vartotojas galės įrašyti (į input laukelius): car brand, model, mileage, price ir image (url laukelis). 
+  // Per konstruktorių, sukuriams objektas ir jis atvaizduojamas po forma (CSS rašykite CSS'e) kaip atvaizduota nuotraukoje apačioje. 
+  // Paspaudus ant automobilio bloko - turi alert išmesti kainą.

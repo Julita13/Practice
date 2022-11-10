@@ -1,3 +1,5 @@
+// 1.Pratimas
+
 function Person(name, surname) {
     this.name = name;
     this.surname = surname;
@@ -23,3 +25,13 @@ function Person(name, surname) {
     person.addToTable();
   });
   
+// 3. Pratimas
+
+const myArray = [1, 3, 3, 5, 5, 5];
+
+let thirdArray = [... new Set(myArray)];
+console.log(thirdArray);
+
+//  Tas pats, tik užrašymo būdas skiriasi: 
+const removeDuplicates = arr => [...new Set(arr)];
+console.log(removeDuplicates([1, 3, 3, 5, 5, 5]));
