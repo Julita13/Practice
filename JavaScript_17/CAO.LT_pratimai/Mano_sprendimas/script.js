@@ -62,3 +62,25 @@ function Person(vardas, pavarde) {
     newPerson.printNameInTable();
   }
   )
+
+
+  // document.querySelector("#first-task").addEventListener('keypress', (event) => {
+  //   event.preventDefault();
+  //   const fullName = document
+  //     .querySelector("input[name=vardas]")
+  //     .value;
+  //   if(event.key === "Enter") {
+  //     console.log(fullName)
+  //     if(fullName) {
+  //       let name = fullName.trim().split(" ");
+  //     const vardas = name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase();
+  //     const pavarde = name[1].charAt(0).toUpperCase() + name[1].slice(1).toLowerCase();
+  
+  //     const newPerson = new Person(vardas, pavarde);
+  //     newPerson.printNameInTable();
+  //   } else {
+  //     let smallElement = document.querySelector("small");
+  //     smallElement.innerText = "Jus nieko neįvedėte";
+  //   }
+  //   }
+  // } )
