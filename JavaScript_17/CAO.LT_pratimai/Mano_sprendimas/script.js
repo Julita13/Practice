@@ -123,3 +123,47 @@ function Person(vardas, pavarde) {
   // Sukurkite HTML formą, kurioje vartotojas galės įrašyti (į input laukelius): car brand, model, mileage, price ir image (url laukelis). 
   // Per konstruktorių, sukuriams objektas ir jis atvaizduojamas po forma (CSS rašykite CSS'e) kaip atvaizduota nuotraukoje apačioje. 
   // Paspaudus ant automobilio bloko - turi alert išmesti kainą.
+
+
+  class Car {
+    constructor(brand, model, mileage, price, image) {
+      this.brand = brand;
+      this.model = model;
+      this.mileage = mileage;
+      this.price = price;
+      this.image = image;
+    }
+    showCar() {
+      const answerCell = document.getElementById("answer");
+
+      const frame = document.createElement("div");
+      frame.addEventListener("click", () => alert(`This ${this.brand} ${this.model} costs: ${this.price}$`));
+
+      let imgCell = document.createElement("img");
+      imgCell.src = this.image;
+
+      let textCell = document.createElement("p");
+      textCell.innerText = `${this.brand}  ${this.model}`;
+
+      frame.append(imgCell, textCell);
+      answerCell.append(frame);
+    }
+  }
+
+  document.querySelector("#second-task").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const brand = document.querySelector("input[name=car-brand]").value;
+    const model = document.querySelector("input[name=model]").value;
+    const mileage = document.querySelector("input[name=mileage]").value;
+    const price = document.querySelector("input[name=price]").value;
+    const image = document.querySelector("input[name=image]").value;
+
+    const newCar = new Car(brand, model, mileage, price, image);
+    console.log(newCar);
+    newCar.showCar();
+  })
+
+
+  // JSITORIAUS veikianti versija: 
+  // https://jsitor.com/QUFmgR6kWw

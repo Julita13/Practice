@@ -5,16 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAO atsakymai</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
+    <!-- <form>
         <input type="text" id="fullname" placeholder="Enter your name">
         <button type="submit">Submit</button>
       </form>
@@ -30,7 +24,19 @@
         </thead>
         <tbody>
         </tbody>
-      </table>
+      </table> -->
+
+      <form>
+        <input id="brand" type="text" placeholder="Enter car brand">
+        <input id="model" type="text" placeholder="Enter model">
+        <input id="mileage" type="text" placeholder="Enter mileage">
+        <input id="price" type="text" placeholder="Enter price">
+        <input id="image" type="text" placeholder="Enter image URL">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+      
+      <div class="wrapper"></div>
     <script src="main.js"></script>
 </body>
 </html>
