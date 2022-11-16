@@ -95,7 +95,7 @@ const repeatLetters = (myString, number) => {
 
 console.log(repeatLetters(myString, 2));
 
-// 
+// IRGI NEVEIKIA:
 // const string = "Julita turi 13 kačių";
 // const newString = string.split("").map((item) => item + item).join("");
 // console.log(newString)
