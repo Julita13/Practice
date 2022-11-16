@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petro pamokslai</title>
+</head>
+<body>
+    <h1></h1>
+    <form >
+        <input type="text" name="name" id="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.querySelector("h1").textContent = localStorage.getItem("name");
+
+document.forms[0].addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = e.target.elements.name.value;
+   
+    JSON.stringify()
+    localStorage.setItem("name", array);
+});
+
+const cars = ["BMW", "Audi"];
+console.log(typeof cars); // parodo masyvą
+console.log(typeof JSON.stringify(cars)) // stringify konvertuoja ir masyvas patampa stringu
+console.log(JSON.parse(JSON.stringify(cars))); // parse - gražina į pradžią / konvertuoja string'ą į array'u
+; 
+
+    </script>
+</body>
+</html>
