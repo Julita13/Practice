@@ -68,3 +68,26 @@ fetch("https://randomuser.me/api/")
 // );
 
 // promise.then(script => alert('Another handler...'));
+// Kodas su pažadais turi augti iš viršaus į apačią, ne į dešinę
+// We may have as many .then handlers as we want, and then use a single .catch at the end to handle errors in all of them.
+
+//ASYNC/AWAIT
+
+// async function f() {
+//   return 1;
+// }
+
+// f().then(alert); // 1
+
+
+// works only inside async functions
+// let value = await promise;
+
+// The setTimeout() method calls a function after a number of milliseconds.
+// 1 second = 1000 milliseconds.
+
+// The setTimeout() is executed only once.
+
+// If you need repeated executions, use setInterval() instead.
+
+// Use the clearTimeout() method to prevent the function from starting.
