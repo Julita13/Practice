@@ -69,13 +69,7 @@ async function getUsers() {
   
   getUsers();
   
-  
-  
-  
-  
-  
-  
-  
+
   
   // norint pasižiūrėti, kas yra paimama iš puslapio, reikia spausti F12, tada Network, 
   // run, ir ten prie response - api

@@ -8,14 +8,14 @@ let randomPerson = (user) => {
     newImage.src = user.picture.large;
     newImage.alt = `${user.name.first} profile picture`;
 
-    let newName = document.createElement("h2");
+    let newName = document.createElement("h1");
     newName.innerText = `${user.name.first} ${user.name.last}`;
 
     let age = document.createElement("h2");
     age.innerText = `${user.dob.age} years old`;
     age.style.cssText = "color: green";
 
-    let email = document.createElement("h4");
+    let email = document.createElement("h3");
     email.innerText = `${user.email}`;
     email.style.cssText = "color: grey";
     
@@ -24,7 +24,7 @@ let randomPerson = (user) => {
     document.body.append(newProfile);
 }
 
-const findRandomUser = async () => {
+const showRandomUser = async () => {
   try {
     const response = await fetch("https://randomuser.me/api/");
     if(response.ok) {
@@ -36,7 +36,7 @@ const findRandomUser = async () => {
 }
 };
 
-findRandomUser();
+showRandomUser();
 
 // 2.Pratimas
 // Naudojant "https://boiling-reaches-93648.herokuapp.com/week-3/party" - pasiimkite informaciją iš šito puslapio 
@@ -56,7 +56,7 @@ const findUser = (users, userName) => {
       else {
         answer.innerText = `${userName} nėra VIP narys`
       }
-  }
+  };
   
   const checkPersonsStatus = async() => {
     try {
