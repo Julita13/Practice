@@ -12,48 +12,57 @@
 
 
 const vipCheckBox = document.createElement("input");
-vipCheckBox.type = "checkbox";
+vipCheckBox.setAttribute("type","checkbox");
 vipCheckBox.id = "checkVipStatus";
 
 const vipLabel = document.createElement("label");
 vipLabel.setAttribute("for", "checkVipStatus");
 vipLabel.innerText = "VIP only";
 
-document.body.append(vipLabel, vipCheckBox);
+const searchInput = document.createElement("input");
+searchInput.setAttribute("type", "search");
+searchInput.setAttribute("id", "search");
+searchInput.setAttribute("name", "search");
+
+const searchButton = document.createElement("button");
+searchButton.innerText = "Search for robot";
+
+const newForm = document.createElement("form");
+newForm.append(searchInput, searchButton);
+
+document.body.append(vipLabel, vipCheckBox, newForm);
 
 
 const createEmptyTable = () => {
-    const myTable = document.createElement("table");
-    const myTableHead = document.createElement("thead");
-    const myTableBody = document.createElement("tbody");
-    const myHeadRow = document.createElement("tr");
+  const myTable = document.createElement("table");
+  const myTableHead = document.createElement("thead");
+  const myTableBody = document.createElement("tbody");
+  const myHeadRow = document.createElement("tr");
 
-    const idHead = document.createElement("th");
-    idHead.innerText = "ID numeris";
+  const idHead = document.createElement("th");
+  idHead.innerText = "ID numeris";
 
-    const pictureHead = document.createElement("th");
-    pictureHead.innerText = "Nuotrauka";
+  const pictureHead = document.createElement("th");
+  pictureHead.innerText = "Nuotrauka";
 
-    const vardasHead = document.createElement("th");
-    vardasHead.innerText = "Vardas";
+  const vardasHead = document.createElement("th");
+  vardasHead.innerText = "Vardas";
 
-    const surnameHead = document.createElement("th");
-    surnameHead.innerText = "Pavardė";
+  const surnameHead = document.createElement("th");
+  surnameHead.innerText = "Pavardė";
 
-    const cityHead = document.createElement("th");
-    cityHead.innerText = "Miestas";
+  const cityHead = document.createElement("th");
+  cityHead.innerText = "Miestas";
 
-    const colorHead = document.createElement("th");
-    colorHead.innerText = "Mėgstama spalva";
+  const colorHead = document.createElement("th");
+  colorHead.innerText = "Mėgstama spalva";
 
-    myHeadRow.append(idHead, pictureHead, vardasHead, surnameHead, cityHead, colorHead);
-    myTableHead.append(myHeadRow);
-    myTable.append(myTableHead, myTableBody);
+  myHeadRow.append(idHead, pictureHead, vardasHead, surnameHead, cityHead, colorHead);
+  myTableHead.append(myHeadRow);
+  myTable.append(myTableHead, myTableBody);
 
-    document.body.append(myTable);
-  };
-
-createEmptyTable();
+  document.body.append(myTable);
+};
 
 function showRobots(robots) {
   const tableBody = document.querySelector("tbody");
@@ -86,20 +95,33 @@ function showRobots(robots) {
     const newRow = document.createElement("tr");
     newRow.append(myId, photo, vardas, surname, city, color);
     tableBody.append(newRow);
+  });
+
+  const ourCheckBox = document.querySelector("input[type=checkbox]");
+
+  ourCheckBox.addEventListener("change", (event) => {
+    const vipsOnly = robots.filter((robot) => robot.vip);
+    console.log(vipsOnly);
+
+    event.target.checked ? showRobots(vipsOnly) : showRobots(robots);
+    // if (event.target.checked) {
+    //   console.log("VIPs only selected");
+    //   showRobots(vipsOnly);
+    // } else {
+    //   console.log("VIPs are not selected");
+    //   showRobots(robots)
+    // }
+  });
+
+  const mySearch = document.querySelector("form");
+
+  mySearch.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchString = document.querySelector("#search").value.toLowerCase();
+    const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchString));
+    showRobots(filteredRobots);
   })
 };
-
-const ourCheckBox = document.querySelector("input[type=checkbox]");
-
-ourCheckBox.addEventListener("change", (event) => {
-  if (event.target.checked) {
-    console.log("VIPs only selected");
-    // showRobots(data.filter(robot => robot.vip));
-  } else {
-    console.log("VIPs are not selected");
-    // showRobots(data);
-}
-});
 
 async function getUsers() {
   try {
@@ -114,5 +136,9 @@ async function getUsers() {
   }
 };
 
+createEmptyTable();
 getUsers();
 
+
+// Pasitikrinti kas neveikia? 
+// https://jsitor.com/fVqP4YpSeM
