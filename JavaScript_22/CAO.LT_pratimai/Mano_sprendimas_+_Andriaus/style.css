@@ -1,0 +1,15 @@
+table, th, td {
+    border-collapse: collapse;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 3rem;
+};
+
+tbody > tr:nth-child(2n) {
+  background-color: #eee;
+}
+
+tbody > tr:nth-child(2n+1) {
+  background-color: #ddd;
+}
