@@ -5,3 +5,11 @@ table, th, td {
     text-align: center;
     margin-top: 3rem;
 };
+
+tbody > tr:nth-child(2n) {
+    background-color: #eee;
+  }
+  
+  tbody > tr:nth-child(2n+1) {
+    background-color: #ddd;
+  }

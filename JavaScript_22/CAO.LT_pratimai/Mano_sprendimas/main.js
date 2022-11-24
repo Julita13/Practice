@@ -10,27 +10,46 @@
 //     Suvedus duomenis, lentelėje turi prasifiltruoti pagal vardą arba pavardę (fullname contains search string). 
 //     Capitalizacija turėtų būti nesvarbi.
 
+function createSearchArea(robots) {
+  const vipCheckBox = document.createElement("input");
+  vipCheckBox.setAttribute("type", "checkbox");
+  vipCheckBox.id = "checkVipStatus";
 
-const vipCheckBox = document.createElement("input");
-vipCheckBox.setAttribute("type","checkbox");
-vipCheckBox.id = "checkVipStatus";
+  const vipLabel = document.createElement("label");
+  vipLabel.setAttribute("for", "checkVipStatus");
+  vipLabel.innerText = "VIP only";
 
-const vipLabel = document.createElement("label");
-vipLabel.setAttribute("for", "checkVipStatus");
-vipLabel.innerText = "VIP only";
+  const searchInput = document.createElement("input");
+  searchInput.setAttribute("type", "search");
+  searchInput.setAttribute("id", "search");
+  searchInput.setAttribute("name", "search");
 
-const searchInput = document.createElement("input");
-searchInput.setAttribute("type", "search");
-searchInput.setAttribute("id", "search");
-searchInput.setAttribute("name", "search");
+  const searchButton = document.createElement("button");
+  searchButton.innerText = "Search for robot";
 
-const searchButton = document.createElement("button");
-searchButton.innerText = "Search for robot";
+  const newForm = document.createElement("form");
+  newForm.append(searchInput, searchButton);
 
-const newForm = document.createElement("form");
-newForm.append(searchInput, searchButton);
+  document.body.append(vipLabel, vipCheckBox, newForm);
 
-document.body.append(vipLabel, vipCheckBox, newForm);
+  const ourCheckBox = document.querySelector("input[type=checkbox]");
+
+  ourCheckBox.addEventListener("change", (event) => {
+    const vipsOnly = robots.filter((robot) => robot.vip);
+    // console.log(vipsOnly);
+    event.target.checked ? showRobots(vipsOnly) : showRobots(robots);
+  }
+  );
+
+  const mySearch = document.querySelector("form");
+
+  mySearch.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchString = document.querySelector("#search").value.toLowerCase();
+    const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchString));
+    showRobots(filteredRobots);
+  })
+};
 
 
 const createEmptyTable = () => {
@@ -96,31 +115,6 @@ function showRobots(robots) {
     newRow.append(myId, photo, vardas, surname, city, color);
     tableBody.append(newRow);
   });
-
-  const ourCheckBox = document.querySelector("input[type=checkbox]");
-
-  ourCheckBox.addEventListener("change", (event) => {
-    const vipsOnly = robots.filter((robot) => robot.vip);
-    console.log(vipsOnly);
-
-    event.target.checked ? showRobots(vipsOnly) : showRobots(robots);
-    // if (event.target.checked) {
-    //   console.log("VIPs only selected");
-    //   showRobots(vipsOnly);
-    // } else {
-    //   console.log("VIPs are not selected");
-    //   showRobots(robots)
-    // }
-  });
-
-  const mySearch = document.querySelector("form");
-
-  mySearch.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const searchString = document.querySelector("#search").value.toLowerCase();
-    const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchString));
-    showRobots(filteredRobots);
-  })
 };
 
 async function getUsers() {
@@ -129,16 +123,18 @@ async function getUsers() {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
-      showRobots(data);
+      return data;
     }
   } catch (error) {
     console.log(`message: `, error.message);
   }
 };
 
-createEmptyTable();
-getUsers();
+async function init() {
+  const data = await getUsers();
+  createSearchArea(data);
+  createEmptyTable();
+  showRobots(data)
+}
 
-
-// Pasitikrinti kas neveikia? 
-// https://jsitor.com/fVqP4YpSeM
+init();
