@@ -44,6 +44,7 @@
     border: 1px solid rgb(2,212,177);
     border-radius: 0.2rem;
     margin-right: 5rem;
+    text-decoration: none;
 }
 
 .right-button:hover {
