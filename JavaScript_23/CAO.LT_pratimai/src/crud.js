@@ -25,21 +25,3 @@ console.log(newCar);
 
 
 
-async function postData(car) {
-  try {
-    const response = await fetch(baseUrl, {
-      method: 'POST',
-      body: JSON.stringify(newCar),
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      const data = await response.json();
-      getCars()
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};

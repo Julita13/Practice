@@ -35,6 +35,8 @@ async function getCars() {
 
 getCars();
 
+
+
 // import {getCars, postData} from './src/crud.js';
 // const myForm = document.querySelector("#my-form");
 // const tableBody = document.querySelector("#table-body");
@@ -91,4 +93,7 @@ getCars();
 
 // https://jsitor.com/8cqxJAacFh  veikiantis variantas : 1 padaryta. 2 ne taip. To be continued
 
-//  https://jsitor.com/S788_s8o8O - Andriaus atsakymas
+//  htOtps://jsitor.com/S788_s8o8 - Andriaus atsakymas
+
+
+// https://jsitor.com/mrMjB6ik0_ - pilniausias atsakymas so far
