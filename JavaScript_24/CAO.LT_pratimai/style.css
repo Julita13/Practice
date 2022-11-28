@@ -2,6 +2,7 @@
     background-color: rgb(2,212,177);
     padding: 2rem;
     padding-left: 5rem;
+    margin-top: 2rem;
 }
 
 .white-text {
@@ -11,15 +12,17 @@
 
 .grey-text {
     color:rgb(91, 91, 91);
+    font-weight: 500;
 }
 
 .flex-wrapper {
     display: flex;
-    align-content: space-around;
+    justify-content: space-between;
 }
 
 .button-area {
     padding-left: 5rem;
+    padding-bottom: 2rem;
 }
 
 .white-button {
@@ -40,7 +43,7 @@
     padding: 0.3rem 1rem;
     border: 1px solid rgb(2,212,177);
     border-radius: 0.2rem;
-    margin-left: 30rem;
+    margin-right: 5rem;
 }
 
 .right-button:hover {
@@ -49,4 +52,46 @@
     border: 1px solid rgb(2,212,177);
     border-radius: 0.2rem;
     color: rgb(2,212,177);
+}
+
+.flat-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 4em;
+  justify-content: space-around;
+}
+
+.second-page {
+    margin-left: 5em;
+}
+
+.green-button {
+    background-color: rgb(2,212,177);
+    color: white;
+    padding: 0.3rem 1rem;
+    border: 1px solid rgb(2,212,177);
+    border-radius: 0.2rem;
+    margin-right: 5rem;
+}
+
+.green-button:hover {
+    padding: 0.3rem 1rem; 
+    background-color: white;
+    border: 1px solid rgb(2,212,177);
+    border-radius: 0.2rem;
+    color: rgb(2,212,177);
+}
+
+#image, #price, #description {
+    width: 70%;
+    padding: 0.4rem;
+    border: 1px solid rgb(202, 196, 196);
+    border-radius: 0.2rem;
+}
+
+#city {
+    padding: 0.3rem;
+    background-color: white;
+    border: 1px solid rgb(202, 196, 196);
+    border-radius: 0.2rem;
 }

@@ -8,27 +8,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="green-wrapper">
-        <h1 class="white-text">Property List</h1>
-        <h4 class="white-text">See all the houses you want!</h4>
-    </div>
-    <div class="button-area">
-        <div>
-            <h4 class="grey-text">Filter:</h4>
-        </div>
-        <div class="flex-wrapper">
-            <div>
-                <button type="submit" class="white-button">Vilnius</button>
-                <button type="submit" class="white-button">Kaunas</button>
-                <button type="submit" class="white-button">Klaipėda</button>
-            </div>
-            <div>
-                <button class="right-button">Add Property +</button>
-            </div>
-        </div>
-    </div>
-    <div id="flat-profiles">
-    </div>
-    <script src="main.js"></script>
+	<div class="green-wrapper">
+		<h1 class="white-text">Property List</h1>
+		<h4 class="white-text">See all the houses you want!</h4>
+	</div>
+	<div class="button-area">
+		<div>
+			<h4 class="grey-text">Filter:</h4>
+		</div>
+		<div class="flex-wrapper">
+			<div>
+				<button type="submit" class="white-button" id="vilnius">Vilnius</button>
+				<button type="submit" class="white-button" id="kaunas">Kaunas</button>
+				<button type="submit" class="white-button" id="klaipeda">Klaipėda</button>
+			</div>
+			<div class="right-sided">
+				<button class="right-button">Add Property +</button>
+			</div>
+		</div>
+	</div>
+	<div id="flat-profiles" class="flat-info"></div>
+
+	<div class="green-wrapper">
+		<h1 class="white-text">Add your property for sale</h1>
+		<h4 class="white-text">Yes, you can sell where you live and get cash!!</h4>
+	</div>
+	<div class="second-page">
+		<form id="my-form">
+			<h4 class="grey-text">Add Property</h4>
+			<label for="image">Img</label><br>
+			<input type="text" id="image" name="image" placeholder="https://google.com/logo.png" required><br><br>
+			<label for="price">Price, EUR</label><br>
+			<input type="number" id="price" name="price" placeholder="50000" required><br><br>
+			<label for="description">Description</label><br>
+			<textarea id="description" name="description" placeholder="anything you would like to say?" required></textarea><br><br>
+			<label for="city">City</label><br>
+			<select name="city" id="city" required>
+				<option value="Vilnius">Vilnius</option>
+				<option value="Kaunas">Kaunas</option>
+				<option value="Klaipeda">Klaipeda</option>
+			</select><br><br>
+			<button type="submit" class="green-button" id="green-button">Add Property +</button><br><br>
+      <small id="answer"></small>
+		</form>
+	</div>
+	<script src="main.js"></script>
 </body>
 </html>
