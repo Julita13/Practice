@@ -67,10 +67,10 @@ myForm.onsubmit = async (event) => {
   postData(newProduct).then((item) => {
     console.log(item);
   });
-  
+
   setTimeout(function () {
-      getProducts();
-    }, 3000);
+    getProducts();
+  }, 5000);
 };
 
 const postData = async (data) => {
@@ -84,7 +84,13 @@ const postData = async (data) => {
       },
     });
     if (response.ok) {
-      return await response.json();
+      const data = await response.json();
+      if (data.msg === 'Product added') {
+        alert("Jūsų produktas sėmingai pridėtas")
+        return data;
+      } else {
+        alert("Duomenų įrašyti nepavyko")
+      }
     }
   } catch (error) {
     console.error(error);
@@ -92,6 +98,9 @@ const postData = async (data) => {
 };
 
 getProducts();
+
+
+// https://jsitor.com/zK9nqBDDdO
 
 
 // https://jsitor.com/zK9nqBDDdO
