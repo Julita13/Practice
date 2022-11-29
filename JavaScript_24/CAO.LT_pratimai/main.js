@@ -94,8 +94,12 @@ myForm.onsubmit = async (event) => {
    console.log(newFlat);
    postData(newFlat).then((item) => {
      console.log(item);
-   })
-};
+
+  setTimeout(function(){
+    getFlats(); 
+  }, 5000);
+  })
+   };
 
 const postData = async (data) => {
   try {
@@ -122,6 +126,9 @@ const postData = async (data) => {
     console.error(error);
   }
 }
+
+
+
 
 
 
