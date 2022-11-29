@@ -1,0 +1,25 @@
+#show-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.submit-button {
+  width: 10em;
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+}
+
+input {
+  width: 30%;
+  color: rgb(110, 109, 109);
+  border: 1px solid lightgrey;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+}
+
+.second-page {
+  margin-left: 2em;
+  margin-top: 4em;
+}

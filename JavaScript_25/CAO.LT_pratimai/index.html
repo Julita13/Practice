@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAO.LT pratimai</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+	<main>
+		<div id="show-products"></div>
+		<div class="second-page">
+			<form id="my-form">
+				<h2>Pridėti prekę</h2>
+				<div>
+					<input type="text" id="image" name="image" placeholder="image" required><br><br>
+					<input type="text" id="title" name="title" placeholder="title" required><br><br>
+					<input type="number" id="price" step="0.01" name="price" placeholder="price" required><br><br>
+                </div>
+					<button type="submit" id="submit-button" class="submit-button">Add product </button>
+			</form>
+
+		</div>
+	</main>
+	<script src="script.js"></script>
 </body>
 </html>
