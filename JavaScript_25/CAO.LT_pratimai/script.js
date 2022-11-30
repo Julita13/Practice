@@ -1,4 +1,4 @@
-const baseUrl = "https://golden-whispering-show.glitch.me";
+const baseUrl = "https://golden-whispering-show.glitch.me/";
 
 const myForm = document.querySelector("#my-form");
 
@@ -26,6 +26,7 @@ function showProducts(products) {
     deleteButton.setAttribute("type", "submit");
     deleteButton.style.cssText = "width: 20%; padding: 0.2rem; background-color: white; border: 1px solid lightgrey; font-size: 0.5rem; color: black; margin-bottom: 0.5rem; margin-top: -1rem"
     deleteButton.innerText = "Ištrinti";
+    deleteButton.addEventListener("click", () => deleteProduct(product.id));
     const buttonDiv = document.createElement("div");
     buttonDiv.style.cssText = "display: flex; justify-content: center"
     buttonDiv.append(deleteButton)
@@ -96,6 +97,20 @@ const postData = async (data) => {
     console.error(error);
   }
 };
+
+const deleteProduct = async (id) => {
+  try {
+    const response = await fetch(baseUrl + id, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      const data = await response.json();
+      getProducts();
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 getProducts();
 
