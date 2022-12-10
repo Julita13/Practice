@@ -73,4 +73,8 @@ cukrai.addEventListener("click", () => {
     sortedFruits.forEach(item => {
         rezultatas.innerHTML += `<div>${item.name} - ${item.sugar}</div>`
     })
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 365d7fb294cc2199b86d0166f179f52833ecc80a
