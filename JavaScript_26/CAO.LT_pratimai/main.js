@@ -64,3 +64,5 @@ async function init() {
 }
 
 init();
+
+// veikia!
