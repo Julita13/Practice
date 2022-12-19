@@ -150,6 +150,24 @@ $items = [
 // * |12|* |14|*
 // 16|* |18|* |20
 
+for($i=1; $i<=20; $i++){
+    if($i%2 === 0) {
+        echo "|$i";
+    } else {
+        echo "|*"; 
+    }
+}
+// $num = 20;
+// for ($i = 1; $i <= 10; $i++){
+//     echo "<tr>";
+//         for($j = 1; $j <= $num; $j++){
+//         echo "<td>$j</td>";
+//         }
+//     echo "</tr>";
+// }
+
+
+echo "\n\n";
 //12. Pratimas
 // Turite dvimatį masyvą su informacija apie jūsų mėgstamus aktorius. Kiekvieno masyvo elemento vertė yra asociacinis masyvas,
 // reprezentuojantis vieną aktorių. Informacija apie aktorių yra tokia:
