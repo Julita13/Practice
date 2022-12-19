@@ -191,7 +191,7 @@ $actors = [
     [
         'first_name' => 'Anthony',
         'last_name' => 'Hopkins',
-        'date_of_birth' => '1937',
+        'date_of_birth' => '1967',
         'place-of_birth' => 'Port Talbot, Glamorgan, Wales, United Kingdom',
         'nationality' => 'UK',
         'best_movies' => ['Hannibal', "Meet Joe Black", "Instinct"],
@@ -202,7 +202,10 @@ foreach ($actors as $actor) {
     echo "{$actor["first_name"]} {$actor["last_name"]}\n";
     echo "{$actor["nationality"]} aktorius \n";
     echo "Gimtinė - {$actor["place-of_birth"]}\n";
-    echo "Gimė {$actor["date_of_birth"]} metais\n";
+    $birthdate = $actor["date_of_birth"];
+    $age = date_diff(date_create($birthdate), date_create('now'))->y;
+    // echo $age;
+    echo "Metai - $age (gimė $birthdate metais)\n";
     echo "Geriausi filmai - ";
     foreach($actor["best_movies"] as $movie) {
         echo "\"$movie\", ", "";
