@@ -200,7 +200,7 @@ $actors = [
 
 foreach ($actors as $actor) {
     echo "{$actor["first_name"]} {$actor["last_name"]}\n";
-    echo "{$actor["nationality"]} actor \n";
+    echo "{$actor["nationality"]} aktorius \n";
     echo "Gimtinė - {$actor["place-of_birth"]}\n";
     echo "Gimė {$actor["date_of_birth"]} metais\n";
     echo "Geriausi filmai - ";
