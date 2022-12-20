@@ -150,13 +150,13 @@ $items = [
 // * |12|* |14|*
 // 16|* |18|* |20
 
-for($i=1; $i<=20; $i++){
-    if($i%2 === 0) {
-        echo "|$i";
-    } else {
-        echo "|*"; 
-    }
-}
+// for($i=1; $i<=20; $i++){
+//     if($i%2 === 0) {
+//         echo "|$i";
+//     } else {
+//         echo "|*"; 
+//     }
+// }
 // $num = 20;
 // for ($i = 1; $i <= 10; $i++){
 //     echo "<tr>";
@@ -167,7 +167,27 @@ for($i=1; $i<=20; $i++){
 // }
 
 
-echo "\n\n";
+// echo "\n\n";
+
+
+//Veikiantis variantas:
+// $number = 90;
+
+// for ($i = 1; $i <= $number; $i++) {
+//     if ($i % 2 == 0) {
+//         echo $i;
+//     } else {
+//         echo "*";
+//     }
+//     if ($i % 5 == 0) {
+//         echo "\n";
+//     } else {
+//         echo " |";
+//     }
+// }
+
+
+
 //12. Pratimas
 // Turite dvimatį masyvą su informacija apie jūsų mėgstamus aktorius. Kiekvieno masyvo elemento vertė yra asociacinis masyvas,
 // reprezentuojantis vieną aktorių. Informacija apie aktorių yra tokia:
@@ -209,7 +229,7 @@ $actors = [
     [
         'first_name' => 'Anthony',
         'last_name' => 'Hopkins',
-        'date_of_birth' => '1967',
+        'date_of_birth' => '1937',
         'place-of_birth' => 'Port Talbot, Glamorgan, Wales, United Kingdom',
         'nationality' => 'UK',
         'best_movies' => ['Hannibal', "Meet Joe Black", "Instinct"],
@@ -220,10 +240,16 @@ foreach ($actors as $actor) {
     echo "{$actor["first_name"]} {$actor["last_name"]}\n";
     echo "{$actor["nationality"]} aktorius \n";
     echo "Gimtinė - {$actor["place-of_birth"]}\n";
+    
     $birthdate = $actor["date_of_birth"];
-    $age = date_diff(date_create($birthdate), date_create('now'))->y;
+    // $now = new DateTime();
+    // $year = $now->format("Y");
+    // $birthdate2 = $birthday->format("Y");
+    // $age = date_diff(date_create('now'), date_create($birthdate))->y;
     // echo $age;
-    echo "Metai - $age (gimė $birthdate metais)\n";
+    $age = date("Y") - $birthdate;
+    echo "Metai - $age (gimė $birthdate m.)\n";
+
     echo "Geriausi filmai - ";
     foreach($actor["best_movies"] as $movie) {
         echo "\"$movie\", ", "";
@@ -231,6 +257,7 @@ foreach ($actors as $actor) {
     echo "\n\n";
 }
 
+// date_diff( date_create(),date_create('1937-12-22'))->y // Mykolo sprendimas
 ?>
 
 
