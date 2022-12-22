@@ -1,0 +1,59 @@
+<?php
+
+//1 Užduotis
+//Aprašyti enumeruotą/indeksuotą masyvą iš 4 reikšmių milk, bread, eggs, salads. Priskirkite kintamajam "shoppingList".
+
+echo "1 užduotis \n"; 
+$shoppingList = ["milk", "bread", "eggs", "salads"];
+print_r($shoppingList)."\n";
+
+//2 Užduotis
+//Pridėkite 1 vertę prie "shoppingList" - "potato".
+
+echo "2 užduotis \n"; 
+array_push($shoppingList, "potato");
+print_r($shoppingList)."\n";
+
+//3 Užduotis
+// Pašalinkite "shoppingList" 1 vertę - salad.
+
+// echo "3 užduotis \n"; 
+// unset($shoppingList[3]);
+// print_r($shoppingList)."\n";
+
+//4 Užduotis
+// Parašykite for ciklą ir išspausdinkite kiekvieną masyvo elemento vertę į tokį sąkinį - 'Shopping list:  milk  bread  eggs  potato'.
+
+echo " 4 užduotis \n"; 
+echo "Shopping list: ";
+foreach($shoppingList as $shoppingItem){
+    echo $shoppingItem.", ";
+};
+
+// Tik vėliau pastebėjau, kad reikėjo parašyti FOR loop'ą(su kitokiais skyrybos ženklais), tad štai ir antras sprendimo būdas
+//TAČIAU! kad jis veiktų, reikia užkomentuoti 3 užduotį (nes ten panaikintas 3 masyvo key):
+
+echo "\n\n 4 užduotis - dublis 2 \n Shopping list: ";
+for ($i = 0; $i < count($shoppingList); $i++) {
+    echo $shoppingList[$i]." ";
+};
+
+
+//5 Užduotis
+// Parašykite funkciją  getModifiedValue(). Funkcija priima 3 parametrus: $array, $index, $modifier. Grąžina string tipo vertę.
+// 1 parametras - masyvas, 2 - jo indekas, 3 - tekstas, kuris bus pridėtas vertės prieky ir gale. Funkcija patikrina ar toks indekas egzistuoja masyve. Jei egzistuoja,
+// paima vertę pagal indeksą, ją modifikuoja ir grąžina. Pvz.: getModifiedValue($shoppingList, 0, "**"); grįš string "**potato**". Jei tokio indekso  nėra, grįš tekstas "Vertė nerasta!".
+
+//KAD UŽDUOTIS VEIKTŲ, REIKIA UŽKOMENTUOTI 3 UŽDUOTIES SPRENDIMĄ. 
+echo "\n\n 5 užduotis \n";
+function getModifiedValue($array, $index, $modifier): string {
+    if(array_key_exists($index, $array)){
+        return $modifier.$array[$index].$modifier;
+    } else {
+        echo "Vertė nerasta!";
+    }
+}
+echo(getModifiedValue($shoppingList, 0, "**"));
+
+
+?>
