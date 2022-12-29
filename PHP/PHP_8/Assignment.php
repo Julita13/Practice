@@ -1,4 +1,5 @@
-// 1.
+<?php
+
 function getCities(): array
 {
     return [
@@ -27,55 +28,84 @@ function getCities(): array
             'population' => 25000000,
         ],
     ];
-}
+};
 
 // 1.1
-function exercise1(): int
-{
-    /*
+/*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami paprastu 'foreach' ir grąžinkite ją iš funkcijos.
     Miestus pasiimkite iškvietę funkciją 'getCities'
-    */
+*/
 
-    return 0;
-}
+function exercise1(): int{
+    $cities = getCities();
+    $a = 0;
+    foreach($cities as $city){
+        $a += "$city[population]";
+    };
+    return $a;
+};
+
+echo "1.1 pratimas\n"; 
+echo (exercise1())."\n\n";
+
+
 
 // 1.2
-function exercise2(): int
-{
-    /*
+/*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcijomis array_column ir array_sum
     ir grąžinkite ją iš funkcijos
-    */
+*/
 
-    return 0;
-}
+function exercise2(): int{
+    $cities = getCities();
+    $totalPopulation = array_column($cities, 'population');
+    return array_sum($totalPopulation);
+};
+
+echo "1.2 pratimas\n";
+echo (exercise2())."\n\n";
+
 
 // 1.3
-function exercise3(): int
-{
-    /*
+/*
     Suskaičiuokite bendrą miestų populiaciją pasinaudodami funkcija array_reduce ir grąžinkite ją iš funkcijos
-    */
+*/
+function exercise3(): int {
+    $cities = getCities();
+    $sum = array_reduce($cities, function ($carry, $city) {
+        if (array_key_exists("population", $city)) {
+            $carry += $city["population"];
+        }
+        return $carry;
+    });
+    return $sum;
+};
 
-    return 0;
-}
+echo "1.3 pratimas\n";
+echo (exercise3())."\n\n";
+
 
 // 1.4
-function exercise4(): int
-{
-    /*
+/*
     Suskaičiuokite populiaciją miestų, kurie yra didesni nei 25,000,000 gyventojų.
     Rinkites sau patogiausią skaičiavimo būdą.
-    */
+*/
+function exercise4(): int{
+    $cities = getCities();
+    $b = 0;
+    foreach($cities as $city){
+        if($city["population"] > 25000000){
+            $b += "$city[population]";
+        }
+    };
+    return $b;
+};
 
-    return 0;
-}
+echo "1.4 pratimas\n";
+echo (exercise4())."\n\n";
 
 // 1.5
-function exercise5(): array
-{
-    /*
+/*
     Grąžinkite masyvą, kuriame būtų tik tie miestai, kurie yra didesni nei 25,000,000 gyventojų
     Rezultatas turi būti tokios pat struktūros, kaip ir pradinis miestų masyvas:
     [
@@ -84,12 +114,17 @@ function exercise5(): array
             'population' => 37435191,
         ],
         ...
-    ]
-    */
+*/
+function exercise5(): array{
+    $cities = getCities();
+    $newArray = array_filter($cities, function($compare) {
+        return $compare["population"] > 25000000;
+    });
+    return $newArray;
+};
 
-    return [];
-}
-
+echo "1.5 pratimas\n";
+print_r(exercise5())."\n\n";
 
  /*
 2. Parašykite funkciją, kuris grąžins šią figūrą. Panaudokite ciklus.
@@ -138,3 +173,5 @@ Pvz.: nuo  1 iki 12 būtų:
 Panaudokite ciklus.
 Ribas perduokite parametrais.
 */
+
+?>
