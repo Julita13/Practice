@@ -143,6 +143,29 @@ print_r(exercise5())."\n\n";
 *
 */
 
+function drawPyramid($length){
+    $string = "*";
+    $pyramid_str = "";
+    $mid_point = ceil($length/2);
+    for($i = 1; $i <= $mid_point; $i++){
+     for($j = 1; $j <= $i; ++$j) {
+      $pyramid_str .= $string . " ";
+     }
+     $pyramid_str.="\r\n";
+    }
+     
+    for($i = $mid_point; $i >= 1; $i--){
+     for($j = 1; $j < $i; ++$j) {
+      $pyramid_str .= $string . " ";
+     }
+     $pyramid_str.="\r\n";
+    }
+    return $pyramid_str;
+};
+
+echo "2 pratimas\n\n";
+echo drawPyramid(13);
+
 /*
 3. Parašykite funkciją, kuri grąžina tokį stačiakampį. Matmenys turi būti perduodami parametrais. Panaudokite ciklus.
 $length = 5;
@@ -152,6 +175,18 @@ $height = 4;
 *  *  *  *  *
 *  *  *  *  *
 */
+
+function drawRectangle(int $height, int $length):void{ 
+    for($i = 1; $i < $height + 1; $i++){	
+        for($j = 1; $j < $length + 1; $j++){
+            echo "*";
+        };
+        echo "\n";
+    }
+};
+
+echo "3 pratimas\n\n";
+echo drawRectangle(4, 5);
 
 /*
 4. Parašykite funkciją, kuri grąžina kiekvieno sveiko skaičiaus daliklius.
@@ -173,5 +208,17 @@ Pvz.: nuo  1 iki 12 būtų:
 Panaudokite ciklus.
 Ribas perduokite parametrais.
 */
+function showDividers(int $number){
+    $divisors = "";
+    for($i = 1; $i < $number; $i ++) {
+        if ($number % $i == 0) {
+            $divisors .= $i." ";
+        }
+    }
+    return "$number: $divisors";
+};
+
+echo "4 pratimas\n\n";
+echo showDividers(12);
 
 ?>
