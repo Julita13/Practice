@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$array = [
+    "a",
+    "b",
+    "c",
+    "d",
+];
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+echo "<h1>AAA</h1>";
+// <pre> tagas irgi daro tarpą. Jei norime tarpo dokumente - tiesiog reiktų dėti <br>
+echo "\n"; 
+print_r($array);
 
-<body>
-  <?php
-    foreach([
-        'https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg',
-        'https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg',
-        'https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg'] as $element){
-        echo "<img src='{$element}'>";
-    }
-  ?>
-
-<script>
-    const smt = document.querySelector('body');
-    console.log(smt);
-</script>
-</body>
-</html>
+?>
