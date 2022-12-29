@@ -209,13 +209,13 @@ Panaudokite ciklus.
 Ribas perduokite parametrais.
 */
 function showDividers(int $number){
-    $divisors = "";
+    $dividers = "";
     for($i = 1; $i < $number; $i ++) {
         if ($number % $i == 0) {
-            $divisors .= $i." ";
+            $dividers .= $i." ";
         }
     }
-    return "$number: $divisors";
+    return "$number: $dividers";
 };
 
 echo "4 pratimas\n\n";
