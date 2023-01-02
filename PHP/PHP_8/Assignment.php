@@ -221,4 +221,17 @@ function showDividers(int $number){
 echo "4 pratimas\n\n";
 echo showDividers(12);
 
+
+// function exercise8(int $num): void{
+//     for($i = 1;$i < $num; $i++){
+//         echo "\n $i:";
+//         for($j=1; $j < $num; $j++){
+//             if($i % $j ){
+//             } else{
+//                 echo "$j ";
+//             }
+//         }
+//     }
+// }
+//  echo exercise8(12);
 ?>

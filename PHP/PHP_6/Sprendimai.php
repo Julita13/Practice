@@ -115,10 +115,10 @@ kiek lygių turi būti spausdinama. Pavyzdžio atveju, tas skaičius yra 5.
  4444444
 555555555
 */
-function christmasTree($howTall):void {
-    for ($i = 1; $i <= $howTall; $i++){
-        for ($j = 1; $j < $howTall + $i; $j++) {
-            if ($j >= $howTall - $i + 1) {
+function christmasTree($myNumber):void {
+    for ($i = 1; $i <=$myNumber; $i++){
+        for ($j = 1; $j < $myNumber + $i; $j++) {
+            if ($j >= $myNumber - $i + 1) {
                 echo $i;
             } else {
                 echo " ";
