@@ -1,6 +1,6 @@
 <?php
 
-echo "Labas";
-$test = ", Tomai!";
+echo "Hello";
+$test = "Tomas";
 
 ?>
