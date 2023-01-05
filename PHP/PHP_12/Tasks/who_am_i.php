@@ -13,7 +13,7 @@ if ($_GET) {
     echo "<button><a href='who_am_i.php'>Reset</a></button>";
 }
     else {
-       echo "<a href='who_am_i.php?first_name=Julita&last_name=Mečkovska&city=Vilnius'>Who am I?</a>";
+       echo "<a href='who_am_i.php?first_name=Julita&last_name=Mažuolytė-Mečkovska&city=Vilnius'>Who am I?</a>";
 };
 ?>
 
