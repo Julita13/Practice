@@ -1,3 +1,4 @@
+<?php 
 $pizzas = [
     [
         'name' => 'BAHAMOS',
@@ -66,3 +67,5 @@ $pizzas = [
         ],
     ],
 ];
+
+?>
