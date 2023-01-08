@@ -66,7 +66,7 @@ function exercise5(): array
                         <td>{$item["type"]}</td>
                         <td>{$item["name"]}</td>
                         <td>{$item["weight"]}</td>
-                        <td><a href='show.php?id={$item["id"]}'>Link</a></td>
+                        <td><a href='show.php?id={$item["id"]}'>View</a></td>
                     </tr>";
                 }
             ?>
