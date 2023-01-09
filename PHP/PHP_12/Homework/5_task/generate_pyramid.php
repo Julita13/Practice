@@ -38,5 +38,27 @@ if(isset($_GET['generate'])){
     echo "<a href='generate_pyramid.php?generate=true'>Generate!</a>";
 };
 
+
+// Andriaus sprendimas
+
+function pyramid(): string {
+    $tree = "";
+    for ($i=1; $i < 10; $i++) {
+        // $tree .= $i . ": ";
+        for ($k=0; $k < (9 - $i)*2; $k++) {
+            $tree .= "-";
+        }
+        for ($j=0; $j < $i; $j++) {
+            $tree .= $j ? "***" . $i : $i;
+        }
+        for ($k=0; $k < (9 - $i)*2; $k++) {
+            $tree .= "-";
+        }
+        $tree .= "\n";
+    }
+    return $tree;
+}
+
+echo pyramid();
 ?>
 

@@ -22,7 +22,7 @@
 //Kad būtų aišku, koks veiksmas turi būti atliekamas, užklausos turi metodus, kurie nurodo veiksmo esmę. 
 
 //GET - paimti duomenis
-//POST -įrašyti duomenis
+//POST -  įrašyti duomenis
 //PUT - atnaujinti duomenis
 //DELETE - ištrinti
 
