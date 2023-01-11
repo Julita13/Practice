@@ -36,6 +36,7 @@ if (isset($get['status'])) {
         }
     }
 ?>
+
     <form action="register_contest.php" method="POST">
         <label for="name">Name: </label><br>
         <input type="text" name="name"><br>

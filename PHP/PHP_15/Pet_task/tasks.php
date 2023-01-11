@@ -1,51 +1,59 @@
-<?php
-/*
-1.0
-Sukurkite 2 failus pet.php ir register_contest.php
-pet.php forma POST metodu siunčia gyvūno duomenis į register_contest.php
-duomenų laukeliai:
-name, age, breed, weight, height    
+<?php 
 
-Faile register_contest.php yra funkcija processData().
-processData() neturi return.
-processData() yra 2 kintamaieji:
-    $status, kuris pradžioje jis lygus 1
-    $message, kuris pradžioje yra lygus "Viskas ok".
+// 1. DUMP
+ 
+// https://php.watch/versions/8.1/spread-operator-string-array-keys
+// Argument unpacking naudojant unpacking/spread operatoriu ...
+ 
+// Iš kelių kintamųjų padaro verčių masyvą, o masyvą išpakuoja į atskiras vertes.
+// Veikia funkcijų skliaustuose, tiek inicijuojant, tiek apibrėžiant funkciją.
+// Tai pat masyvų viduje.
+ 
+// Sukurti helpers.php failą.
+ 
+// Parašyti 2 funkcijas dump(); ir dd(); - vadinama "dump and die"
+ 
+// dump() - nieko negrąžina(neturi return).
+// Jos paskirtis - išspausdinti perduotus duomenis tokiu būdų:
+// pvz.: dump(['Labas','Krabas'], 123, 321, 'Viso gero');
+ 
+// Atvaizduojama:
+ 
+//     Array
+//     (
+//         [0] => Labas
+//         [1] => Krabas
+//     )
+//     123
+//     321
+//     Viso gero
+ 
+// Funkcijos argumentų skaičius yra neribotas.
+// Tam pasiekti naudokite array unpacking/spread operatorių - ...
+// dump() funkcija turi tik vieną parametrą su spread operatoriumi - ...$variables
+// Pvz.: dump(...$variables){}
+ 
+// Parašyktie kodą, kuris išspausdina visus variables duomenis su šiuo html
+// "<pre>". print_r() ."</pre>";
+ 
+// dd() - nieko negrąžina(neturi return).
+// dd() funkcija taip pat priima tik 1 kintamąjį su spread operatoriumi.
+// Su spread operatoriumi ...$variables
+// Ji kviečia dump() ir inicijuoja die() funckiją.
 
-funkcijos pabaigoje yra header() funkcija, kuri grąžina atgal į pet.php su GET parametrais
-status=$status ir message=$message.
-pvz.: header("Location: somwhere.php?param=1");
+// 1.2.
+//     Funkcijoje processData() pridedama if sąlyga, kuri tikrina, ar $_POST masyve yra gyvūno vardas t.y.,
+//     ar buvo įvesta input laukely.
+//     Jei gyvūno vardo nėra, tuomet $status prilyginamas 0, $message - "Įveskite gyvūno vardą".
 
-1.2.
-    pet.php faile yra php kodas, kuris tikrina, ar $_GET masyve yra "status" raktas.
-    Jei "status" yra, atvaizduojamas žinutės HTML:
-
-        apie 300 X 200 pixelių kvadrato formos
-        viršutiniame naršyklės kampe(kuriame - pasirinktinai)
-        backgroundo spalva priklausys nuo "status" vertės/
-   
-    Jei "status" 1, žinutės kvadrato fonas yra žalias, jei "status" yra 0 - tai raudonas.
-
-    Jei $_GET turi "status", taip pat tikrinama ar $_GET turi "message" raktą.
-   
-    Jei taip, tuomet atvaizduojamas žinutės tekstas iš "message". Jei  "message" nėra:
-        status 0 atveju tekstas bus "Error".
-        status 1 atveju tekstas bus "Success".
-
-
-1.2.
-    Funkcijoje processData() pridedama if sąlyga, kuri tikrina, ar $_POST masyve yra gyvūno vardas t.y.,
-    ar buvo įvesta input laukely.
-    Jei gyvūno vardo nėra, tuomet $status prilyginamas 0, $message - "Įveskite gyvūno vardą".
-
-    // 1.3. register_contest.php yra funkcija validateData(), kuri priima $_POST perduotų duomenų
+// 1.3. register_contest.php yra funkcija validateData(), kuri priima $_POST perduotų duomenų
 //     masyvą ir patikrina, ar duomenys visi duomenys užpildyti.
 //     Funkcija grąžina "stringa".
 //     processData() panaudoja validateData(), kad patikrintų visi laukai užpildyti.
 //     Jei iš validateData() gaunamas pranešimas, kad kažkas neužpildyta,tekstas perduodamas
 //     kaip žinutė atgal į formą: "Neužpildyti duomenys: name, age";
 
-1.4. Patobulinti validacijos funkciją.
+// 1.4. Patobulinti validacijos funkciją.
 //     Ji turi atiduoti masyvą, kuriame nurodyta išvardintos klaidos
 //     [
 //         [name] => Neužpildytas laukelis name
@@ -58,8 +66,7 @@ pvz.: header("Location: somwhere.php?param=1");
 //     Pavalidavę ivestus duomenis, jei grįžo ne tuščias masyvas perduokite jį json formatu
 //     kaip $message į formą  
 
-
-1.5
+// 1.5
 //     Formoje aprašykite funkciją message(), kuri priima parametrus $title, $body $status
 //     Šie parametrai turi default vertes:
 //         function message(string $title = '', string $body = '', int $status = 1)
