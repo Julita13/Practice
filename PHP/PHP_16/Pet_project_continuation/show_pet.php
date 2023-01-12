@@ -15,6 +15,10 @@ include_once(__DIR__ . "/pet_functions.php");
             align-items: center;
             margin-bottom: 10px;
         }
+        img:hover{
+            border: 1px solid darkgrey; 
+            box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 20px; 
+        }
         body{
             align-items: center;
             text-align: center;

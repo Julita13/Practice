@@ -69,6 +69,14 @@ $pets = getPets(__DIR__."/pets.json");
             text-decoration: underline;
             font-size: 22px;
         }
+        .pet{
+            font-size: 22px;
+            color: #125896;
+            font-weight: 600;
+        }
+        .pet:hover{
+            font-size: 26px;
+        }
     </style>
 </head>
 <body>
@@ -77,15 +85,16 @@ $pets = getPets(__DIR__."/pets.json");
             <h1>Gyvūnėlių sąrašas</h1>
             <?php
                 foreach($pets as $pet){
-                    echo "<article>
-                            <div><img src={$pet["img"]}></div>
-                            <div>Vardas: {$pet["name"]}</div>
-                            <div>Amžius: {$pet["age"]} m.</div>
-                            <div>Veislė: {$pet["breed"]}</div>
-                            <div>Rūšis: {$pet["kind"]}</div>
-                            <div>Svoris: {$pet["weight"]} kg</div>
-                            <div>Aukštis: {$pet["height"]} cm</div>
-                            <div><p><a href='show_pet.php?id={$pet["id"]}'>Platesnė informacija apie gyvūną<a/></p></div>
+                    echo 
+                        "<article>
+                                <div><img src={$pet["img"]}></div>
+                                <div class='pet'>Vardas: {$pet["name"]}</div>
+                                <div>Amžius: {$pet["age"]} m.</div>
+                                <div>Veislė: {$pet["breed"]}</div>
+                                <div>Rūšis: {$pet["kind"]}</div>
+                                <div>Svoris: {$pet["weight"]} kg</div>
+                                <div>Aukštis: {$pet["height"]} cm</div>
+                                <div><p><a href='show_pet.php?id={$pet["id"]}'>Platesnė informacija apie gyvūną<a/></p></div>
                         </article>";
                 }
 
