@@ -23,7 +23,7 @@ $pets = getPets(__DIR__."/pets.json");
             box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 10px; 
         }
         article:hover {
-            background-color: #125896;
+            background-color: #9fd1e8;
             border-radius: 1rem;
             cursor: default;
         }
@@ -49,7 +49,7 @@ $pets = getPets(__DIR__."/pets.json");
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: aliceblue;
+            background-color: lightsteelblue;
         }
         h1{
             text-align: center;
