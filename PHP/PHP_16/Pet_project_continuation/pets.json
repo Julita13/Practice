@@ -6,7 +6,8 @@
       "breed": "Veislinis kieminukas",
       "kind": "\u0160uo",
       "weight": "10",
-      "height": "30"
+      "height": "30",
+      "img": "https://cdn.britannica.com/79/8179-050-F1398EAA/Chow-chow.jpg"
   
     },
     {
@@ -16,6 +17,7 @@
       "breed": "Raina gatvin\u0117 pantera",
       "kind": "Kat\u0117",
       "weight": "4",
-      "height": "15"
+      "height": "15",
+      "img": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
     }
   ]

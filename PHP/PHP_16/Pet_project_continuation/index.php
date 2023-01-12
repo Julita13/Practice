@@ -15,7 +15,17 @@ $pets = getPets(__DIR__."/pets.json");
         article{
             padding: 3px;
             width: 20rem;
-            margin: 20px;
+            margin: 30px;
+            padding: 30px;
+            border: 3px solid darkgrey;
+            background-color: lightblue;
+            border: 1px solid darkgrey; 
+            box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 10px; 
+        }
+        article:hover {
+            background-color: #125896;
+            border-radius: 1rem;
+            cursor: default;
         }
        
         div{
@@ -23,6 +33,7 @@ $pets = getPets(__DIR__."/pets.json");
             text-align: center;
             font-size: 20px;
             margin: 2px;
+            border: 1px solid black;
         }
         div:nth-child(2n) {
                 background-color: lightgrey;
@@ -33,6 +44,22 @@ $pets = getPets(__DIR__."/pets.json");
         img{
             width: 18rem;
         }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            text-decoration: underline;
+            color: darkslategray;
+        }
+        a {
+            cursor: pointer;
+        }
+        
     </style>
 </head>
 <body>
@@ -42,7 +69,7 @@ $pets = getPets(__DIR__."/pets.json");
             <?php
                 foreach($pets as $pet){
                     echo "<article>
-                            <div><img src='https://cdn.britannica.com/79/8179-050-F1398EAA/Chow-chow.jpg'></div>
+                            <div><img src={$pet["img"]}></div>
                             <div>Vardas: {$pet["name"]}</div>
                             <div>Amžius: {$pet["age"]}</div>
                             <div>Veislė: {$pet["breed"]}</div>
