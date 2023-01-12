@@ -26,6 +26,8 @@ $pets = getPets(__DIR__."/pets.json");
             background-color: #9fd1e8;
             border-radius: 1rem;
             cursor: default;
+            border: 2px solid darkgrey; 
+            box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 20px; 
         }
        
         div{
