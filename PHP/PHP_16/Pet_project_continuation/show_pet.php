@@ -16,6 +16,7 @@ include_once(__DIR__ . "/pet_functions.php");
             margin-bottom: 10px;
         }
         img:hover{
+            width: 630px;
             border: 1px solid darkgrey; 
             box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 20px; 
         }
