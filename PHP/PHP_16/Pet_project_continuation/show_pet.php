@@ -44,6 +44,8 @@ include_once(__DIR__ . "/pet_functions.php");
             width: 130px;
             background-color: darkgrey;
             font-size: 18px;
+            border: 2px solid darkgrey; 
+            box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 10px; 
         }
         p{
             margin-top: 400px;
