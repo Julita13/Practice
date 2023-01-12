@@ -49,7 +49,7 @@ $pets = getPets(__DIR__."/pets.json");
                             <div>Rūšis: {$pet["kind"]}</div>
                             <div>Svoris: {$pet["weight"]}</div>
                             <div>Aukštis: {$pet["height"]}</div>
-                            <div>Žiūrėti: <a href='show_pet.php?id={$pet["id"]}'>čia<a/></div>
+                            <div>Platesnė informacija apie gyvūną: <a href='show_pet.php?id={$pet["id"]}'>čia<a/></div>
                         </article>";
                 }
 
