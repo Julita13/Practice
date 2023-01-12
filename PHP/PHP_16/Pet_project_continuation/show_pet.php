@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
         echo $pets[$myNumber]['weight'] . "<br>";
         echo $pets[$myNumber]['height'] . "<br>";
 } else {
-        echo "Resource not found";
+        echo "Sorry, your pet was not found :(";
 }
 }
 ?>
