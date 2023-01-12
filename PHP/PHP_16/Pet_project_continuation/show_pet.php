@@ -20,11 +20,13 @@ include_once(__DIR__ . "/pet_functions.php");
             text-align: center;
             font-size: 30px;
             background-color: lightgrey;
+            color: midnightblue;
         }
 
         h1{
             font-size: 35px;
             text-align: underline;
+            color: darkslategray;
         }
         button{
             width: 100px;
@@ -55,14 +57,14 @@ if (isset($_GET['id'])) {
     $myNumber = ($_GET['id'])-1;
     $pets = getPets(__DIR__ . "/pets.json");
     if (isset($pets[$myNumber]['id'])){
-        echo "<h1>Pasirinkto gyvūnėlio informacija: </h1>";
+        echo "<h1>Detali pasirinkto gyvūno informacija: </h1>";
         echo "<img src={$pets[$myNumber]['img']}>" . "<br>";
         echo "Vardas: " . $pets[$myNumber]['name'] . "<br>";
-        echo "Amžius: " . $pets[$myNumber]['age'] . "<br>";
+        echo "Amžius: " . $pets[$myNumber]['age'] ." m.". "<br>";
         echo "Veislė: " . $pets[$myNumber]['breed'] . "<br>";
         echo "Rūšis: ". $pets[$myNumber]['kind'] . "<br>";
-        echo "Svoris: " . $pets[$myNumber]['weight'] . "<br>";
-        echo "Aukštis: " . $pets[$myNumber]['height'] . "<br>";
+        echo "Svoris: " . $pets[$myNumber]['weight'] ." kg" . "<br>";
+        echo "Aukštis: " . $pets[$myNumber]['height'] ." cm" . "<br>";
         echo "<button><a href='index.php'>Grįžti</a></button>";
 } else {
         echo "<p>Sorry, your pet was not found :(</p>";

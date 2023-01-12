@@ -34,6 +34,7 @@ $pets = getPets(__DIR__."/pets.json");
             font-size: 20px;
             margin: 2px;
             border: 1px solid black;
+            color: black;
         }
         div:nth-child(2n) {
                 background-color: lightgrey;
@@ -56,10 +57,18 @@ $pets = getPets(__DIR__."/pets.json");
             text-decoration: underline;
             color: darkslategray;
         }
-        a {
-            cursor: pointer;
+        a{
+            color: royalblue;
+            text-decoration: none;
         }
-        
+        p {
+            cursor: pointer;
+            text-decoration: none; 
+        } 
+        p:hover{
+            text-decoration: underline;
+            font-size: 22px;
+        }
     </style>
 </head>
 <body>
@@ -71,12 +80,12 @@ $pets = getPets(__DIR__."/pets.json");
                     echo "<article>
                             <div><img src={$pet["img"]}></div>
                             <div>Vardas: {$pet["name"]}</div>
-                            <div>Amžius: {$pet["age"]}</div>
+                            <div>Amžius: {$pet["age"]} m.</div>
                             <div>Veislė: {$pet["breed"]}</div>
                             <div>Rūšis: {$pet["kind"]}</div>
-                            <div>Svoris: {$pet["weight"]}</div>
-                            <div>Aukštis: {$pet["height"]}</div>
-                            <div>Platesnė informacija apie gyvūną: <a href='show_pet.php?id={$pet["id"]}'>čia<a/></div>
+                            <div>Svoris: {$pet["weight"]} kg</div>
+                            <div>Aukštis: {$pet["height"]} cm</div>
+                            <div><p><a href='show_pet.php?id={$pet["id"]}'>Platesnė informacija apie gyvūną<a/></p></div>
                         </article>";
                 }
 
