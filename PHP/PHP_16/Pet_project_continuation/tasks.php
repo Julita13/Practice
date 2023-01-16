@@ -136,3 +136,15 @@
 // show_pet.php turi html'a, kuris atvaizduos 1 gyvūno nuotrauką ir duomenis.
 // Sturkūra body > main > section > article.
 // Gyvūnas yra <article> tage
+
+
+// III Įrašyti  duomenis į failą. 
+// 1. Sukurti funkciją createRecord() pet_functions.php faile, kurią iškvietus bus padaromas naujas įrašas pets.json faile. 
+// 2. Funkcija duomenis įrašymui gaus iš formos. 
+// 3. Funkcija kviečiama sėkmingai validavus įvestis. 
+// 3. Kiekvienam naujam įrašui turi būti sugeneruojama id vertė, +1 nuo didžiausios esamos tarp įrašų. 
+// 4. Funkcija grąžina naujo įrašo "id"(int).   
+// 5. Pateikus formą ir sėkmingai padarius naują įrašą automatiškai nuvedama į index.php, kur matoma, ar pasipildė sąrašas. 
+// 6. Validacijai nepraėjus, grąžinama į formą.php 
+
+

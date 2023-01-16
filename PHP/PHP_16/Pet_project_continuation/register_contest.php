@@ -1,5 +1,6 @@
 <?php
 include_once(__DIR__ . "/helpers.php");
+include_once(__DIR__ . "/pet_functions.php");
 
 function processData(): void
 {
@@ -12,10 +13,12 @@ function processData(): void
     if ($errors) {
         $status = 0;
         $message = json_encode($errors);
+        $url = "pet.php";
     } else {
-        //write to file
+        createRecord($data);
+        $url = "index.php";
     }
-    header("Location: pet.php?status=$status&message=$message&old_data=$oldData");
+    header("Location: $url?status=$status&message=$message&old_data=$oldData");
 
 }
 processData();

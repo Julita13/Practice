@@ -1,15 +1,26 @@
-<?Php
-include_once(__DIR__ . "/pet_functions.php");
+<?php
+
+include_once __DIR__ . '/pet_functions.php';
+
+$get = $_GET;
+
+if (isset($get['id'])) {
+    $pet = getPet($get['id']);
+} else {
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <title>Augintinių sąrašas</title>
+  <style>
         img{
             width: 600px;
             align-items: center;
@@ -55,34 +66,33 @@ include_once(__DIR__ . "/pet_functions.php");
         
     </style>
 </head>
+
 <body>
-    
-<?php 
+    <main>
+        <section>
 
-if (isset($_GET['id'])) {
-    $myNumber = ($_GET['id'])-1;
-    $pets = getPets(__DIR__ . "/pets.json");
-    if (isset($pets[$myNumber]['id'])){
-        echo "<h1>Detali pasirinkto gyvūno informacija: </h1>";
+            <h1>Augintinis</h1>
 
+            <?php
+           echo
+           "<article>
+                    <div>
+                       <img src='".($pet['img'] ?? '')."'>
+                   </div>
+                   <div class='name'>".($pet['name']??'')."</div>
+                   <div>Amžius: ".($pet['age']??'')." m.</div>
+                   <div>Veilsė: ".($pet['breed']??'')."</div>
+                   <div>Tipas: ".($pet['kind']??'')."</div>
+                   <div> Svoris ".($pet['weight']??'')." kg</div>
+                   <div>Aukštis: ".($pet['height']??'')." cm</div>
+                       <button><a href='index.php'>Atgal</a></button>
+                   </article>"
+       ;
+            ?>
 
-        echo "<img src='".($pets[$myNumber]['img'] ?? '')."'>" . "<br>";  
-        echo "Vardas: " . ($pets[$myNumber]['name']?? '') . "<br>";
-        echo "Amžius: " . ($pets[$myNumber]['age']??'') ." m.". "<br>";
-        echo "Veislė: " . ($pets[$myNumber]['breed']?? '') . "<br>";
-        echo "Rūšis: ". ($pets[$myNumber]['kind']?? '') . "<br>";
-        echo "Svoris: " . ($pets[$myNumber]['weight']?? '') ." kg" . "<br>";
-        echo "Aukštis: " . ($pets[$myNumber]['height']?? '') ." cm" . "<br>";
-        echo "<button><a href='index.php'>Grįžti</a></button>";
-} else {
-        echo "<p>Sorry, your pet was not found :(</p>";
-}
-}
+        </section>
+    </main>
 
-
-
-
-?>
 </body>
-</html>
 
+</html>

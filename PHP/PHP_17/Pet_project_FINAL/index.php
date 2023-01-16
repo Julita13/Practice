@@ -1,16 +1,19 @@
 <?php
-include_once(__DIR__ . "/pet_functions.php");
-$pets = getPets(__DIR__."/pets.json");
+
+include_once __DIR__ . '/pet_functions.php';
+
+$pets = getPets(__DIR__ . '/pets.json');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyvūnų sąrašas</title>
+    <title>Augintinių sąrašas</title>
     <style>
         article{
             padding: 3px;
@@ -81,32 +84,37 @@ $pets = getPets(__DIR__."/pets.json");
         }
     </style>
 </head>
+
 <body>
     <main>
         <section>
-            <h1>Gyvūnėlių sąrašas</h1>
-            <?php
-                foreach($pets as $pet){
-                    echo 
-                        "<article>
-                                <div>
-                                    <img src='".($pet['img'] ?? '')."'>
-                                 </div>
-                                <div class='pet'>Vardas: ".($pet["name"]?? ''). "</div>
-                                <div>Amžius: ".($pet["age"]??'')." m.</div>
-                                <div>Veislė: ".($pet["breed"]??'')."</div>
-                                <div>Rūšis: ".($pet['kind']??'')."</div>
-                                <div>Svoris: ".($pet['weight']??'')." kg</div>
-                                <div>Aukštis: ".($pet['height']??'')." cm</div>
-                                <div><p><a href='show_pet.php?id={$pet["id"]}'>Platesnė informacija apie gyvūną<a/></p></div>
-                                <div><p><a href='update_pet_from.php?id={$pet['id']}'>Update</a></p></div>
-                        </article>";
-                }
 
-                
-                // <a href='?id={$pet["id"]}>
+            <h1>Augintinių sąrašas</h1>
+
+            <?php
+            foreach($pets as $pet){
+                echo 
+                    "<article>
+                            <div>
+                                <img src='".($pet['img'] ?? '')."'>
+                             </div>
+                            <div class='pet'>Vardas: ".($pet["name"]?? ''). "</div>
+                            <div>Amžius: ".($pet["age"]??'')." m.</div>
+                            <div>Veislė: ".($pet["breed"]??'')."</div>
+                            <div>Rūšis: ".($pet['kind']??'')."</div>
+                            <div>Svoris: ".($pet['weight']??'')." kg</div>
+                            <div>Aukštis: ".($pet['height']??'')." cm</div>
+                            <div><p><a href='show_pet.php?id={$pet["id"]}'>Platesnė informacija apie gyvūną<a/></p></div>
+                            <div><p><a href='update_pet_from.php?id={$pet['id']}'>Update</a></p></div>
+                    </article>";
+            }
+
+
             ?>
+
         </section>
     </main>
+
 </body>
+
 </html>

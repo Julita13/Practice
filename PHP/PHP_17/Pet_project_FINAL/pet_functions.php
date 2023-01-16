@@ -1,12 +1,27 @@
 <?php
-include_once(__DIR__ . "/helpers.php");
-function getPets(string $file): array {
-    $petsData = file_get_contents($file);
-    $decodedData = json_decode($petsData, true);
-    return $decodedData;
-};
 
-// var_dump(getPets(__DIR__ . "/pets.json"));
+include_once __DIR__ . '/helpers.php';
+
+function getPets(string $file)
+{
+    $getData = file_get_contents($file);
+    //    dd($getData);
+    $decodedData = json_decode($getData, true);
+    //    dd($decodedData);
+    return $decodedData;
+}
+
+function getPet($petId): array
+{
+    $pets = getPets(__DIR__ . '/pets.json');
+
+    foreach ($pets as $pet) {
+        if ($pet['id'] == $petId) {
+            return $pet;
+        }
+    }
+    return [];
+}
 
 function createRecord($post) {
     $data = file_get_contents(__DIR__ . "/pets.json");
@@ -20,6 +35,7 @@ function createRecord($post) {
     $dataToJson = json_encode($dataArr);
     file_put_contents(__DIR__. "/pets.json", $dataToJson);
 }
+
 
 function updatePet($pet) {
     $pets = getPets(__DIR__ . "/pets.json");

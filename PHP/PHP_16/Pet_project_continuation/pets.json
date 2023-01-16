@@ -1,43 +1,50 @@
 [
     {
-      "id": 1,
-      "name": "Bobikas Trumpakojis",
-      "age": "2",
-      "breed": "Veislinis kieminukas",
-      "kind": "\u0160uo",
-      "weight": "10",
-      "height": "30",
-      "img": "https://cdn.britannica.com/79/8179-050-F1398EAA/Chow-chow.jpg"
-  
+        "id": 1,
+        "name": "Bobikas Trumpakojis",
+        "age": "2",
+        "breed": "Veislinis kieminukas",
+        "kind": "\u0160uo",
+        "weight": "10",
+        "height": "30",
+        "img": "https:\/\/cdn.britannica.com\/79\/8179-050-F1398EAA\/Chow-chow.jpg"
     },
     {
-      "id": 2,
-      "name": "Mops\u0117 Naglasnuk\u0117",
-      "age": "2",
-      "breed": "Raina gatvin\u0117 pantera",
-      "kind": "Kat\u0117",
-      "weight": "4",
-      "height": "15",
-      "img": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
+        "id": 2,
+        "name": "Mops\u0117 Naglasnuk\u0117",
+        "age": "2",
+        "breed": "Raina gatvin\u0117 pantera",
+        "kind": "Kat\u0117",
+        "weight": "4",
+        "height": "15",
+        "img": "https:\/\/images.pexels.com\/photos\/45201\/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
     },
     {
-      "id": 3,
-      "name": "Kiškiukas Ilgaausiukas",
-      "age": "4",
-      "breed": "Naujosios Zelandijos baltasis triušis",
-      "kind": "Triušis",
-      "weight": "2",
-      "height": "10",
-      "img": "https://live.staticflickr.com/2734/4353428267_bba2b6f6f8.jpg"
+        "id": 3,
+        "name": "Ki\u0161kiukas Ilgaausiukas",
+        "age": "4",
+        "breed": "Naujosios Zelandijos baltasis triu\u0161is",
+        "kind": "Triu\u0161is",
+        "weight": "2",
+        "height": "10",
+        "img": "https:\/\/live.staticflickr.com\/2734\/4353428267_bba2b6f6f8.jpg"
     },
     {
-      "id": 4,
-      "name": "Ežiukas Tinginiukas",
-      "age": "12",
-      "breed": "Nykštukinis Afrikos ežys",
-      "kind": "Ežys",
-      "weight": "0.6",
-      "height": "8",
-      "img": "https://vetmed.illinois.edu/wp-content/uploads/2021/04/pc-keller-hedgehog.jpg"
+        "id": 4,
+        "name": "E\u017eiukas Tinginiukas",
+        "age": "12",
+        "breed": "Nyk\u0161tukinis Afrikos e\u017eys",
+        "kind": "E\u017eys",
+        "weight": "0.6",
+        "height": "8",
+        "img": "https:\/\/vetmed.illinois.edu\/wp-content\/uploads\/2021\/04\/pc-keller-hedgehog.jpg"
+    },
+    {
+        "name": "Cookie",
+        "age": "7",
+        "breed": "Chow",
+        "weight": "7",
+        "height": "1",
+        "id": 5
     }
-  ]
+]
