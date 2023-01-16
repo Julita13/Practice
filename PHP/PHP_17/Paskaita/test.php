@@ -1,5 +1,8 @@
 <?php
 
+// session_start([
+//     'name' => "ManoSesija",
+// ]);
 session_start();
 // $_SESSION['name'] = "Julita"; 
 echo $_SESSION['name'];
