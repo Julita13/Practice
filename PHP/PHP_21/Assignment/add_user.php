@@ -24,7 +24,7 @@ include_once __DIR__ . "/helpers.php";
         setErrorMessages($errors);
 
     }  else {
-        // setSuccessMessage();
+        setSuccessMessage();
         // $_SESSION['authenticated'] = 1;
         // $url = "add_user.php";
         $jsonPath = __DIR__ . "/users.json";
@@ -46,4 +46,5 @@ function validateData($data) : array {
         }
     } return $message;  
 }
+
 ?>
