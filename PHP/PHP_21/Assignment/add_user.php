@@ -2,6 +2,12 @@
 include_once(__DIR__ . "/app.php");
 include_once __DIR__ . "/helpers.php";
 
+if($_SERVER['REQUEST_METHOD'] !== 'POST'){
+    http_response_code("405");
+    echo "<h1>Method Not Allowed</h1>";
+    exit();
+}
+
 // function writeToJson(): void {
 //     $POST = $_POST;
 //     if (isset($_POST)) {
