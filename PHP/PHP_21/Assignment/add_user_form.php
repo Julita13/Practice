@@ -1,9 +1,9 @@
 <?php 
 include_once(__DIR__ . "/app.php");
-if($_SESSION['authenticated'] ?? false){
-    dump($_SESSION);
-}
-echo (messages());
+include_once(__DIR__ . "/get_user.php");
+
+$users = getUsers($jsonPath);
+// var_dump ($users);
 ?> 
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@ echo (messages());
             border-radius: 20px;
             outline: 1px solid #b0b0b0;
             margin: 5rem;
+            margin-top: 8rem;
         }
         .green {
             background-color: green;
@@ -44,7 +45,8 @@ echo (messages());
             background-color: blue;
         }
         input:hover{
-            background-color: lightgoldenrodyellow;
+            background-color: whitesmoke;
+            border: 2px solid darkslateblue;
         }
         button {
             border-radius: 0.7rem;
@@ -56,12 +58,43 @@ echo (messages());
             border: 1px solid darkblue;
             text-decoration: underline;  
         }
+        article{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        } 
+        h2 {
+            font-size: 1.5rem;
+            color: darkslateblue;
+        }
+        div{
+            padding: 0.2rem;
+        }
+
+        span{
+            color: darkcyan;
+        }
+
+    
     </style>
 </head>
 
 
 <body>
-    <?php echo messages();?>
+    <?php
+        echo messages();
+        echo "<h2>Already existing users:</h2>";
+        foreach($users as $user){
+            echo 
+                "<article> 
+                        <div><span>First name:</span> ".($user["first_name"]??'')."</div>
+                        <div><span>Last name:</span> ".($user["last_name"]??'')."</div>
+                        <div><span>Age:</span> ".($user['age']??'')."</div>
+                        <div><span>Country:</span> ".($user['country']??'')."</div>
+                </article>";
+        }
+    ?>
+    
     <main>
         <section>
 
