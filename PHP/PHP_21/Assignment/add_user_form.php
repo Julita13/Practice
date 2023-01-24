@@ -82,6 +82,7 @@ $users = getUsers($jsonPath);
 
 <body>
     <?php
+    
         echo messages();
         echo "<h2>Already existing users:</h2>";
         foreach($users as $user){

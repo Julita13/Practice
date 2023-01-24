@@ -34,7 +34,7 @@ function getMessages():array {
 function messages(): string {
     $messages = getMessages();
     clearMessages();
-    // dd($message);
+    // dd($messages);
     return buildAllMessages($messages); // spread operatorius
     // return messageBuilder($message['title'], $message['body'], $message['status']); ALTERNATYVA
 

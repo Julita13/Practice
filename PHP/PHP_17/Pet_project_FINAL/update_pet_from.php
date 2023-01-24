@@ -1,21 +1,3 @@
-<?php
-include_once(__DIR__ . "/helpers.php");
-include_once __DIR__ . '/pet_functions.php';
-
-$get = $_GET;
-
-if (isset($get['id'])) {
-    $pet = getPet($get['id']);
-} else {
-    exit("No  ID detected");
-}
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>PET</title>
