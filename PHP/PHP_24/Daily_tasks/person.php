@@ -15,3 +15,6 @@ Paredaguokite klasę Person, kad veiktų šis kodas:
 $person = new Person('John', 'Smith');
 echo $person; // "This person is called John Smith"
 */
+
+$person = new Person('John', 'Smith');
+echo $person;
