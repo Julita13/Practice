@@ -6,8 +6,8 @@ class Person
 {
     public function __construct(private string $name, private string $surname)
     {
+        echo "This person is called $this->name $this->surname";
     }
-
 }
 
 /*
@@ -17,4 +17,4 @@ echo $person; // "This person is called John Smith"
 */
 
 $person = new Person('John', 'Smith');
-echo $person;
+
