@@ -25,3 +25,4 @@
 2023-02-02 22:01:10 The rest of product with ID number "4" is only 2
 2023-02-02 22:01:18 The product with such id "14" does not exist
 2023-02-02 22:06:03 The rest of product with ID number "4" is only 2
+2023-02-06 17:48:26 The product with such id "Julita" does not exist

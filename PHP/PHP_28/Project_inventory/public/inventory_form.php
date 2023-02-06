@@ -18,7 +18,7 @@ if(isset($_GET["message"])){
     
 
     <form action="inventory_check.php" method="POST"><br>
-        <label for="check">Please write your name:</label><br>
+        <label for="check">Please write ID number of the product you have selected:</label><br>
         <input type="text" name="check" id="check" value="1:3,2:2,4:2"><br><br>
         <button type="submit">Submit</button>
     </form>
