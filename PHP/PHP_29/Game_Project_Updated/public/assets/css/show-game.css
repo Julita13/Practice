@@ -1,0 +1,76 @@
+section {
+    border: 1px solid grey;
+    border-radius: 5%;
+    margin: 1rem 20rem;
+    padding: 2rem;
+    background-color: darkgray;
+    box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 20px; 
+}
+img{
+    width: 500px;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+}
+img:hover{
+    border: 1px solid darkgrey; 
+    box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 20px; 
+}
+body{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    background-color: lightgrey;
+    color: midnightblue;
+}
+
+h1{
+    font-size: 35px;
+    text-align: underline;
+    color: darkslategray;
+}
+button{
+    width: 100px;
+    padding: 3px;
+    border: 1px solid darkgrey;
+    border-radius: 10%;
+    background-color: #eee;
+    font-size: 15px;
+}
+button:hover{
+    width: 130px;
+    color: whitesmoke;
+    background-color:darkslateblue;
+    font-size: 18px;
+    border: 2px solid darkslategrey; 
+    box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 10px; 
+}
+p{
+    margin-top: 400px;
+    color: #125896;
+
+}
+div{
+    padding: 0.2rem;
+}
+.title {
+    font-size: 3rem;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: whitesmoke;
+}
+.my-button{
+    width: 15rem;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+}
+.my-button:hover{
+    width: 16rem;
+    padding: 0.5rem;
+}
