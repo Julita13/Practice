@@ -5,7 +5,7 @@ use src\Services\JsonData;
 use src\Services\Helper;
 
 class Game {
-    public function index() {
+    public function index():void {
         $gameJson = new JsonData(__DIR__ . '/../database/games.json');
         $games = $gameJson->getAll();
         // (new Helper)->dump($games);

@@ -5,7 +5,7 @@ $get = $_GET;
 if(isset($get["id"])){
     $game = getGame($get["id"]);
 } else {
-    // header("Location: index.php");
+    header("Location: index.php");
 }
 
 ?>
