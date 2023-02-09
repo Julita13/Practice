@@ -1,0 +1,21 @@
+{
+    "name": "julita/game",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+
+        "files": [
+            "_helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Julita13",
+            "email": "julitamazuolyte@yahoo.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
