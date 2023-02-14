@@ -41,6 +41,7 @@
                         <div class="game-card-description">
                             <?= $game['description']; ?>
                         </div>
+                        <!-- <button class='my-button'><a href='https://google.com/search?q=<?= $game['name']; ?>'>More info about this game</a></button> -->
                     </div>
                 </article>
             </div>
