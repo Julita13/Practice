@@ -1,50 +1,21 @@
 <?php
 
 namespace App;
+
 use App\Services\JsonDatabase;
-abstract class AbstractController{
+use App\Services\File;
+
+abstract class AbstractController{ 
+    public string $databasePath;
+    public JsonDatabase $database;
+
+    public function __construct()
+    {
+        $file = new File($this->databasePath);
+        $this->database = new JsonDatabase($file);
+        //dd($this->database->getRecords());
+    }
+    
     public abstract function index();
-    public function createRecord($post):void{
-        $data = file_get_contents(__DIR__ . "/../database/games.json");
-        $dataArr = json_decode($data, true);
-        $index = array_column($dataArr, 'id');
-        $index = max($index) + 1;
-        if(isset($post)){
-            $post['id'] = $index;
-            $dataArr[] = $post;
-        }
-        $dataToJson = json_encode($dataArr);
-        file_put_contents(__DIR__ . "/../database/games.json", $dataToJson);
-    }
 
-    public function updateRecord($post):void{
-        $games = $this->all();
-        // dd($pet);
-        foreach($games as $key => $gameItem) {
-            if($gameItem['id'] == $post['id']) {
-                $games[$key] = $post;
-            }
-        }
-        file_put_contents(__DIR__ . "/../database/games.json", json_encode($games));
-    }
-
-    public function all(): array
-    {
-        $data = new JsonDatabase(__DIR__ . '/../database/games.json');
-        return $data->getAll();
-    }
-
-    public function getGameById(int $id): array
-    {
-        $games = $this->all();
-        $game = [];
-
-        foreach ($games as $element) {
-            if ((int)$element['id'] === $id) {
-                $game = $element;
-                break; // sustabdome ciklą
-            }
-        }
-        return $game;
-    }
 }
