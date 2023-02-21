@@ -1,0 +1,8 @@
+-- Active: 1676911949936@@127.0.0.1@3306@movies
+
+
+ALTER TABLE `movies`.`movie`
+MODIFY `image` TEXT(1000) NOT NULL,
+MODIFY `genre` TEXT(50) NOT NULL,
+MODIFY `language` TEXT(50) NOT NULL,
+MODIFY `country` TEXT(50) NOT NULL;
