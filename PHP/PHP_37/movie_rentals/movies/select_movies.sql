@@ -1,4 +1,4 @@
--- Active: 1676911949936@@127.0.0.1@3306@movies
+-- Active: 1676911949936@@127.0.0.1@3306@movie_rentals
 
 
 -- a) paimti duomenis -  title, language, release_date, image.
