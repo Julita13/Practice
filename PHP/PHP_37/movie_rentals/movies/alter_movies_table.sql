@@ -11,3 +11,12 @@ MODIFY `image` VARCHAR(1000) NOT NULL,
 MODIFY `genre` VARCHAR(50) NOT NULL,
 MODIFY `language` VARCHAR(50) NOT NULL,
 MODIFY `country` VARCHAR(50) NOT NULL;
+
+-- update movie genre to ids
+UPDATE `movie_rentals`.`movies` AS `m`
+LEFT JOIN `movie_rentals`.`genres` AS `g` ON `m`.`genre` = `g`.`name`
+SET `m`.`genre` = `g`.`id`;
+
+-- change movies genre column name to genre_id
+ALTER TABLE `movie_rentals`.`movies`
+CHANGE `genre` `genre_id` INT UNSIGNED NOT NULL;

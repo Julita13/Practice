@@ -7,7 +7,7 @@ SELECT
 FROM `movie_rentals`.`movies` AS `movies`
 JOIN `movie_rentals`.`genres` AS `genre` ON `movies`.`genre_id` = `genre`.`id`;
 
--- SELECT
--- `title`,
--- `release_date`
--- FROM `movie_rentals`.`movies`
+SELECT
+`title`,
+`release_date`
+FROM `movie_rentals`.`movies`
