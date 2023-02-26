@@ -16,3 +16,11 @@ SELECT
 `genres`.`id` AS `genre_id`
 FROM `movie_rentals`.`movies` AS `movies`
 LEFT JOIN `movie_rentals`.`genres` AS `genres` ON `movies`.`genre_id` = `genres`.`id`;
+
+SELECT 
+`movie`.`title`,
+JSON_ARRAYAGG(`language`.`name`) AS `languages`
+FROM `movie_rentals`.`movies` AS `movie`
+LEFT JOIN `movie_rentals`.`language_movie` AS `movielanguage` ON `movie`.`id` = `movielanguage`.`movie_id`
+LEFT JOIN `movie_rentals`.`languages` AS `language` ON `language`.`id` = `movielanguage`.`language_id`
+GROUP BY `title`;
