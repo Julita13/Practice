@@ -46,7 +46,6 @@ LEFT JOIN `movie_rentals`.`countries` AS `country` ON `country`.`id` = `cm`.`cou
 GROUP BY `movie`.`title`;
 
 -- genres
-
 SELECT `movie`.`title`,
 JSON_ARRAYAGG(`genre`.`name`) AS `Genres`
 FROM `movie_rentals`.`movies` AS `movie`
