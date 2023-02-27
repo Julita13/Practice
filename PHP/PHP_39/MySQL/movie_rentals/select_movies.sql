@@ -17,10 +17,39 @@ SELECT
 FROM `movie_rentals`.`movies` AS `movies`
 LEFT JOIN `movie_rentals`.`genres` AS `genres` ON `movies`.`genre_id` = `genres`.`id`;
 
+
+--languages
 SELECT 
 `movie`.`title`,
 JSON_ARRAYAGG(`language`.`name`) AS `languages`
 FROM `movie_rentals`.`movies` AS `movie`
 LEFT JOIN `movie_rentals`.`language_movie` AS `movielanguage` ON `movie`.`id` = `movielanguage`.`movie_id`
 LEFT JOIN `movie_rentals`.`languages` AS `language` ON `language`.`id` = `movielanguage`.`language_id`
-GROUP BY `title`;
+GROUP BY `movie`.`title`;
+
+-- actors
+SELECT
+`movie`.`title`,
+JSON_ARRAYAGG(CONCAT(`actor`.`first_name`, " ", `actor`.`last_name`)) AS `actors`
+FROM `movie_rentals`.`movies` AS `movie`
+LEFT JOIN `movie_rentals`.`actor_movie` AS `am` ON `movie`.`id` = `am`.`movie_id`
+LEFT JOIN `movie_rentals`.`actors` AS `actor` ON `actor`.`id` = `am`.`actor_id`
+GROUP BY `movie`.`title`;
+
+-- countries
+SELECT
+`movie`.`title`,
+JSON_ARRAYAGG(`country`.`name`) AS `Country`
+FROM `movie_rentals`.`movies` AS `movie`
+LEFT JOIN `movie_rentals`.`country_movie` AS `cm` ON `movie`.`id` = `cm`.`movie_id`
+LEFT JOIN `movie_rentals`.`countries` AS `country` ON `country`.`id` = `cm`.`country_id`
+GROUP BY `movie`.`title`;
+
+-- genre 
+
+SELECT `movie`.`title`,
+JSON_ARRAYAGG(`genre`.`name`) AS `Genre`
+FROM `movie_rentals`.`movies` AS `movie`
+LEFT JOIN `movie_rentals`.`genre_movie` AS `gm` ON `movie`.`id` = `gm`.`movie_id`
+LEFT JOIN `movie_rentals`.`genres` AS `genre` ON `genre`.`id` = `gm`.`genre_id`
+GROUP BY `movie`.`title`;

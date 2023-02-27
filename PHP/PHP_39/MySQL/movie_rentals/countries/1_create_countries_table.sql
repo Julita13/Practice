@@ -1,11 +1,9 @@
 -- Active: 1676911949936@@127.0.0.1@3306@movie_rentals
 
-DROP TABLE IF EXISTS `movie_rentals`.`languages`;
-
-CREATE TABLE IF NOT EXISTS `movie_rentals`.`languages`(
+DROP TABLE IF EXISTS `movie_rentals`.`countries`;
+CREATE TABLE IF NOT EXISTS `movie_rentals`.`countries`(
     `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    `name` VARCHAR(50) NOT NULL,
-    `abbr` VARCHAR(2) NOT NULL,
+    `name` VARCHAR(150) NOT NULL,
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `deleted_at` TIMESTAMP NULL DEFAULT NULL
