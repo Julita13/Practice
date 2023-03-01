@@ -1,4 +1,4 @@
--- Active: 1676911955202@@127.0.0.1@3306@games_and_more
+-- Active: 1676911949936@@127.0.0.1@3306@movie_rentals
 
 DROP TABLE IF EXISTS `movie_rentals`.`movies`;
 
