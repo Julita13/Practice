@@ -11,7 +11,7 @@ $indiana = [
     "image" => 'https://m.media-amazon.com/images/I/51K8ouYrHeL._AC_UF894,1000_QL80_.jpg'
 ];
 
-(new Movie())->insert($indiana);
+$movieId = (new Movie())->insert($indiana);
 
 // $movie = (new Movie())->showSingle(2);
 // dump($movie);
