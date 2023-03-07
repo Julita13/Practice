@@ -50,4 +50,5 @@
 // composer install 
 // persivadini composer.json faile pradinį atspirties tašką (5 eilutė) 
 // šito projekto atveju "App\\": "app/"
+// HELPERSuose reikia pakeisti path'ą iki projekto!
 ?>
