@@ -14,7 +14,7 @@
                             <th>Title</th>
                             <th>Release date</th>
                             <th>Desription</th>
-                            <th>Runtime (min)</th>
+                            <th>Runtime (min.)</th>
                             <th>Rating (MPAA)</th>
                             <th>Created</th>
                             <th>Updated</th>
