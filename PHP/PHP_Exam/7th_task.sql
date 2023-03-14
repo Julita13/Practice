@@ -1,0 +1,46 @@
+-- Active: 1676911949936@@127.0.0.1@3306@movie_rentals
+
+-- SPRENDIMAS: 
+-- SQL KODAS LEIDŽIAMAS DALIMIS!
+
+DROP TABLE IF EXISTS `movie_rentals`.`WORKPLACES`;
+CREATE TABLE IF NOT EXISTS `movie_rentals`.`WORKPLACES`(
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    `name` VARCHAR(50) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `deleted_at` TIMESTAMP NULL DEFAULT NULL
+);
+
+
+-- LENTELĖ `USERS` PAPILDOMA STULPELIU workplace_id:
+ALTER TABLE `movie_rentals`.`USERS`
+ADD COLUMN `workplace_id` INT UNSIGNED NOT NULL AFTER `date_of_birth`;
+
+
+-- UŽDEDAMAS FOREIGN CONSTRAINT ANT REIKIAMŲ STULPELIŲ
+ALTER TABLE `movie_rentals`.`USERS`
+ADD CONSTRAINT `FK_users_workplaces` FOREIGN KEY (`workplace_id`) REFERENCES `WORKPLACES`(`id`) 
+ON UPDATE CASCADE ON DELETE RESTRICT;
+
+
+-- TO UŽDUOTYJE NEBUVO, TAČIAU: 
+-- WORKPLACES LENTELĖ UŽPILDOMA FAKE DUOMENIMIS DEMONSTRAVIMO TIKSLAIS  :)
+INSERT INTO `movie_rentals`.`WORKPLACES`(
+    `name`
+)
+VALUES (
+    'IT Guru'
+    ),
+(
+    'Girls, IT & Co'
+    ),
+(
+    'Klaipėdos Front-enderiai'
+    ),
+(
+    'IT Vilniaus Team'
+),
+(
+    'Gods of Programming Ltd.'
+);
