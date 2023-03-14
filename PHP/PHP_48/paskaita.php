@@ -31,9 +31,9 @@
 // php artisan db:seed MovieSeeder - seedina lentelę
 
 // php artisan migrate:refresh - ištrina lenteles
-// php artisan migrate - sukuria lentutes iš naujo
+// php artisan migrate - sukuria lentutes iš naujo -
 // php artisan migrate:refresh --seed - ištrina lentelės turinį
 
-// https://github.com/Mykolas25/vigi38_movie_rentals.git
+// https://github.com/Mykolas25/vigi38_movie_rentals.git - Mykolo gitas
 
 ?>
