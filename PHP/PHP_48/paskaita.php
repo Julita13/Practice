@@ -36,4 +36,6 @@
 
 // https://github.com/Mykolas25/vigi38_movie_rentals.git - Mykolo gitas
 
+// Github: git clone http://, tada susiinstaliuojame composerius. O tada jau galima visas migracijas daryti 
+
 ?>
