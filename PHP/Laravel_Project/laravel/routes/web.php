@@ -27,7 +27,7 @@ Route::get('/', function () {
 //     echo "Labas";
 // });  --- įvedus į naršyklę http://laravel_project.test/admin, matysime Labas
 
-Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin.home');
+// Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin.home');
 
 // //  TO INDEX: 
 // Route::get('admin/movies', [AdminMovieController::class, 'index'])->name('admin.movies');
@@ -58,16 +58,21 @@ Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin.home');
 
 
 // Route'ų grupavimas: 
-// Route::prefix('admin')->name('admin.')->group(function () {
-//     Route::resource('movies', AdminMovieController::class);
-// });
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminHomeController::class, 'index'])->name('home');
+    Route::resource('movies', AdminMovieController::class);
+    Route::resource('actors', AdminActorController::class);
+    Route::resource('countries', AdminCountryController::class);
+    Route::resource('languages', AdminLanguageController::class);
+    Route::resource('genres', AdminGenreController::class);
+    });
 
 // ALL BASIC ROUTES WITH ONE ROUTE FUNCTION
-Route::resource('admin/movies', AdminMovieController::class);
-Route::resource('admin/actors', AdminActorController::class);
-Route::resource('admin/countries', AdminCountryController::class);
-Route::resource('admin/languages', AdminLanguageController::class);
-Route::resource('admin/genres', AdminGenreController::class);
+// Route::resource('admin/movies', AdminMovieController::class);
+// Route::resource('admin/actors', AdminActorController::class);
+// Route::resource('admin/countries', AdminCountryController::class);
+// Route::resource('admin/languages', AdminLanguageController::class);
+// Route::resource('admin/genres', AdminGenreController::class);
 
 // Route::resources([
 //     'movies' => AdminMovieController::class,

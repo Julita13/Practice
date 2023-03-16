@@ -22,7 +22,7 @@ class MovieSeeder extends Seeder
                 'release_date' => '1999-11-01',
                 'runtime' => 195,
                 'rating' => 'PG-13',
-                'image' => 'https://play-lh.googleusercontent.com/560-H8NVZRHk00g3RltRun4IGB-Ndl0I0iKy33D7EQ0cRRwH78-c46s90lZ1ho_F1soo',
+                'image' => 'https://play-lh.googleusercontent.com/560-H8NVZRHk00g3RltRun4IGB-Ndl0I0iKy33D7EQ0cRRwH78-c46s90lZ1ho_F1so',
                 'created_at' => Date::now(),
                 'updated_at' => Date::now()
             ],
@@ -32,7 +32,7 @@ class MovieSeeder extends Seeder
                 'release_date' => '2010-07-08',
                 'runtime' => 148,
                 'rating' => 'PG-13',
-                'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt1375666%2F&psig=AOvVaw1RTy4irZNCWtCsC9bQQR04&ust=1677092778248000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKCnrsynp_0CFQAAAAAdAAAAABAE',
+                'image' => 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg',
                 'created_at' => Date::now(),
                 'updated_at' => Date::now()
             ],

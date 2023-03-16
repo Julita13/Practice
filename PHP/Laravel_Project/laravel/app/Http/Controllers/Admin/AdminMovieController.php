@@ -15,7 +15,8 @@ class AdminMovieController extends Controller
     public function index()
     {
         $movies = Movie::get();
-        dd($movies[1]->countries);
+        return view('admin.movies.index', compact('movies')); 
+        // dd($movies[1]->countries);
     }
 
     /**
@@ -23,7 +24,8 @@ class AdminMovieController extends Controller
      */
     public function create()
     {
-        dd('CREATE METHOD');
+        return view('admin.movies.create'); 
+        
     }
 
     /**
@@ -31,7 +33,8 @@ class AdminMovieController extends Controller
      */
     public function store(StoreMovieRequest $request)
     {
-        //
+        Movie::create($request->all());
+        return to_route('admin.movies.index');
     }
 
     /**
@@ -47,9 +50,9 @@ class AdminMovieController extends Controller
      */
     public function edit(Movie $movie)
     {
-        dd(route('admin.movies.edit', 4));
+        // dd('edit', $movie);
         // <a href="{{route('admin.movies.edit', 5)}}">Edit movie</a>
-    
+        return view('admin.movies.edit', compact('movie')); 
     }
 
     /**
@@ -57,7 +60,10 @@ class AdminMovieController extends Controller
      */
     public function update(UpdateMovieRequest $request, Movie $movie)
     {
-        //
+        // dd($request->all());
+        // dd($movie);
+        $movie->fill($request->all())->save();
+        return to_route('admin.movies.index');
     }
 
     /**

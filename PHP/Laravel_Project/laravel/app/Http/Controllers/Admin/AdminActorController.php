@@ -15,7 +15,8 @@ class AdminActorController extends Controller
     public function index()
     {
         $actors = Actor::get();
-        dd($actors[1]);
+        // dd($actors[1]);
+        return view('admin.actors.index', compact('actors')); 
     }
 
     /**
@@ -23,7 +24,8 @@ class AdminActorController extends Controller
      */
     public function create()
     {
-        dd('CREATE METHOD OF ACTORS');
+        // dd('CREATE METHOD OF ACTORS');
+        return view('admin.actors.create'); 
     }
 
     /**
@@ -31,7 +33,8 @@ class AdminActorController extends Controller
      */
     public function store(StoreActorRequest $request)
     {
-        //
+        Actor::create($request->all());
+        return to_route('admin.actors.index');
     }
 
     /**
@@ -47,7 +50,8 @@ class AdminActorController extends Controller
      */
     public function edit(Actor $actor)
     {
-        echo "Actor";
+        // echo "Actor";
+        return view('admin.actors.edit', compact('actor')); 
     }
 
     /**
@@ -55,7 +59,8 @@ class AdminActorController extends Controller
      */
     public function update(UpdateActorRequest $request, Actor $actor)
     {
-        //
+        $actor->fill($request->all())->save();
+        return to_route('admin.actors.index');
     }
 
     /**

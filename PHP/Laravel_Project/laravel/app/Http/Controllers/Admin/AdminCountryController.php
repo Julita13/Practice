@@ -15,7 +15,8 @@ class AdminCountryController extends Controller
     public function index()
     {
         $countries = Country::get();
-        dd($countries[1]);
+        // dd($countries[1]);
+        return view('admin.countries.index', compact('countries')); 
     }
     
 
@@ -24,7 +25,7 @@ class AdminCountryController extends Controller
      */
     public function create()
     {
-        dd('CREATE METHOD');
+        return view('admin.countries.create'); 
     }
 
     /**
@@ -32,7 +33,8 @@ class AdminCountryController extends Controller
      */
     public function store(StoreCountryRequest $request)
     {
-        //
+        Country::create($request->all());
+        return to_route('admin.countries.index');
     }
 
     /**
@@ -48,7 +50,7 @@ class AdminCountryController extends Controller
      */
     public function edit(Country $country)
     {
-        
+        return view('admin.countries.edit', compact('country')); 
     }
 
     /**
@@ -56,8 +58,10 @@ class AdminCountryController extends Controller
      */
     public function update(UpdateCountryRequest $request, Country $country)
     {
-        //
+        $country->fill($request->all())->save();
+        return to_route('admin.countries.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
