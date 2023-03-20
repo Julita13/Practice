@@ -38,6 +38,12 @@
                     <input type="text" class="form-control" maxlength="5" name="rating" value="<?= ($movie->rating ?? ''); ?>" id="rating" placeholder="Rating">
                 </div>
 
+                {{-- {{dd($genres)}} --}}
+                <x-forms.multi-relation-select :tagName="'genres'" :model="$movie" :relationItems="$genres"/>
+                <x-forms.multi-relation-select :tagName="'languages'" :model="$movie" :relationItems="$languages"/>
+                <x-forms.multi-relation-select :tagName="'countries'" :model="$movie" :relationItems="$countries"/>
+                <x-forms.multi-relation-select :tagName="'actors'" :model="$movie" :optionName="'first_name'" :relationItems="$actors"/>
+
                 <div class="form-group">
                     <label for="image">Image</label>
                     <input type="text" class="form-control" name="image" value="<?= ($movie->image ?? ''); ?>" id="image" placeholder="Image">
