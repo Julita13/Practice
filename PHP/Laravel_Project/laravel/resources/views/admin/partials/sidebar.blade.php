@@ -35,12 +35,12 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                <li class="nav-header">Duomenų lentelės</li>
+                <li class="nav-header">Data tables</li>
                 <li class="nav-item">
                     <a href="{{route('admin.movies.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Filmai
+                            Movies
                         </p>
                     </a>
                 </li>
@@ -48,7 +48,7 @@
                     <a href="{{route('admin.actors.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Aktoriai
+                            Actors
                         </p>
                     </a>
                 </li>
@@ -56,7 +56,7 @@
                     <a href="{{route('admin.countries.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Valstybės
+                            Countries
                         </p>
                     </a>
                 </li>
@@ -64,7 +64,7 @@
                     <a href="{{route('admin.genres.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Žanrai
+                            Genres
                         </p>
                     </a>
                 </li>
@@ -72,7 +72,7 @@
                     <a href="{{route('admin.languages.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Kalbos
+                            Languages
                         </p>
                     </a>
                 </li>

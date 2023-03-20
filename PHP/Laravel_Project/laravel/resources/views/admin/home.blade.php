@@ -1,1 +1,1 @@
-HOME BLADE
+Welcome to movie rentals' project!

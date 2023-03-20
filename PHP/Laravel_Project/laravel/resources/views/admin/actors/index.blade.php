@@ -5,9 +5,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Aktoriai</h3>
+                <h3 class="card-title">Actors</h3>
                 <a href="{{route('admin.actors.create')}}" class="btn btn-app">
-                  <i class="fas fa-plus"></i> Naujas
+                  <i class="fas fa-plus"></i> New
                 </a>
             </div>
             <!-- /.card-header -->
@@ -16,12 +16,12 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Vardas</th>
-                            <th>Pavardė</th>
-                            <th>Gimimo data</th>
-                            <th>Sukurta</th>
-                            <th>Atnaujinta</th>
-                            <th>Veiksmai</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Date of birth</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,12 +36,12 @@
                                 <td>{{($actor->updated_at ?? '')}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href='{{route('admin.actors.edit', $actor) }}' type="button" class="btn btn-info">Keisti</a>
+                                        <a href='{{route('admin.actors.edit', $actor) }}' type="button" class="btn btn-info">Change</a>
                                         <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown" aria-expanded="false">
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu" role="menu">
-                                            <a class="dropdown-item" href="{{route('admin.actors.destroy', $actor) }}">Naikinti</a>
+                                            <a class="dropdown-item" href="{{route('admin.actors.destroy', $actor) }}">Delete</a>
                                         </div>
                                     </div>
                                 </td>
@@ -52,12 +52,12 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Vardas</th>
-                            <th>Pavardė</th>
-                            <th>Gimimo data</th>
-                            <th>Sukurta</th>
-                            <th>Atnaujinta</th>
-                            <th>Veiksmai</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Date of birth</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Actions</th>
                         </tr>
                     </tfoot>
                 </table>

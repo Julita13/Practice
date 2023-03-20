@@ -5,9 +5,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Kalbos</h3>
+                <h3 class="card-title">Languages</h3>
                 <a href="{{route('admin.languages.create')}}" class="btn btn-app">
-                  <i class="fas fa-plus"></i> Nauja
+                  <i class="fas fa-plus"></i> New
                 </a>
             </div>
             <!-- /.card-header -->
@@ -16,11 +16,11 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Pavadinimas</th>
-                            <th>Santrumpa</th>
-                            <th>Sukurta</th>
-                            <th>Atnaujinta</th>
-                            <th>Veiksmai</th>
+                            <th>Name</th>
+                            <th>Abbreviation</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,12 +34,12 @@
                                 <td>{{($language->updated_at ?? '')}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href='{{route('admin.languages.edit', $language) }}' type="button" class="btn btn-info">Keisti</a>
+                                        <a href='{{route('admin.languages.edit', $language) }}' type="button" class="btn btn-info">Change</a>
                                         <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown" aria-expanded="false">
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu" role="menu">
-                                            <a class="dropdown-item" href="{{route('admin.languages.destroy', $language) }}">Naikinti</a>
+                                            <a class="dropdown-item" href="{{route('admin.languages.destroy', $language) }}">Delete</a>
                                         </div>
                                     </div>
                                 </td>
@@ -50,11 +50,11 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Pavadinimas</th>
-                            <th>Santrumpa</th>
-                            <th>Sukurta</th>
-                            <th>Atnaujinta</th>
-                            <th>Veiksmai</th>
+                            <th>Name</th>
+                            <th>Abbreviation</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Actions</th>
                         </tr>
                     </tfoot>
                 </table>

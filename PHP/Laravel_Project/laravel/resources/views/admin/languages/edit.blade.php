@@ -3,7 +3,7 @@
 @section('content')
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Keisti kalbą [<?= ($language->name ?? ''); ?>][<?= ($language->id ?? ''); ?>]</h3>
+            <h3 class="card-title">Change language: [<?= ($language->name ?? ''); ?>][<?= ($language->id ?? ''); ?>]</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -14,13 +14,13 @@
             <input type="hidden" name="id" value="<?= ($language->id ?? ''); ?>">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="title">Pavadinimas</label>
-                    <input type="text" class="form-control" name="name" value="<?= ($language->name ?? ''); ?>" id="name" placeholder="Pavadinimas">
+                    <label for="title">Name</label>
+                    <input type="text" class="form-control" name="name" value="<?= ($language->name ?? ''); ?>" id="name" placeholder="Name">
                 </div>
 
                 <div class="form-group">
-                    <label for="title">Santrumpa</label>
-                    <input type="text" class="form-control" name="abbr" value="<?= ($language->abbr ?? ''); ?>" id="abbr" placeholder="Santrumpa">
+                    <label for="title">Abbreviation</label>
+                    <input type="text" class="form-control" name="abbr" value="<?= ($language->abbr ?? ''); ?>" id="abbr" placeholder="Abbreviation">
                 </div>
 
             <div class="card-footer">
