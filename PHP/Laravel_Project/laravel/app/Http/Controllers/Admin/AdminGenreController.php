@@ -42,7 +42,7 @@ class AdminGenreController extends Controller
      */
     public function show(Genre $genre)
     {
-        dd($genre);
+        // dd($genre);
     }
 
     /**
@@ -67,6 +67,7 @@ class AdminGenreController extends Controller
      */
     public function destroy(Genre $genre)
     {
-        //
+        $genre->delete();
+        return response()->json(['success'=> true]);
     }
 }

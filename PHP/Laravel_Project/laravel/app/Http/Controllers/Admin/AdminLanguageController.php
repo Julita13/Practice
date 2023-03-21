@@ -42,7 +42,7 @@ class AdminLanguageController extends Controller
      */
     public function show(Language $language)
     {
-        dd($language);
+        // dd($language);
     }
 
     /**
@@ -67,6 +67,7 @@ class AdminLanguageController extends Controller
      */
     public function destroy(Language $language)
     {
-        //
+        $language->delete();
+        return response()->json(['success'=> true]);
     }
 }

@@ -37,6 +37,7 @@ class AdminMovieController extends Controller
      */
     public function store(StoreMovieRequest $request)
     {
+        // dd($request->all());
         Movie::create($request->all());
         return to_route('admin.movies.index');
     }
@@ -46,7 +47,7 @@ class AdminMovieController extends Controller
      */
     public function show(Movie $movie)
     {
-        dd($movie);
+        // dd($movie);
     }
 
     /**
@@ -70,6 +71,7 @@ class AdminMovieController extends Controller
     {
         // dd($request->all());
         // dd($movie);
+        Movie::imageUpload($request);
         $movie->actors()->sync($request->get('actors'));
         $movie->genres()->sync($request->get('genres'));
         $movie->languages()->sync($request->get('languages'));
@@ -83,6 +85,7 @@ class AdminMovieController extends Controller
      */
     public function destroy(Movie $movie)
     {
-        //
+        $movie->delete();
+        return response()->json(['success'=> true]);
     }
 }

@@ -6,6 +6,7 @@ use App\Models\Actor;
 use App\Models\Genre;
 use App\Models\Country;
 use App\Models\Language;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -41,6 +42,17 @@ class Movie extends Model
 
     public function actors():BelongsToMany{
         return $this->belongsToMany(Actor::class);
+    }
+
+    public static function imageUpload(Request $request){
+        // dd($request->files);
+        $paths = [];
+        foreach($request->all()['images'] as $image){
+            $paths[] = $image->storeAs(
+                'public/images', $image->getClientOriginalName()
+            );
+        }
+        
     }
 }
 

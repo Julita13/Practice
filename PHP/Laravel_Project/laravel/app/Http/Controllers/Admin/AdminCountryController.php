@@ -42,7 +42,7 @@ class AdminCountryController extends Controller
      */
     public function show(Country $country)
     {
-        dd($country);
+        // dd($country);
     }
 
     /**
@@ -68,6 +68,7 @@ class AdminCountryController extends Controller
      */
     public function destroy(Country $country)
     {
-        //
+        $country->delete();
+        return response()->json(['success'=> true]);
     }
 }

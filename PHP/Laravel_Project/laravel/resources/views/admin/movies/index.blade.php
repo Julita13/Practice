@@ -49,7 +49,7 @@
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu" role="menu">
-                                            <a class="dropdown-item" href="{{route('admin.movies.destroy', $movie) }}">Delete</a>
+                                            <a onclick="event.preventDefault()" class="dropdown-item delete" href="{{route('admin.movies.destroy', $movie) }}">Delete</a>
                                         </div>
                                     </div>
                                 </td>

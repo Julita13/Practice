@@ -7,12 +7,12 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route('admin.movies.store')}}" method="POST">
+        <form action="{{route('admin.movies.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" Title="title" id="title" placeholder="Title">
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Title">
                 </div>
 
                 <div class="form-group">
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label for="rating">Rating (MPAA) </label>
                     <input type="text" class="form-control" maxlength="5" name="rating" id="rating" placeholder="Rating (MPAA) ">
-                </div>ė
+                </div>
 
                 <div class="form-group">
                     <label for="image">Image</label>

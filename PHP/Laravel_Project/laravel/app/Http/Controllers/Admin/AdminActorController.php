@@ -42,7 +42,7 @@ class AdminActorController extends Controller
      */
     public function show(Actor $actor)
     {
-        dd($actor);
+        // dd($actor);
     }
 
     /**
@@ -68,6 +68,7 @@ class AdminActorController extends Controller
      */
     public function destroy(Actor $actor)
     {
-        //
+        $actor->delete();
+        return response()->json(['success'=> true]);
     }
 }
