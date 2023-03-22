@@ -45,12 +45,12 @@
                 <x-forms.multi-relation-select :tagName="'actors'" :model="$movie" :optionName="'full_name'" :relationItems="$actors"/>
 
                 <div class="form-group">
-                    <label for="image">Image</label>
-                    <input type="text" class="form-control" name="image" value="<?= ($movie->image ?? ''); ?>" id="image" placeholder="Image">
+                    <label for="image">Cover image</label>
+                    <input type="file" class="form-control" name="image" id="cover_image" placeholder="Image">
                 </div>
 
                 <div class="form-group">
-                    <x-forms.image-input/>
+                    <x-forms.image-input :images="$movie->images" />
                 </div>
 
             <div class="card-footer">

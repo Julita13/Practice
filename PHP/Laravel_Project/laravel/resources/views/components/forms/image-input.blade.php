@@ -1,10 +1,21 @@
-<label for="images">Add image</label>
-        <div class="input-group">
-            <div class="custom-file">
-                <input multiple type="file" class="custom-file-input" name="images[]" id="images">
-                <label class="custom-file-label" for="images">Choose image</label>
-            </div>
-            <div class="input-group-append">
-                <span class="input-group-text">Upload</span>
-            </div>
+<div class='old-images'>
+    @foreach ($images as $image)
+        <div class='old-images-block'>
+            <img src='{{ asset("storage/images/$image->name") }}'>
+            <input type='hidden' name='old_images[]' value='{{ $image->name }}'>
+            <label>{{ $image->name }}</label>
+            <i class="far fa-trash-alt remove-image"></i>
         </div>
+    @endforeach
+</div>
+
+<label for="images">Images</label>
+<div class="input-group">
+    <div class="custom-file">
+        <input multiple type="file" class="custom-file-input" name="images[]" id="images">
+        <label class="custom-file-label" for="images">Choose photo</label>
+    </div>
+    <div class="input-group-append">
+        <span class="input-group-text">Submit</span>
+    </div>
+</div>

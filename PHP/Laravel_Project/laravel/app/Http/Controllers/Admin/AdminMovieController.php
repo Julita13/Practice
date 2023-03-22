@@ -38,7 +38,8 @@ class AdminMovieController extends Controller
     public function store(StoreMovieRequest $request)
     {
         // dd($request->all());
-        Movie::create($request->all());
+        // Movie::create($request->all());
+        Movie::customCreate($request);
         return to_route('admin.movies.index');
     }
 
@@ -71,12 +72,7 @@ class AdminMovieController extends Controller
     {
         // dd($request->all());
         // dd($movie);
-        Movie::imageUpload($request);
-        $movie->actors()->sync($request->get('actors'));
-        $movie->genres()->sync($request->get('genres'));
-        $movie->languages()->sync($request->get('languages'));
-        $movie->countries()->sync($request->get('genres'));
-        $movie->fill($request->all())->save();
+        $movie->customUpdate($request);
         return to_route('admin.movies.index');
     }
 

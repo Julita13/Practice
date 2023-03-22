@@ -74,4 +74,12 @@
 
 //  Padarom sąryšius su visom lentelėm; 
 // ir nuejus į laravel_project.test/admin/movies turi rodyti aąryšį su ta lentute, kurią prisitraukėm 
+// Movie class apvelkame visa customUpdate (iki returno) su šituo: 
+// DB::transaction(function () use($request){
+// Po to, įkėlus nuotraukas, jos atsiranda heidi movie_images lentelėje ir projekte - public/storage/images folderyje
+
+
+
+
+
 ?>
