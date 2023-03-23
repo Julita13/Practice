@@ -16,15 +16,17 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Image</th>
-                            <th>Title</th>
-                            <th>Release date</th>
-                            <th>Description</th>
-                            <th>Duration (min.)</th>
-                            <th>Rating</th>
-                            <th>Created at</th>
-                            <th>Updated at</th>
-                            <th>Actions</th>
+                            <th>{{Str::ucfirst(trans('app.image'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.title'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.release_date'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.description'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.duration'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.rating'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.genres'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.actors'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.actions'))}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +42,18 @@
                                 <td>{{($movie->description ?? '')}}</td>
                                 <td>{{($movie->runtime ?? '')}}</td>
                                 <td>{{($movie->rating ?? '')}}</td>
+                                <td>
+                                    @foreach($movie->genres as $genre)
+                                        {{$genre->name ?? ''}}
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach($movie->actors as $actor)
+                                        <a href="{{route('admin.actors.edit', $actor)}}">
+                                            {{$actor->fullName ?? ''}}
+                                        </a>
+                                    @endforeach
+                                </td>
                                 <td>{{($movie->created_at ?? '')}}</td>
                                 <td>{{($movie->updated_at ?? '')}}</td>
                                 <td>
@@ -66,6 +80,8 @@
                             <th>Description</th>
                             <th>Duration (min.)</th>
                             <th>Rating</th>
+                            <th>Genres</th> 
+                            <th>Actors</th>
                             <th>Created at</th>
                             <th>Updated at</th>
                             <th>Actions</th>

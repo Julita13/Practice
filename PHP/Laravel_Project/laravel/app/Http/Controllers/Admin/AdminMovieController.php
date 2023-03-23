@@ -7,6 +7,7 @@ use App\Models\Genre;
 use App\Models\Movie;
 use App\Models\Country;
 use App\Models\Language;
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMovieRequest;
 use App\Http\Requests\UpdateMovieRequest;
@@ -18,6 +19,7 @@ class AdminMovieController extends Controller
      */
     public function index()
     {
+        App::setLocale('en');
         $movies = Movie::get();
         return view('admin.movies.index', compact('movies')); 
         // dd($movies[1]->countries);

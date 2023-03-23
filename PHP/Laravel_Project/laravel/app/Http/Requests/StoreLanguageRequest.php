@@ -22,7 +22,8 @@ class StoreLanguageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|max:255',
+            'abbr' => 'required|max_digits:3',
         ];
     }
 }

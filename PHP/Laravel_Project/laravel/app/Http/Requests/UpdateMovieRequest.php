@@ -22,7 +22,11 @@ class UpdateMovieRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|max:255',
+            'release_date' => 'required|date',
+            'description' => 'required',
+            'runtime' => 'required|numeric|max_digits:3',
+            'rating' => 'required',
         ];
     }
 }

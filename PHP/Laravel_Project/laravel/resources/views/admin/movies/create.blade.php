@@ -36,14 +36,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="image">Cover image</label>
-                    <input type="file" class="form-control" name="image" id="cover_image" placeholder="Image">
+                    <x-forms.image-input :label="'cover-image'" :inputName="'image'" :oldInputName="'old_cover_image'"/>
+                </div>
+    
+                <div class="form-group">    
+                    <x-forms.image-input :label="'images'" :inputName="'images[]'" :oldInputName="'old_images[]'"/>
                 </div>
 
-
-                <div class="form-group">
-                    <x-forms.image-input/>
-                </div>
 
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>

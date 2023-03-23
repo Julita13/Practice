@@ -44,13 +44,12 @@
                 <x-forms.multi-relation-select :tagName="'countries'" :model="$movie" :relationItems="$countries"/>
                 <x-forms.multi-relation-select :tagName="'actors'" :model="$movie" :optionName="'full_name'" :relationItems="$actors"/>
 
-                <div class="form-group">
-                    <label for="image">Cover image</label>
-                    <input type="file" class="form-control" name="image" id="cover_image" placeholder="Image">
+                <div class="form-group">    
+                    <x-forms.image-input :images="[$movie->image]" :label="'cover-image'" :inputName="'image'" :oldInputName="'old_cover_image'"/>
                 </div>
 
-                <div class="form-group">
-                    <x-forms.image-input :images="$movie->images" />
+                <div class="form-group">    
+                    <x-forms.image-input :images="$movie->images"  :label="'images'" :inputName="'images[]'" :oldInputName="'old_images[]'"/>
                 </div>
 
             <div class="card-footer">
