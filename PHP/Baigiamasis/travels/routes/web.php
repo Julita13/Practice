@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/admin', function(){
         echo "Labas";
     });
+

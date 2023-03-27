@@ -11,7 +11,10 @@ return [
     'updated_at' => 'updated_at',
     'actions' => 'actions',
     'genres' => 'genres',
-    'actors' => 'actors'
+    'actors' => 'actors',
+    'movie' => 'Movie',
+    'languages' => 'languages',
+    'countries' => 'countries'
 ];
 
 ?>

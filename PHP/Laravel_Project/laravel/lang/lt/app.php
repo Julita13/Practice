@@ -11,7 +11,10 @@ return [
     'updated_at' => 'atnaujinta',
     'actions' => 'veiksmai',
     'genres' => 'žanrai',
-    'actors' => 'aktoriai'
+    'actors' => 'aktoriai',
+    'movie' => 'Filmas',
+    'languages' => 'Kalbos',
+    'countries' => 'Valstybės'
 ];
 
 ?>
