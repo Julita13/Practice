@@ -12,55 +12,40 @@ class AdminDestinationController extends Controller
     public function index()
     {
         $destinations = Destination::get();
-        dd($destinations);
-        // dd($destinations[0]->languages);
+        return view('admin.destinations.index', compact('destinations'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        dd("CREATE METHOD");
+        return view('admin.destinations.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreDestinationRequest $request)
     {
-        //
+        Destination::create($request->all());
+        return to_route('admin.destinations.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Destination $destination)
     {
         dd($destination->population);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Destination $destination)
     {
-        dd($destination);
+        return view('admin.destinations.edit', compact('destination'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(UpdateDestinationRequest $request, Destination $destination)
     {
-        //
+        $destination->fill($request->all())->save();
+        return to_route('admin.destinations.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(Destination $destination)
     {
-        //
+        echo "DELETE";
     }
 }

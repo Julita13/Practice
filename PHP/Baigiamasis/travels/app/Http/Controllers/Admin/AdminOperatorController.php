@@ -11,50 +11,35 @@ class AdminOperatorController extends Controller
 {
     public function index()
     {
-        $operators = Operator::with('destinations')->get();
-        dd($operators[0]);
+        $operators = Operator::get();
+        return view('admin.operators.index', compact('operators'));
     }
     public function create()
     {
-        dd("CREATE METHOD");
+        return view('admin.operators.create');
     }
-    
-
-    /**
-     * Store a newly created resource in storage.
-     */
+ 
     public function store(StoreOperatorRequest $request)
     {
-        //
+        Operator::create($request->all());
+        return to_route('admin.operators.index');
     }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Operator $operator)
     {
         dd($operator->address);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Operator $operator)
     {
-        //
+        return view('admin.operators.edit', compact('operator'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateOperatorRequest $request, Operator $operator)
     {
-        //
+        $operator->fill($request->all())->save();
+        return to_route('admin.operators.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Operator $operator)
     {
         //
