@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\UserSeeder;
 use Database\Seeders\CapitalSeeder;
 use Database\Seeders\LanguageSeeder;
 use Database\Seeders\OperatorSeeder;
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
         //     CapitalSeeder::class,
         //     LanguageSeeder::class,
         //     OperatorSeeder::class,
+        //     UserSeeder::class,
         // ]);
     }
 }

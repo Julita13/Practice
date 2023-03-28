@@ -1,24 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminCapitalController;
+use App\Http\Controllers\Admin\AdminLanguageController;
+use App\Http\Controllers\Admin\AdminOperatorController;
+use App\Http\Controllers\Admin\AdminDestinationController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/admin', function(){
-        echo "Labas";
-    });
-
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminHomeController::class, 'index'])->name('home');
+    Route::resource('destinations', AdminDestinationController::class);
+    Route::resource('capitals', AdminCapitalController::class);
+    Route::resource('languages', AdminLanguageController::class);
+    Route::resource('operators', AdminOperatorController::class);
+});
