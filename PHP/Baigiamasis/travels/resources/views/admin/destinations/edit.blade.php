@@ -35,6 +35,10 @@
                 <input type="text" class="form-control"  name="currency" value="<?= ($destination->currency ?? ''); ?>" id="currency" placeholder="Currency">
             </div>
 
+           
+            <x-forms.multi-relation-select :tagName="'operators'" :model="$destination" :relationItems="$operators" />
+            <x-forms.multi-relation-select :tagName="'languages'" :model="$destination" :relationItems="$languages"/>
+
             <div class="form-group">
                 <label for="image">Image</label>
                 <input type="text" class="form-control" name="image" id="image" placeholder="url" value="<?= ($destination->image ?? ''); ?>">

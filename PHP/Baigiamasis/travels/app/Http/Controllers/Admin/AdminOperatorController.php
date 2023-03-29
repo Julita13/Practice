@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Operator;
+use App\Models\Destination;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreOperatorRequest;
 use App\Http\Requests\UpdateOperatorRequest;
 
@@ -26,22 +27,25 @@ class AdminOperatorController extends Controller
     }
     public function show(Operator $operator)
     {
-        dd($operator->address);
+        // dd($operator->address);
     }
 
     public function edit(Operator $operator)
     {
-        return view('admin.operators.edit', compact('operator'));
+        $destinations = Destination::get();
+        return view('admin.operators.edit', compact('operator', 'destinations'));
     }
 
     public function update(UpdateOperatorRequest $request, Operator $operator)
     {
+        $operator->destinations()->sync($request->get('destinations'));
         $operator->fill($request->all())->save();
         return to_route('admin.operators.index');
     }
 
     public function destroy(Operator $operator)
     {
-        //
+        $operator->delete();
+        return response()->json(['success'=> true]);
     }
 }

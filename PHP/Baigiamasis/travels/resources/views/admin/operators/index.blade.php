@@ -19,8 +19,8 @@
                             <th>Address</th>
                             <th>Email</th>
                             <th>Phone number</th>
-                            <th>Created</th>
-                            <th>Updated</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -44,7 +44,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu" role="menu" style="">
-                                    <a class="dropdown-item" href="{{route('admin.operators.destroy', $operator)}}">Delete</a>
+                                    <a onclick="event.preventDefault()" class="dropdown-item delete" href="{{route('admin.operators.destroy', $operator)}}">Delete</a>
                                     </div>
                                 </div>
                               </td>
@@ -61,8 +61,8 @@
                             <th>Address</th>
                             <th>Email</th>
                             <th>Phone number</th>
-                            <th>Created</th>
-                            <th>Updated</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>

@@ -25,6 +25,8 @@
                 <input type="text" class="form-control" name="language_family" value="<?= ($language->language_family ?? ''); ?>" id="language_family" placeholder="Language family">
             </div>
 
+            <x-forms.multi-relation-select :tagName="'destinations'" :model="$language" :relationItems="$destinations" />
+
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

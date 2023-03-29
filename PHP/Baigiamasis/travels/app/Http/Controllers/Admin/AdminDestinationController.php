@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Language;
+use App\Models\Operator;
 use App\Models\Destination;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDestinationRequest;
 use App\Http\Requests\UpdateDestinationRequest;
-use App\Http\Controllers\Controller;
 
 class AdminDestinationController extends Controller
 {
@@ -28,17 +30,21 @@ class AdminDestinationController extends Controller
 
     public function show(Destination $destination)
     {
-        dd($destination->population);
+        // dd($destination->population);
     }
 
     public function edit(Destination $destination)
     {
-        return view('admin.destinations.edit', compact('destination'));
+        $languages = Language::get();
+        $operators = Operator::get();
+        return view('admin.destinations.edit', compact('destination', 'operators', 'languages'));
     }
 
     
     public function update(UpdateDestinationRequest $request, Destination $destination)
     {
+        $destination->operators()->sync($request->get('operators'));
+        $destination->languages()->sync($request->get('languages'));
         $destination->fill($request->all())->save();
         return to_route('admin.destinations.index');
     }
@@ -46,6 +52,7 @@ class AdminDestinationController extends Controller
     
     public function destroy(Destination $destination)
     {
-        echo "DELETE";
+        $destination->delete();
+        return response()->json(['success'=> true]);
     }
 }

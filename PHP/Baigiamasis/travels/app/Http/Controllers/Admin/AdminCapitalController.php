@@ -30,7 +30,7 @@ class AdminCapitalController extends Controller
    
     public function show(Capital $capital)
     {
-        dd($capital->must_visit);
+        // dd($capital->must_visit);
     }
 
     public function edit(Capital $capital)
@@ -46,6 +46,7 @@ class AdminCapitalController extends Controller
 
     public function destroy(Capital $capital)
     {
-        //
+        $capital->delete();
+        return response()->json(['success'=> true]);
     }
 }

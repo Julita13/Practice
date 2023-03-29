@@ -21,8 +21,8 @@
                             <th>Capital</th>
                             <th>Population</th>
                             <th>Currency</th>
-                            <th>Created</th>
-                            <th>Updated</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -50,7 +50,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu" role="menu" style="">
-                                    <a class="dropdown-item" href="{{route('admin.destinations.destroy', $destination)}}">Delete</a>
+                                    <a onclick="event.preventDefault()" class="dropdown-item delete" href="{{route('admin.destinations.destroy', $destination)}}">Delete</a>
                                     </div>
                                 </div>
                               </td>
@@ -69,8 +69,8 @@
                         <th>Capital</th>
                         <th>Population</th>
                         <th>Currency</th>
-                        <th>Created</th>
-                        <th>Updated</th>
+                        <th>Created at</th>
+                        <th>Updated at</th>
                         <th>Actions</th>
                         </tr>
                     </tfoot>

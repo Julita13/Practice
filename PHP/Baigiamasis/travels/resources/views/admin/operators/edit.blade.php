@@ -30,6 +30,8 @@
                 <input type="text" class="form-control" name="phone_number" value="<?= ($operator->phone_number ?? ''); ?>" id="phone_number" placeholder="Phone number">
             </div>
 
+            <x-forms.multi-relation-select :tagName="'destinations'" :model="$operator" :relationItems="$destinations" />
+
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
