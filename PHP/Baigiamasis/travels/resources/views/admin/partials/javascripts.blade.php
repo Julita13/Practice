@@ -24,3 +24,5 @@
   <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
   <script src="{{asset('js/admin/app.js')}}"></script>
   <!-- Page specific script -->
+
+

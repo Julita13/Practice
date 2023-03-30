@@ -33,7 +33,8 @@
                             <tr>
                              <td>{{($destination->id ?? '')}}</td>
                               <td>
-                                <img width="200" src="{{($destination->image ?? '')}}">
+                                {{-- <img width="200" src="{{($destination->image ?? '')}}"> --}}
+                                <img width="200" src="{{ asset ('storage/images/'.($destination->image ?? "noimage.jpg"))}}">
                               </td>
                               <td>{{($destination->destination ?? '')}}</td>
                               <td>{{($destination->description ?? '')}}</td>

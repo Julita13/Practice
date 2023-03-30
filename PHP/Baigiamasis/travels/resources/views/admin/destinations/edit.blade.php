@@ -39,29 +39,22 @@
             <x-forms.multi-relation-select :tagName="'operators'" :model="$destination" :relationItems="$operators" />
             <x-forms.multi-relation-select :tagName="'languages'" :model="$destination" :relationItems="$languages"/>
 
+
             <div class="form-group">
-                <label for="image">Image</label>
-                <input type="text" class="form-control" name="image" id="image" placeholder="url" value="<?= ($destination->image ?? ''); ?>">
+                <x-forms.image-input :images="[$destination->image]" :label="'cover-image'" :inputName="'image'" :oldInputName="'old_cover_image'"/>
               </div>
 
+            <div class="form-group">
+                <x-forms.image-input :images="$destination->images" :label="'images'" :inputName="'images[]'" :oldInputName="'old_images[]'"/>
+            </div>
 
-              <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <div class="input-group">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text">Upload</span>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-
+    </form>
+</div>
 
 @endsection

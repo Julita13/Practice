@@ -24,7 +24,7 @@ class AdminDestinationController extends Controller
 
     public function store(StoreDestinationRequest $request)
     {
-        Destination::create($request->all());
+        Destination::customCreate($request);
         return to_route('admin.destinations.index');
     }
 
@@ -43,9 +43,7 @@ class AdminDestinationController extends Controller
     
     public function update(UpdateDestinationRequest $request, Destination $destination)
     {
-        $destination->operators()->sync($request->get('operators'));
-        $destination->languages()->sync($request->get('languages'));
-        $destination->fill($request->all())->save();
+        $destination->customUpdate($request);
         return to_route('admin.destinations.index');
     }
 
