@@ -57,6 +57,7 @@ return [
     'population' => 'gyventojų skaičius',
 
     // S
+    'search' => 'paieška',
     'submit' => 'pateikti',
 
     // T

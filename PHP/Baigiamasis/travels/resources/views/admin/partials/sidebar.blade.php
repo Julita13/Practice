@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{asset('adminlte/index3.html') }}" class="brand-link">
+    <a href="{{asset('storage/images/forbidden.gif') }}" class="brand-link">
         <img src="{{asset('adminlte/dist/img/detailed-travel-logo_23-2148616611.avif')}} " alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light" style="color:pink">Best Travel Agency</span>
     </a>
@@ -21,7 +21,7 @@
         <!-- SidebarSearch Form -->
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="{{Str::ucfirst(trans('app.search'))}}" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-sidebar">
                         <i class="fas fa-search fa-fw"></i>
@@ -65,7 +65,7 @@
                     <a href="{{route('admin.operators.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            {{Str::ucfirst(trans('app.tour_operators'))}}
+                            {{Str::ucfirst(trans('app.languages'))}}
                         </p>
                     </a>
                 </li>

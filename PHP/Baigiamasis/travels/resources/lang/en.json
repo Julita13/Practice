@@ -50,7 +50,8 @@
     "phone_number": "phone number",
     "population": "population",
  
-     "submit": "submit",
+    "search": "search",
+    "submit": "submit",
     
     "time_zone": "time zone",
     "tour_operator": "tour operator",

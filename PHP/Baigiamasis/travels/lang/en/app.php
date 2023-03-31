@@ -57,6 +57,7 @@ return [
    'population' => 'population',
 
     // S
+    'search' => 'search',
     'submit' => 'submit',
    
    // T
