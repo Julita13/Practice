@@ -65,7 +65,7 @@
                     <a href="{{route('admin.operators.index')}}" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            {{Str::ucfirst(trans('app.languages'))}}
+                            {{Str::ucfirst(trans('app.tour_operators'))}}
                         </p>
                     </a>
                 </li>
