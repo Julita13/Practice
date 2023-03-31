@@ -1,0 +1,65 @@
+{
+ 
+    "abbr": "abbreviation",
+    "actions": "actions",
+    "address": "address",
+    "all_rights": "all rights reserved",
+ 
+    "capital": "capital",
+    "capitals": "capitals",
+    "change": "change",
+    "change_capital": "change capital",
+    "change_destination": "change destination",
+    "change_language": "change language",
+    "change_tour_operator": "change tour operator",
+    "choose_image": "choose image",
+    "contact": "contact",
+    "copyright": "copyright",
+    "created_at": "created at",
+    "currency": "currency",
+    
+  
+    "data_tables": "data tables",
+    "delete": "delete",
+    "description": "description",
+    "destination": "Destination",
+    "destinations": "destinations",
+ 
+
+    "email": "email",
+    
+
+    "home": "home",
+    
+   
+    "id": "id",
+    "image": "image",
+ 
+    "language": "language",
+    "language_family": "language family",
+    "languages": "languages",
+ 
+    "must_visit_spot": "must visit spot",
+ 
+
+    "new_capital": "new capital",
+    "new_destination": "new destination",
+    "new_language": "new language",
+    "new_tour_operator": "new tour operator",
+
+    "phone_number": "phone number",
+    "population": "population",
+ 
+     "submit": "submit",
+    
+    "time_zone": "time zone",
+    "tour_operator": "tour operator",
+    "tour_operators": "tour operators",
+
+    "updated_at": "updated at", 
+    "upload": "upload",
+
+    "version" : "version",
+
+    "your_travel_manager": "your travel manager"
+}

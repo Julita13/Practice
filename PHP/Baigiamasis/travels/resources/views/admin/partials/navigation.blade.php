@@ -13,6 +13,8 @@
     </ul>
 
     <!-- Right navbar links -->
+        <a class="nav-link" href="/lang/en"><img style="width: 35px; height: 20px"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt=""></a>
+        <a class="nav-link" href="/lang/lt"><img style="width: 35px; height: 20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/250px-Flag_of_Lithuania.svg.png" alt=""></a>
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
         <li class="nav-item">

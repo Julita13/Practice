@@ -12,6 +12,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/lang/{locale}', function ($locale) {
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('home');
     Route::resource('destinations', AdminDestinationController::class);
@@ -19,3 +24,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('languages', AdminLanguageController::class);
     Route::resource('operators', AdminOperatorController::class);
 });
+

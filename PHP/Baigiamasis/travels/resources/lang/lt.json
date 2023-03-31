@@ -1,0 +1,60 @@
+{
+
+    "abbr": "santrumpa",
+    "actions": "veiksmai",
+    "address": "adresas",
+    "all_rights": "visos teisės saugomos",
+
+    "capital": "sostinė",
+    "capitals": "sostinės",
+    "change": "keisti",
+    "change_capital": "keisti sostinę",
+    "change_destination": "keisti kryptį",
+    "change_language": "keisti kalbą",
+    "change_tour_operator": "keisti kelionių organizatorių",
+    "choose_image": "pasirinkti nuotrauką",
+    "contact": "kontaktai",
+    "copyright": "autorinės teisės",
+    "created_at": "sukurta",
+    "currency": "valiuta",
+
+    "data_tables": "duomenų lentelės",
+    "delete": "naikinti",
+    "description": "aprašymas",
+    "Destination": "Kryptis",
+    "destinations": "kryptys",
+
+   "email": "elektroninis paštas",
+
+   "home": "namai",
+
+    "id": "id",
+    "image": "nuotrauka",
+
+    "language": "kalba",
+    "language_family": "kalbų šeima",
+    "languages": "kalbos",
+
+   "must_visit_spot": "lankomiausia vieta",
+
+    "new_capital": "nauja sostinė",
+    "new_destination": "nauja kryptis",
+    "new_language": "nauja kalba",
+    "new_tour_operator": "naujas kelionių organizatorius",
+
+    "phone_number": "telefono numeris",
+    "population": "gyventojų skaičius",
+
+    "submit": "pateikti",
+
+    "time_zone": "laiko juosta",
+    "tour_operator": "kelionių organizatorius",
+   "tour_operators": "kelionių organizatoriai",
+
+    "updated_at": "pakeista", 
+    "upload": "įkelti",
+
+    "version" : "versija",
+
+    "your_travel_manager": "Jūsų kelionių atstovas"
+}
