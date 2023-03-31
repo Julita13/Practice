@@ -5,10 +5,10 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{route('admin.home')}}" class="nav-link">Home</a>
+            <a href="{{route('admin.home')}}" class="nav-link">{{Str::ucfirst(trans('app.home'))}}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="https://www.facebook.com/julita.mazuolyte/?locale=lt_LT" class="nav-link">Contact</a>
+            <a href="https://www.facebook.com/julita.mazuolyte/?locale=lt_LT" class="nav-link">{{Str::ucfirst(trans('app.contact'))}}</a>
         </li>
     </ul>
 

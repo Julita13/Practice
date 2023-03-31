@@ -5,25 +5,25 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title" style="margin-top:1rem">Destinations</h3>
+                <h3 class="card-title" style="margin-top:1rem">{{Str::ucfirst(trans('app.destinations'))}}</h3>
                 <a href="{{route('admin.destinations.create')}}" class="btn btn-app">
-                  <i class="fas fa-plus"></i> New destination
+                  <i class="fas fa-plus"></i> {{Str::ucfirst(trans('app.new_destination'))}}
                 </a>
             </div>
             <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Image</th>
-                            <th>Destination</th>
-                            <th>Description</th>
-                            <th>Capital</th>
-                            <th>Population</th>
-                            <th>Currency</th>
-                            <th>Created at</th>
-                            <th>Updated at</th>
-                            <th>Actions</th>
+                            <th>{{Str::upper(trans('app.id'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.image'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.destination'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.description'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.capital'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.population'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.currency'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.actions'))}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,12 +46,12 @@
 
                               <td>
                                 <div class="btn-group">
-                                    <a href='{{ route('admin.destinations.edit', $destination) }}' type="button" class="btn btn-info">Change</a>
+                                    <a href='{{ route('admin.destinations.edit', $destination) }}' type="button" class="btn btn-info">{{Str::ucfirst(trans('app.change'))}}</a>
                                     <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown" aria-expanded="false">
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu" role="menu" style="">
-                                    <a onclick="event.preventDefault()" class="dropdown-item delete" href="{{route('admin.destinations.destroy', $destination)}}">Delete</a>
+                                    <a onclick="event.preventDefault()" class="dropdown-item delete" href="{{route('admin.destinations.destroy', $destination)}}">{{Str::ucfirst(trans('app.delete'))}}</a>
                                     </div>
                                 </div>
                               </td>
@@ -63,16 +63,16 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th>ID</th>
-                        <th>Image</th>
-                        <th>Destination</th>
-                        <th>Description</th>
-                        <th>Capital</th>
-                        <th>Population</th>
-                        <th>Currency</th>
-                        <th>Created at</th>
-                        <th>Updated at</th>
-                        <th>Actions</th>
+                        <th>{{Str::upper(trans('app.id'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.image'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.destination'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.description'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.capital'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.population'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.currency'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.actions'))}}</th>
                         </tr>
                     </tfoot>
                 </table>

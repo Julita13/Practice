@@ -2,7 +2,7 @@
 @section('content')
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title">Change capital: [<?= ($capital->capital ?? ''); ?>]</h3>
+        <h3 class="card-title">{{Str::ucfirst(trans('app.change_capital'))}}: [<?= ($capital->capital ?? ''); ?>]</h3>
     </div>
     <form action="{{route('admin.capitals.update', $capital)}}" method="POST" enctype="multipart/form-data">
         @method('put')
@@ -11,27 +11,27 @@
         <input type="hidden" name="id" value="<?= ($capital->id ?? ''); ?>">
         <div class="card-body">
             <div class="form-group">
-                <label for="capital">Capital</label>
-                <input type="text" class="form-control" name="capital" value="<?= ($capital->capital ?? ''); ?>" id="capital" placeholder="Capital">
+                <label for="capital">{{Str::ucfirst(trans('app.capital'))}}</label>
+                <input type="text" class="form-control" name="capital" value="<?= ($capital->capital ?? ''); ?>" id="capital" placeholder="{{Str::ucfirst(trans('app.capital'))}}">
             </div>
 
             <div class="form-group">
-              <label for="population">Population</label>
-              <input type="number" class="form-control"  name="population" value="<?= ($capital->population ?? ''); ?>" id="population" placeholder="Population">
+              <label for="population">{{Str::ucfirst(trans('app.population'))}}</label>
+              <input type="number" class="form-control"  name="population" value="<?= ($capital->population ?? ''); ?>" id="population" placeholder="{{Str::ucfirst(trans('app.population'))}}">
           </div>
 
             <div class="form-group">
-                <label for="must_visit">Must visit spot</label>
-                <input type="text" class="form-control" name="must_visit" value="<?= ($capital->must_visit ?? ''); ?>" id="must_visit" placeholder="Must visit spot">
+                <label for="must_visit">{{Str::ucfirst(trans('app.must_visit_spot'))}}</label>
+                <input type="text" class="form-control" name="must_visit" value="<?= ($capital->must_visit ?? ''); ?>" id="must_visit" placeholder="{{Str::ucfirst(trans('app.must_visit_spot'))}}">
             </div>
 
             <div class="form-group">
-                <label for="time_zone">Time Zone</label>
-                <input type="text" class="form-control" name="time_zone" value="<?= ($capital->time_zone ?? ''); ?>" id="time_zone" placeholder="Time zone">
+                <label for="time_zone">{{Str::ucfirst(trans('app.time_zone'))}}</label>
+                <input type="text" class="form-control" name="time_zone" value="<?= ($capital->time_zone ?? ''); ?>" id="time_zone" placeholder="{{Str::ucfirst(trans('app.time_zone'))}}">
             </div>
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{{Str::ucfirst(trans('app.submit'))}}</button>
             </div>
 
 

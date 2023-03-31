@@ -19,12 +19,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>DataTables</h1>
+                            <h1>{{Str::ucfirst(trans('app.data_tables'))}}</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Data Tables</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.home')}}">{{Str::ucfirst(trans('app.home'))}}</a></li>
+                            <li class="breadcrumb-item active">{{Str::ucfirst(trans('app.data_tables'))}}</li>
                             </ol>
                         </div>
                     </div>
