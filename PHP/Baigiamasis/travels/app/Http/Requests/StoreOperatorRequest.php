@@ -19,7 +19,10 @@ class StoreOperatorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'tour_operator' => 'required|max:100',
+            'address' => 'required|max:100',
+            'email' => 'required|max:255',
+            'phone_number' => 'required|numeric|min_digits:9|max_digits:9',
         ];
     }
 }

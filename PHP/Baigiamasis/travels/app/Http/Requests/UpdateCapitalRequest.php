@@ -19,7 +19,10 @@ class UpdateCapitalRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'capital' => 'required|max:50',
+            'population' => 'required|numeric|min_digits:4',
+            'must_visit' => 'required|max:255',
+            'time_zone' => 'required|max:100',
         ];
     }
 }

@@ -19,7 +19,9 @@ class UpdateLanguageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'language' => 'required|max:50',
+            'abbr' => 'required|max:2',
+            'language_family' => 'required|max:255',
         ];
     }
 }

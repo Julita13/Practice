@@ -19,7 +19,11 @@ class StoreDestinationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'destination' => 'required|max:255',
+            'description' => 'required|max:1000',
+            'capital' => 'required|max:50',
+            'population' => 'required|numeric|min_digits:4',
+            'currency'=> 'required|max:255'
         ];
     }
 }
