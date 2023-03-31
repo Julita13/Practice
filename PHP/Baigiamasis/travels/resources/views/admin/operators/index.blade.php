@@ -19,6 +19,7 @@
                             <th>{{Str::ucfirst(trans('app.address'))}}</th>
                             <th>{{Str::ucfirst(trans('app.email'))}}</th>
                             <th>{{Str::ucfirst(trans('app.phone_number'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.destinations'))}}</th>
                             <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.actions'))}}</th>
@@ -34,6 +35,11 @@
                               <td>{{($operator->address ?? '')}}</td>
                               <td>{{($operator->email ?? '')}}</td>
                               <td>{{($operator->phone_number ?? '')}}</td>
+                              <td>
+                                @foreach($operator->destinations as $destination)
+                                    {{$destination->destination . " " ?? ''}}
+                                @endforeach
+                              </td>
                               <td>{{($operator->created_at ?? '')}}</td>
                               <td>{{($operator->updated_at ?? '')}}</td>
 
@@ -61,6 +67,7 @@
                             <th>{{Str::ucfirst(trans('app.address'))}}</th>
                             <th>{{Str::ucfirst(trans('app.email'))}}</th>
                             <th>{{Str::ucfirst(trans('app.phone_number'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.destinations'))}}</th>
                             <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.actions'))}}</th>

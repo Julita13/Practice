@@ -21,6 +21,8 @@
                             <th>{{Str::ucfirst(trans('app.capital'))}}</th>
                             <th>{{Str::ucfirst(trans('app.population'))}}</th>
                             <th>{{Str::ucfirst(trans('app.currency'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.languages'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.tour_operators'))}}</th>
                             <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.actions'))}}</th>
@@ -41,6 +43,22 @@
                               <td>{{($destination->capital ?? '')}}</td>
                               <td>{{($destination->population ?? '')}}</td>
                               <td>{{($destination->currency ?? '')}}</td>
+                              <td>
+                                    @foreach($destination->languages as $language)
+                                        <a href="{{route('admin.languages.edit', $language)}}">
+                                            {{$language->language . " " ?? ''}}
+                                        </a>
+
+                                        
+                                    @endforeach
+                              </td>
+                              <td>
+                                    @foreach($destination->operators as $operator)
+                                        <a href="{{route('admin.operators.edit', $operator)}}">
+                                            {{$operator->tour_operator . " " ?? ''}}
+                                        </a>
+                                    @endforeach
+                              </td>
                               <td>{{($destination->created_at ?? '')}}</td>
                               <td>{{($destination->updated_at ?? '')}}</td>
 
@@ -70,6 +88,8 @@
                         <th>{{Str::ucfirst(trans('app.capital'))}}</th>
                         <th>{{Str::ucfirst(trans('app.population'))}}</th>
                         <th>{{Str::ucfirst(trans('app.currency'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.languages'))}}</th>
+                        <th>{{Str::ucfirst(trans('app.tour_operators'))}}</th>
                         <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                         <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                         <th>{{Str::ucfirst(trans('app.actions'))}}</th>

@@ -18,6 +18,7 @@
                             <th>{{Str::ucfirst(trans('app.language'))}}</th>
                             <th>{{Str::ucfirst(trans('app.abbr'))}}</th>
                             <th>{{Str::ucfirst(trans('app.language_family'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.destinations'))}}</th>
                             <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.actions'))}}</th>
@@ -32,6 +33,11 @@
                               <td>{{($language->language ?? '')}}</td>
                               <td>{{($language->abbr ?? '')}}</td>
                               <td>{{($language->language_family ?? '')}}</td>
+                              <td>
+                                @foreach($language->destinations as $destination)
+                                    {{$destination->destination . " " ?? ''}}
+                                @endforeach
+                              </td>
                               <td>{{($language->created_at ?? '')}}</td>
                               <td>{{($language->updated_at ?? '')}}</td>
 
@@ -58,6 +64,7 @@
                             <th>{{Str::ucfirst(trans('app.language'))}}</th>
                             <th>{{Str::ucfirst(trans('app.abbr'))}}</th>
                             <th>{{Str::ucfirst(trans('app.language_family'))}}</th>
+                            <th>{{Str::ucfirst(trans('app.destinations'))}}</th>
                             <th>{{Str::ucfirst(trans('app.created_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.updated_at'))}}</th>
                             <th>{{Str::ucfirst(trans('app.actions'))}}</th>
