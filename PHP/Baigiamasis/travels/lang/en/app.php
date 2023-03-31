@@ -15,6 +15,7 @@ return [
    'change_destination' => 'change destination',
    'change_language' => 'change language',
    'change_tour_operator' => 'change tour operator',
+   'choose_image' => 'choose image',
    'contact' => 'contact',
    'copyright' => 'copyright',
    'created_at' => 'created at',
@@ -65,6 +66,7 @@ return [
 
    // U
    'updated_at' => 'updated at', 
+   'upload' => 'upload',
 
    // V
    'version'  => 'version',

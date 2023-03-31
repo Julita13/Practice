@@ -18,6 +18,7 @@ return [
     'change_destination' => 'keisti kryptį',
     'change_language' => 'keisti kalbą',
     'change_tour_operator' => 'keisti kelionių organizatorių',
+    'choose_image' => 'pasirinkti nuotrauką',
     'contact' => 'kontaktai',
     'copyright' => 'autorinės teisės',
     'created_at' => 'sukurta',
@@ -68,6 +69,7 @@ return [
 
     // U
     'updated_at' => 'pakeista', 
+    'upload' => 'įkelti',
 
     // V
     'version'  => 'versija',
