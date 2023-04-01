@@ -3,7 +3,11 @@
     "abbr": "abbreviation",
     "actions": "actions",
     "address": "address",
+    "admin": "admin",
+    "all_destinations": "all destinations",
     "all_rights": "all rights reserved",
+
+    "best": "best",
  
     "capital": "capital",
     "capitals": "capitals",
@@ -14,6 +18,7 @@
     "change_tour_operator": "change tour operator",
     "choose_image": "choose image",
     "contact": "contact",
+    "contact_us": "contact us",
     "copyright": "copyright",
     "created_at": "created at",
     "currency": "currency",
@@ -28,6 +33,7 @@
 
     "email": "email",
     
+    "for_upcoming_holidays": "for upcoming holidays",
 
     "home": "home",
     
@@ -51,16 +57,20 @@
     "population": "population",
  
     "search": "search",
+    "show": "show",
     "submit": "submit",
     
     "time_zone": "time zone",
+    "top_destinations": "top destinations",
     "tour_operator": "tour operator",
     "tour_operators": "tour operators",
+    "travel_agency":  "travel agency",
 
     "updated_at": "updated at", 
     "upload": "upload",
 
     "version" : "version",
 
+    "your": "your",
     "your_travel_manager": "your travel manager"
 }

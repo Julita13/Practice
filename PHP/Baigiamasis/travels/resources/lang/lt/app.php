@@ -5,7 +5,12 @@ return [
     'abbr' => 'santrumpa',
     'actions' => 'veiksmai',
     'address' => 'adresas',
+    'admin' => 'admin',
+    'all_destinations' => "visos kryptys",
     'all_rights' => 'visos teisės saugomos',
+
+    // B
+   'best' => 'geriausia',
 
     // C
     'capital' => 'sostinė',
@@ -17,6 +22,7 @@ return [
     'change_tour_operator' => 'keisti kelionių organizatorių',
     'choose_image' => 'pasirinkti nuotrauką',
     'contact' => 'kontaktai',
+    'contact_us' => 'susisiekite su mumis',
     'copyright' => 'autorinės teisės',
     'created_at' => 'sukurta',
     'currency' => 'valiuta',
@@ -30,6 +36,9 @@ return [
     
     // E
    'email' => 'elektroninis paštas',
+
+    // F
+   'for_upcoming_holidays' => 'artėjančioms atostogoms',
 
     // H
    'home' => 'namai',
@@ -58,12 +67,15 @@ return [
 
     // S
     'search' => 'paieška',
+    'show' => 'rodyti',
     'submit' => 'pateikti',
 
     // T
     'time_zone' => 'laiko juosta',
+    'top_destinations' => 'populiariausios kryptys',
     'tour_operator' => 'kelionių organizatorius',
    'tour_operators' => 'kelionių organizatoriai',
+   'travel_agency' => 'kelionių agentūra',
 
     // U
     'updated_at' => 'pakeista', 
@@ -73,6 +85,7 @@ return [
     'version'  => 'versija',
 
     // Y
+    'your' => 'jūsų',
     'your_travel_manager' => 'Jūsų kelionių atstovas',
    
     

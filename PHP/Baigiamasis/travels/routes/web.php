@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Front\FrontHomeController;
 use App\Http\Controllers\Admin\AdminCapitalController;
 use App\Http\Controllers\Admin\AdminLanguageController;
 use App\Http\Controllers\Admin\AdminOperatorController;
 use App\Http\Controllers\Admin\AdminDestinationController;
+use App\Http\Controllers\Front\FrontDestinationController;
 
 
 Route::get('/', function () {
@@ -25,3 +27,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('operators', AdminOperatorController::class);
 });
 
+Route::name('front.')->group(function () {
+    Route::get('/', [FrontHomeController::class, 'index'])->name('home');
+    Route::resource('destinations', FrontDestinationController::class)->only(['index', 'show']);
+});

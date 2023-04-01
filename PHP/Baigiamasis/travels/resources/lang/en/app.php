@@ -4,7 +4,12 @@ return [
    'abbr' => 'abbreviation',
    'actions' => 'actions',
    'address' => 'address',
+   'admin' => 'admin',
+   'all_destinations' => "all destinations",
    'all_rights' => 'all rights reserved',
+
+   // B
+   'best' => 'best',
 
    // C
    'capital' => 'capital',
@@ -16,6 +21,7 @@ return [
    'change_tour_operator' => 'change tour operator',
    'choose_image' => 'choose image',
    'contact' => 'contact',
+   'contact_us' => 'contact us',
    'copyright' => 'copyright',
    'created_at' => 'created at',
    'currency' => 'currency',
@@ -29,7 +35,10 @@ return [
 
    // E
    'email' => 'email',
-   
+
+   // F
+   'for_upcoming_holidays' => 'for upcoming holidays',
+
    // H
    'home' => 'home',
    
@@ -57,12 +66,15 @@ return [
 
     // S
     'search' => 'search',
+    'show' => 'show',
     'submit' => 'submit',
    
    // T
    'time_zone' => 'time zone',
+   'top_destinations' => 'top destinations',
    'tour_operator' => 'tour operator',
    'tour_operators' => 'tour operators',
+   'travel_agency' => 'travel agency',
 
    // U
    'updated_at' => 'updated at', 
@@ -72,5 +84,6 @@ return [
    'version'  => 'version',
 
    // Y
+   'your' => 'your',
    'your_travel_manager' => 'your travel manager',
 ];
