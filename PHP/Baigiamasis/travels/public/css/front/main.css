@@ -160,3 +160,31 @@ div.single-destination-card-wrapper article>.destination-card-body div.destinati
     transform: scale(2.5);
     cursor: zoom-out;
 }
+.my-button {
+    background-color: rgb(164,151,144);
+    margin: 0.2rem;
+    padding: 0.8rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid white;
+    border-radius:2rem;  
+}
+
+.my-button:hover {
+    background-color: white;
+    border: 1px solid rgb(164,151,144);
+}
+
+.my-button a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.my-button a:hover{
+    color: rgb(164,151,144);
+    text-decoration: underline;
+}
+
+article>.destination-card-body div.destination-card-description div button {
+    background-color: blue;
+}
