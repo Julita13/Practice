@@ -1,7 +1,16 @@
-<audio src="{{asset('storage/music/travels2.mp3')}}" loop autoplay ></audio>
-{{-- <audio src="{{asset('storage/music/travels.mp3')}}" loop autoplay ></audio> --}}
-<img  style="display: block; margin-left: auto; margin-right: auto; width: 50%; " src="https://travelthe.world/wp-content/uploads/2019/02/travel-the-world.png" alt="">
-<button style="display: block; margin-left: auto; margin-right: auto; width: 5%; border-radius: 0.5rem; padding: 0.3rem; background: lightblue; border-color: rgb(173, 173, 218); margin-top:4rem">
-    <a href="{{route('admin.destinations.index')}}" style="color:rgb(86, 86, 156); text-decoration:none">Press me</a>
-</button>
+<link rel="stylesheet" href="{{ asset('css/admin/main.css') }}">
 
+<div>
+    <audio src="{{asset('storage/music/travels2.mp3')}}" loop autoplay ></audio>
+    <img  class="travels" src="https://travelthe.world/wp-content/uploads/2019/02/travel-the-world.png" alt="">
+
+    <div class="container">
+        <a href="{{route('admin.destinations.index')}}" class="button">
+          <div class="button__line"></div>
+          <div class="button__line"></div>
+          <span class="button__text">Press me</span>
+          <div class="button__drow1"></div>
+          <div class="button__drow2"></div>
+        </a>
+    </div>
+</div>

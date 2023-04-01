@@ -3,7 +3,7 @@
 @section('content')
     <section>
             <h1>
-                {{Str::ucfirst(trans('app.top_destinations'))}}
+                {{Str::ucfirst(trans('app.top_destinations'))}}:
             </h1>
 
 

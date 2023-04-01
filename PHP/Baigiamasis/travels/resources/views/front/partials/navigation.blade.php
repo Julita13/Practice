@@ -15,7 +15,7 @@
                 <a href="{{route('front.destinations.index')}}">{{Str::ucfirst(trans('app.home'))}}</a>
             </li>
             <li>
-                <a href="{{asset('storage/images/forbidden.gif') }}">{{Str::ucfirst(trans('app.admin'))}}</a>
+                <a href="{{route('admin.home')}}">{{Str::ucfirst(trans('app.admin'))}}</a>
             </li>
             <li class='dropdown'>
                 <i class="fa fa-caret-down" aria-hidden="true"></i>

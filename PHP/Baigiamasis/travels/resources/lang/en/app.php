@@ -52,6 +52,7 @@ return [
    'languages' => 'languages',
 
    // M
+   'main' => 'main',
    'must_visit_spot' => 'must visit spot',
 
    // N 

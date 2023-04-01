@@ -53,6 +53,7 @@ return [
     'languages' => 'kalbos',
 
     // M
+    'main' => 'pagrindinis',
    'must_visit_spot' => 'lankomiausia vieta',
 
     // N 
