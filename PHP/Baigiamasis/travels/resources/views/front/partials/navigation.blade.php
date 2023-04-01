@@ -20,11 +20,6 @@
             <li class='dropdown'>
                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                 <a href="{{route('front.destinations.index')}}">{{Str::ucfirst(trans('app.destinations'))}}</a>
-                    <ul class='dropdown-list'>
-                        <li>
-                            <a href="{{route('front.destinations.index')}}">{{Str::ucfirst(trans('app.all_destinations'))}}</a>
-                        </li>
-                    </ul>
             </li>
         </ul>   
     </section>

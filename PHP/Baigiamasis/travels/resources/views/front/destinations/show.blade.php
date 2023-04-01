@@ -7,9 +7,9 @@
             {{Str::ucfirst(trans('app.destination'))}}
         </h1>
     </header>
-    <div class="single-game-card-wrapper">
-    {{-- <div class="game-cards"> --}}
-        <article class="game-card">
+    <div class="single-destination-card-wrapper">
+    {{-- <div class="destination-cards"> --}}
+        <article class="destination-card">
             <img src="{{asset('storage/images/' . ($destination->image ?? ''))}}">
             <header>
                 <h2>
@@ -17,8 +17,8 @@
                 </h2>
             </header>
 
-            <div class="game-card-body">
-                <div class="game-card-details">
+            <div class="destination-card-body">
+                <div class="destination-card-details">
                     <div>
                         <span>{{Str::ucfirst(trans('app.capital'))}}</span>
                         <span>{{ ($destination->capital ?? '') }}</span>
@@ -40,7 +40,7 @@
                         <span>{{ ($destination?->operators->pluck('tour_operator')->implode(', ')) }}</span>
                     </div>
                 </div>
-                <div class="game-card-description">
+                <div class="destination-card-description">
                     {{ ($destination->description ?? '') }}
                 </div>
                 <div>

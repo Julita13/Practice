@@ -16,31 +16,31 @@ section {
     margin-bottom: 30px;
 }
 
-section>div.game-cards {
+section>div.destination-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
 
-article.game-card {
+article.destination-card {
     position: relative;
 }
 
-/* article.game-card>a {
+/* article.destination-card>a {
     height: 100%;
     width: 100%;
     display: block;
     position: absolute;
 } */
 
-article.game-card img {
+article.destination-card img {
     height: 400px;
     width: 100%;
     object-fit: cover;
     object-position: left top;
 }
 
-article.game-card {
+article.destination-card {
     display: grid;
     font-size: 1.1em;
     line-height: 1.2;
@@ -51,71 +51,108 @@ article.game-card {
     margin-bottom: 15px
 }
 
-.game-card-hover:hover {
+.destination-card-hover:hover {
     cursor: pointer;
     box-shadow: 2px 2px 9px 2px #d3d3d3;
 }
 
-article>.game-card-body {
+article>.destination-card-body {
     padding: 0 15px;
 }
 
-article>.game-card-body div.game-card-details {
+article>.destination-card-body div.destination-card-details {
     font-size: 0.8em;
     line-height: 1.5;
 }
 
-article>.game-card-body div.game-card-details div span:nth-of-type(odd) {
+article>.destination-card-body div.destination-card-details div span:nth-of-type(odd) {
     font-weight: bold;
 }
 
-article>.game-card-body div.game-card-details div {
+article>.destination-card-body div.destination-card-details div {
     display: grid;
     grid-template-columns: 150px 1fr;
 }
 
-article>.game-card-body div.game-card-details,
-article>.game-card-body div.game-card-description {
+article>.destination-card-body div.destination-card-details,
+article>.destination-card-body div.destination-card-description {
     letter-spacing: 1px;
     text-align: justify;
     padding-bottom: 15px;
 }
 
-article>.game-card-body div.game-card-description {
+article>.destination-card-body div.destination-card-description {
     font-size: 1em;
     /* height: 100px; */
 }
 
 /* Show */
-div.single-game-card-wrapper article {
+div.single-destination-card-wrapper article {
     width: 800px;
 
 }
 
-div.single-game-card-wrapper article {
+div.single-destination-card-wrapper article {
     width: 800px;
     margin: auto;
 }
 
-div.single-game-card-wrapper article.game-card img {
+div.single-destination-card-wrapper article.destination-card img {
 
     height: 800px
 }
 
-div.single-game-card-wrapper article>.game-card-body {
+div.single-destination-card-wrapper article>.destination-card-body {
     padding: 0 30px;
 }
 
-div.single-game-card-wrapper article>.game-card-body div.game-card-details {
+div.single-destination-card-wrapper article>.destination-card-body div.destination-card-details {
     font-size: 0.9em;
 }
 
-div.single-game-card-wrapper article>.game-card-body div.game-card-description {
+div.single-destination-card-wrapper article>.destination-card-body div.destination-card-description {
     font-size: 1.1em;
     text-indent: 50px;
 }
 
-div.single-game-card-wrapper article>.game-card-body div.game-card-details,
-div.single-game-card-wrapper article>.game-card-body div.game-card-description {
+div.single-destination-card-wrapper article>.destination-card-body div.destination-card-details,
+div.single-destination-card-wrapper article>.destination-card-body div.destination-card-description {
     padding-bottom: 30px;
+}
+
+
+
+.single-destination-card-wrapper{
+    display: flex;
+    gap:10px;
+}
+
+.single-destination-card-wrapper{
+    display: flex;
+    gap:10px;
+}
+
+.single-destination-card-wrapper aside div{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.single-destination-card-wrapper aside div img{
+    width: 340px;
+    height: 240px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+.single-destination-card-wrapper aside div img:hover{
+        box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+
+}
+
+.single-destination-card-wrapper aside div img:active{
+    -webkit-transform: scale(2);
+    transform: scale(2.5);
+    cursor: zoom-out;
 }

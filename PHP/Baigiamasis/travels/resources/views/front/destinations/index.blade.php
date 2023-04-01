@@ -7,17 +7,17 @@
             </h1>
 
 
-        <div class="game-cards">
+        <div class="destination-cards">
             @foreach ($destinations as $destination)
-                <article class="game-card game-card-hover">
+                <article class="destination-card destination-card-hover">
                     <header>
                         <img src="{{asset('storage/images/' . ($destination->image ?? 'noimage.jpg'))}}">
                         <h2>
                             {{($destination->destination ?? '')}}
                         </h2>
                     </header>
-                    <div class="game-card-body">
-                        <div class="game-card-details">
+                    <div class="destination-card-body">
+                        <div class="destination-card-details">
                             <div>
                                 <span>{{Str::ucfirst(trans('app.capital'))}}:</span>
                                 <span>{{($destination->capital ?? '')}}</span>
