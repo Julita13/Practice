@@ -10,6 +10,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="https://www.facebook.com/julita.mazuolyte/?locale=lt_LT" class="nav-link">{{Str::ucfirst(trans('app.contact'))}}</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{route('front.destinations.index')}}" class="nav-link">{{Str::ucfirst(trans('app.main'))}}
+        </li>
     </ul>
 
     <!-- Right navbar links -->

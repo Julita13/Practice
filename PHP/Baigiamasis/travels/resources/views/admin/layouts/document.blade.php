@@ -24,7 +24,6 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.home')}}">{{Str::ucfirst(trans('app.home'))}}</a></li>
-                            <li class="breadcrumb-item active"><a href="{{route('front.destinations.index')}}">{{Str::ucfirst(trans('app.main'))}}</li>
                             </ol>
                         </div>
                     </div>

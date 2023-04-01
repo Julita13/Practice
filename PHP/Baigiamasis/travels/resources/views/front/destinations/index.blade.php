@@ -10,6 +10,7 @@
         <div class="destination-cards">
             @foreach ($destinations as $destination)
                 <article class="destination-card destination-card-hover">
+                        <a href="{{route('front.destinations.show', $destination)}}"></a>
                     <header>
                         <img src="{{asset('storage/images/' . ($destination->image ?? 'noimage.jpg'))}}">
                         <h2>
@@ -43,9 +44,6 @@
                                 <span>{{($destination->description ?? '')}}</span>
                             </div> --}}
                         </div>
-                    </div>
-                    <div class="buttons">
-                        <a href="{{route('front.destinations.show', $destination)}}" class="button">{{Str::ucfirst(trans('app.show'))}}</a>
                     </div>
                 </article>
             @endforeach

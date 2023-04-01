@@ -25,13 +25,17 @@ section>div.destination-cards {
 article.destination-card {
     position: relative;
 }
+article.destination-card:hover {
+    box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
 
-/* article.destination-card>a {
+article.destination-card>a {
     height: 100%;
     width: 100%;
     display: block;
     position: absolute;
-} */
+}
 
 article.destination-card img {
     height: 400px;
@@ -99,7 +103,7 @@ div.single-destination-card-wrapper article {
 
 div.single-destination-card-wrapper article.destination-card img {
 
-    height: 800px
+    height: 400px
 }
 
 div.single-destination-card-wrapper article>.destination-card-body {

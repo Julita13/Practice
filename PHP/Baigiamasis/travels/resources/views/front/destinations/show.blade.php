@@ -2,6 +2,7 @@
 
 @section('content')
 <section>
+    
     <header>
         <h1>
             {{Str::ucfirst(trans('app.destination'))}}
@@ -44,7 +45,7 @@
                     {{ ($destination->description ?? '') }}
                 </div>
                 <div>
-                    <button><a href="https://google.com/search?q={{$destination['destination']}}">More info about this destination</a></button>
+                    <button class="my-button"><a href="https://google.com/search?q={{$destination['destination']}}">More info about this destination</a></button>
                 </div>
                 <div>
                     <button class="my-button"><a href='{{route('front.destinations.index')}}'>Back to destinations</a></button>
