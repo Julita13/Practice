@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <span>{{Str::ucfirst(trans('app.population'))}}</span>
-                        <span>{{ ($destination->population ?? '')}} min. </span>
+                        <span>{{ ($destination->population ?? '')}}</span>
                     </div>
                     <div>
                         <span>{{ Str::ucfirst(trans('app.currency')) }}</span>
