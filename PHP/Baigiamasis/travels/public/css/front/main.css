@@ -188,3 +188,28 @@ div.single-destination-card-wrapper article>.destination-card-body div.destinati
 article>.destination-card-body div.destination-card-description div button {
     background-color: blue;
 }
+
+
+div.single-destination-card-wrapper>article.destination-card header h2 {
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+div.single-destination-card-wrapper>article.destination-card div.destination-card-body div.destination-card-details div span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div.single-destination-card-wrapper>article.destination-card div.destination-card-body div.destination-card-description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.destination-cards article.destination-card.destination-card-hover header h2{
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div.destination-cards article.destination-card.destination-card-hover div.destination-card-body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}

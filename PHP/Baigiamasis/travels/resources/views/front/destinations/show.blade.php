@@ -21,23 +21,23 @@
             <div class="destination-card-body">
                 <div class="destination-card-details">
                     <div>
-                        <span>{{Str::ucfirst(trans('app.capital'))}}</span>
+                        <span>{{Str::ucfirst(trans('app.capital'))}}:</span>
                         <span>{{ ($destination->capital ?? '') }}</span>
                     </div>
                     <div>
-                        <span>{{Str::ucfirst(trans('app.population'))}}</span>
+                        <span>{{Str::ucfirst(trans('app.population'))}}:</span>
                         <span>{{ ($destination->population ?? '')}}</span>
                     </div>
                     <div>
-                        <span>{{ Str::ucfirst(trans('app.currency')) }}</span>
+                        <span>{{ Str::ucfirst(trans('app.currency')) }}:</span>
                         <span>{{ ($destination->currency ?? '') }}</span>
                     </div>
                     <div>
-                        <span>{{ Str::ucfirst(trans('app.languages')) }}</span>
+                        <span>{{ Str::ucfirst(trans('app.languages')) }}:</span>
                         <span>{{ ($destination?->languages->pluck('language')->implode(', ')) }}</span>
                     </div>
                     <div>
-                        <span>{{ Str::ucfirst(trans('app.tour_operators')) }}</span>
+                        <span>{{ Str::ucfirst(trans('app.tour_operators')) }}:</span>
                         <span>{{ ($destination?->operators->pluck('tour_operator')->implode(', ')) }}</span>
                     </div>
                 </div>
